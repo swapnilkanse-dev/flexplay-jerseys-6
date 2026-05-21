@@ -97,7 +97,7 @@ function SizeGuide() {
         }}>
           {/* Arrow */}
           <div style={{
-            position: 'absolute', bottom: -7, left: '50%', transform: 'translateX(-50%)',
+            position: 'absolute', bottom: -7, left: '50%',
             width: 12, height: 12, background: 'white',
             border: '1px solid #e5e5e5', borderTop: 'none', borderLeft: 'none',
             transform: 'translateX(-50%) rotate(45deg)',

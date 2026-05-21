@@ -175,9 +175,36 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
             <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.phone ? 'var(--sale-red)' : 'var(--text)' }}>
               WhatsApp Number {errors.phone && <span className="font-normal text-xs">— {errors.phone}</span>}
             </label>
-            <input type="tel" placeholder="e.g. 9876543210" value={phone}
-              onChange={e => { setPhone(e.target.value); setErrors(p => ({ ...p, phone: '' })) }}
-              className={inputCls(errors.phone)} style={inputStyle(errors.phone)} />
+            <div className="relative">
+              <input 
+                type="tel" 
+                placeholder="10-digit mobile number" 
+                value={phone}
+                onChange={e => {
+                  const val = e.target.value.replace(/\D/g, '')
+                  if (val.length <= 10) {
+                    setPhone(val)
+                    setErrors(p => ({ ...p, phone: '' }))
+                  }
+                }}
+                maxLength={10}
+                className={inputCls(errors.phone)} 
+                style={inputStyle(errors.phone)} 
+              />
+              {phone.length > 0 && phone.length < 10 && (
+                <span className="absolute right-3 top-2.5 text-xs" style={{ color: '#f59e0b' }}>
+                  {10 - phone.length} more
+                </span>
+              )}
+              {phone.length === 10 && (
+                <span className="absolute right-3 top-2.5 text-xs" style={{ color: '#22c55e' }}>
+                  ✓ Valid
+                </span>
+              )}
+            </div>
+            <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+              {phone.length === 0 ? 'Indian mobile number only' : `${phone.length}/10 digits`}
+            </p>
           </div>
 
           {/* Location */}
