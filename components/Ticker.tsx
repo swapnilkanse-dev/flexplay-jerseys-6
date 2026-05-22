@@ -1,6 +1,6 @@
 export default function Ticker() {
   const items = [
-    'BUY 2 GET FREE DELIVERY',
+    'FREE DELIVERY',
     'WORLD CUP 2026 SPECIAL COLLECTION IS LIVE',
     'PREMIUM EMBROIDERY QUALITY',
     'ORDER ON WHATSAPP – INSTANT CONFIRMATION',
