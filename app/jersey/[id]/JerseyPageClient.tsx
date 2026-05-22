@@ -171,7 +171,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
   const discount = Math.round(((jersey.originalPrice - jersey.discountedPrice) / jersey.originalPrice) * 100)
 
   function handleOrderClick() {
-    if (!selectedSize) { setSizeError(true); return }
+    if (!selectedSize || !jersey) { setSizeError(true); return }
     const isInStock = jersey.sizeStock?.[selectedSize] ?? true
     if (!isInStock) { setSizeError(true); return }
     setShowOrder(true)
@@ -183,7 +183,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
 
       {/* Breadcrumb bar */}
       <div style={{ paddingTop: 56, background: '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
-        <div style={{ maxWidth: 1100, margin: '0 auto', padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#aaa', flexWrap: 'wrap' }}>
+        <div className="px-4 sm:px-6 md:px-8" style={{ maxWidth: 1100, margin: '0 auto', padding: '12px 0', display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#aaa', flexWrap: 'wrap' }}>
           <button onClick={() => router.push('/')}
             style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa', fontSize: 12, padding: 0 }}>
             🏠 Home
@@ -199,10 +199,10 @@ export default function JerseyPageClient({ id }: { id: string }) {
       </div>
 
       {/* Product layout */}
-      <div style={{ maxWidth: 1100, margin: '0 auto', padding: '32px 24px', display: 'flex', flexWrap: 'wrap', gap: 40, alignItems: 'flex-start' }}>
+      <div className="px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10" style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '24px sm:gap-8 md:gap-10', alignItems: 'flex-start' }}>
 
         {/* ════ LEFT: thumbnails + main image ════ */}
-        <div style={{ display: 'flex', flexDirection: 'row', gap: 12, flex: '1 1 380px', maxWidth: 540 }}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: 12, flex: '1 1 100%', maxWidth: '100%' }} className="sm:flex-1 sm:max-w-md">
 
           {/* Thumbnail column — always visible when multiple images */}
           {slots.length > 1 && (
@@ -210,7 +210,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
               {slots.map((src, i) => (
                 <button key={i} onClick={() => setActiveIdx(i)}
                   style={{
-                    width: 76, height: 76,
+                    width: 56, height: 56,
                     borderRadius: 6,
                     overflow: 'hidden',
                     border: activeIdx === i ? '2px solid #111' : '2px solid #e5e5e5',
@@ -219,7 +219,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
                     padding: 0,
                     flexShrink: 0,
                     transition: 'border-color 0.15s',
-                  }}>
+                  }} className="sm:w-[76px] sm:h-[76px]">
                   <ProductImage src={src} alt={`view ${i + 1}`} jersey={jersey} />
                 </button>
               ))}
@@ -227,12 +227,12 @@ export default function JerseyPageClient({ id }: { id: string }) {
           )}
 
           {/* Main image */}
-          <div style={{ flex: 1, borderRadius: 10, overflow: 'hidden', background: '#f7f7f7', position: 'relative', minHeight: 460 }}>
+          <div style={{ flex: 1, borderRadius: 10, overflow: 'hidden', background: '#f7f7f7', position: 'relative', minHeight: 320 }} className="sm:min-h-[460px]">
             <ProductImage
               src={slots[activeIdx] ?? ''}
               alt={jersey.name}
               jersey={jersey}
-              style={{ minHeight: 460 }}
+              style={{ minHeight: 320 }}
             />
             {slots.length > 1 && (
               <>
@@ -246,10 +246,10 @@ export default function JerseyPageClient({ id }: { id: string }) {
         </div>
 
         {/* ════ RIGHT: details ════ */}
-        <div style={{ flex: '1 1 300px', maxWidth: 440, display: 'flex', flexDirection: 'column', gap: 16 }}>
+        <div style={{ flex: '1 1 100%', maxWidth: '100%', display: 'flex', flexDirection: 'column', gap: 16 }} className="sm:flex-1 sm:max-w-sm md:max-w-md">
 
           <div>
-            <h1 style={{ fontSize: 20, fontWeight: 700, color: '#111', margin: 0, lineHeight: 1.3 }}>
+            <h1 style={{ fontSize: 18, fontWeight: 700, color: '#111', margin: 0, lineHeight: 1.3 }} className="sm:text-xl md:text-2xl">
               {jersey.name}
             </h1>
           </div>
@@ -263,7 +263,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
             </span>
           </div>
 
-          <p style={{ fontSize: 26, fontWeight: 700, color: '#111', margin: '-8px 0 0' }}>
+          <p style={{ fontSize: 24, fontWeight: 700, color: '#111', margin: '-8px 0 0' }} className="sm:text-3xl">
             Rs. {(jersey.discountedPrice ?? 0).toLocaleString('en-IN')}.00
           </p>
           <p style={{ fontSize: 12, color: '#aaa', marginTop: -8 }}>Shipping calculated at checkout.</p>

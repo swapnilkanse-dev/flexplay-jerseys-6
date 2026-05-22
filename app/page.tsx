@@ -42,18 +42,18 @@ export default function Home() {
       <Hero />
 
       {/* Collection */}
-      <section id="collection" style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 24px' }}>
+      <section id="collection" className="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10" style={{ maxWidth: 1200 }}>
 
         {/* Header row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 16, marginBottom: 20 }}>
           <div>
-            <h2 style={{ fontSize: 22, fontWeight: 700, color: '#111', margin: 0 }}>World Cup 2026</h2>
-            <p style={{ fontSize: 13, color: '#aaa', margin: '4px 0 0' }}>
+            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111', margin: 0 }} className="sm:text-2xl">World Cup 2026</h2>
+            <p style={{ fontSize: 12, color: '#aaa', margin: '4px 0 0' }} className="sm:text-sm">
               {filtered.length} product{filtered.length !== 1 ? 's' : ''}
             </p>
           </div>
           {/* Search */}
-          <div style={{ position: 'relative', width: 240 }}>
+          <div style={{ position: 'relative', width: '100%', maxWidth: 240 }} className="w-full sm:w-auto">
             <input
               type="text" placeholder="Search jerseys…" value={search}
               onChange={e => setSearch(e.target.value)}
@@ -88,9 +88,11 @@ export default function Home() {
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(210px, 1fr))',
-            gap: 20,
-          }}>
+            gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
+            gap: '12px',
+          }}
+          className="sm:gap-4 md:gap-5 lg:gap-6"
+          >
             {filtered.map(jersey => (
               <JerseyCard
                 key={jersey.id}
