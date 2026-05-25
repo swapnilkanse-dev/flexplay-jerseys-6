@@ -14,15 +14,18 @@ export default function Home() {
   const [filterCountry, setFilterCountry] = useState('All')
   const [filterType,    setFilterType]    = useState('All')
   const [filterKit,     setFilterKit]     = useState('All')
+  const [filterStock,   setFilterStock]   = useState('All')
   const [search,        setSearch]        = useState('')
 
   const filtered = useMemo(() => JERSEYS.filter(j => {
     if (filterCountry !== 'All' && j.country !== filterCountry) return false
     if (filterType    !== 'All' && j.type    !== filterType)    return false
     if (filterKit     !== 'All' && j.kit     !== filterKit)     return false
+    if (filterStock   === 'In Stock' && !j.inStock) return false
+    if (filterStock   === 'Out of Stock' && j.inStock) return false
     if (search && !j.name.toLowerCase().includes(search.toLowerCase())) return false
     return true
-  }), [filterCountry, filterType, filterKit, search])
+  }), [filterCountry, filterType, filterKit, filterStock, search])
 
   const pill = (active: boolean): React.CSSProperties => ({
     background: active ? '#111' : '#fff',
@@ -77,6 +80,16 @@ export default function Home() {
             <button key={c} onClick={() => setFilterCountry(c)} style={pill(filterCountry === c)}>{c}</button>
           ))}
          
+        </div>
+
+        {/* Stock Filter row */}
+        <div style={{ marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid #f0f0f0' }}>
+          <h3 style={{ fontSize: 12, fontWeight: 600, color: '#111', textTransform: 'uppercase', letterSpacing: '0.5px', margin: '0 0 12px 0' }}>Availability</h3>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            {(['All', 'In Stock', 'Out of Stock'] as string[]).map(stock => (
+              <button key={stock} onClick={() => setFilterStock(stock)} style={pill(filterStock === stock)}>{stock}</button>
+            ))}
+          </div>
         </div>
 
         {/* Grid — clicking navigates to product page */}

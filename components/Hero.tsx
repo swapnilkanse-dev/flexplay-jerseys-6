@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
       {/* Trust strip */}
       <div className="flex flex-wrap justify-center gap-3 sm:gap-6 mt-6 sm:mt-8 text-xs" style={{ color: 'var(--text-muted)' }}>
-        {['✅ Premium Embroidery', '🚚 Pan India Delivery', '💬 WhatsApp Orders'].map(t => (
+        {['🚚 Free Delivery','✅ Premium Embroidery', '🎁 Pan India Delivery', '💬 WhatsApp Orders'].map(t => (
           <span key={t} className="font-medium">{t}</span>
         ))}
       </div>
