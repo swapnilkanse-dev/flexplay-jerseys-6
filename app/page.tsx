@@ -1,7 +1,7 @@
 'use client'
 import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { JERSEYS, COUNTRIES } from '@/constants/jerseys'
+import { JERSEYS } from '@/constants/jerseys'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import JerseyCard from '@/components/JerseyCard'
@@ -26,21 +26,46 @@ export default function Home() {
     }
   }, [])
 
-  const [filterCountry, setFilterCountry] = useState('All')
-  const [filterType,    setFilterType]    = useState('All')
-  const [filterKit,     setFilterKit]     = useState('All')
-  const [filterStock,   setFilterStock]   = useState('All')
-  const [search,        setSearch]        = useState('')
+  const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top', 'Other']
+
+  // Get unique main categories and sort them by the requested priority sequence.
+  const mainCategories = useMemo(() => {
+    const cats = [...new Set(JERSEYS.map(j => j.mainCategory))]
+    const ordered = categoryPriority.filter(c => c === 'All' || cats.includes(c))
+    return ordered
+  }, [])
+
+  const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
+
+  const getSubCategories = (mainCat: string) => {
+    if (mainCat === 'All') return []
+    const subCats = JERSEYS
+      .filter(j => j.mainCategory === mainCat)
+      .map(j => j.subCategory)
+      .filter((v): v is string => !!v)
+    return [...new Set(subCats)].sort()
+  }
+
+  const [filterMainCategory, setFilterMainCategory] = useState('All')
+  const [filterSubCategory, setFilterSubCategory] = useState('All')
+  const [filterStock, setFilterStock] = useState('All')
+  const [search, setSearch] = useState('')
+
+  const subCategories = useMemo(() => getSubCategories(filterMainCategory), [filterMainCategory])
+
+  // Reset sub-category when main category changes
+  useEffect(() => {
+    setFilterSubCategory('All')
+  }, [filterMainCategory])
 
   const filtered = useMemo(() => JERSEYS.filter(j => {
-    if (filterCountry !== 'All' && j.country !== filterCountry) return false
-    if (filterType    !== 'All' && j.type    !== filterType)    return false
-    if (filterKit     !== 'All' && j.kit     !== filterKit)     return false
-    if (filterStock   === 'In Stock' && !j.inStock) return false
-    if (filterStock   === 'Out of Stock' && j.inStock) return false
+    if (filterMainCategory !== 'All' && j.mainCategory !== filterMainCategory) return false
+    if (filterMainCategory !== 'IPL' && filterSubCategory !== 'All' && j.subCategory !== filterSubCategory) return false
+    if (filterStock === 'In Stock' && !j.inStock) return false
+    if (filterStock === 'Out of Stock' && j.inStock) return false
     if (search && !j.name.toLowerCase().includes(search.toLowerCase())) return false
     return true
-  }), [filterCountry, filterType, filterKit, filterStock, search])
+  }), [filterMainCategory, filterSubCategory, filterStock, search])
 
   const pill = (active: boolean): React.CSSProperties => ({
     background: active ? '#111' : '#fff',
@@ -65,7 +90,7 @@ export default function Home() {
         {/* Header row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 16, marginBottom: 20 }}>
           <div>
-            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111', margin: 0 }} className="sm:text-2xl">World Cup 2026</h2>
+            <h2 style={{ fontSize: 20, fontWeight: 700, color: '#111', margin: 0 }} className="sm:text-2xl">Jersey Collection</h2>
             <p style={{ fontSize: 12, color: '#aaa', margin: '4px 0 0' }} className="sm:text-sm">
               {filtered.length} product{filtered.length !== 1 ? 's' : ''}
             </p>
@@ -91,11 +116,20 @@ export default function Home() {
 
         {/* Filter row */}
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid #f0f0f0' }}>
-          {(['All', ...COUNTRIES] as string[]).map(c => (
-            <button key={c} onClick={() => setFilterCountry(c)} style={pill(filterCountry === c)}>{c}</button>
+          {mainCategories.map(category => (
+            <button key={category} onClick={() => setFilterMainCategory(category)} style={pill(filterMainCategory === category)}>{displayCategoryLabel(category)}</button>
           ))}
-         
         </div>
+
+        {/* Sub-filter row */}
+        {filterMainCategory !== 'All' && filterMainCategory !== 'IPL' && subCategories.length > 0 && (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid #f0f0f0' }}>
+            <button onClick={() => setFilterSubCategory('All')} style={pill(filterSubCategory === 'All')}>All</button>
+            {subCategories.map(subCategory => (
+              <button key={subCategory} onClick={() => setFilterSubCategory(subCategory)} style={pill(filterSubCategory === subCategory)}>{subCategory}</button>
+            ))}
+          </div>
+        )}
 
         {/* Stock Filter row */}
         <div style={{ marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid #f0f0f0' }}>
