@@ -27,6 +27,727 @@ export type Jersey = {
 // The placeholder colors below match each jersey's actual colors
 export const JERSEYS: Jersey[] =[
   {
+    "id": "barcelona-2021-concept-kit-messi-fivesleeve-polo",
+    "name": "Barcelona 2021 Concept Kit Messi Fivesleeve Polo",
+    "shortName": "Unknown 2021 Third – Messi",
+    "country": "Barcelona",
+    "flag": "🏳",
+    "year": 2021,
+    "kit": "Third",
+    "player": "Messi",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-31T140254.755.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-31T140254.755.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-31T140257.185.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2021 Unknown Third Kit featuring Messi's name & number. ",
+    "tags": [
+      "Messi",
+      "Third",
+      "2021",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "real-madrid-us-pack-kit-ronaldo-fivesleeve-polo",
+    "name": "Real Madrid Us Pack Kit Ronaldo Fivesleeve Polo",
+    "shortName": "Unknown 2026 Home – Ronaldo",
+    "country": "Real",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "Ronaldo",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-31T135828.609.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-31T135828.609.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-31T135833.045.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit featuring Ronaldo's name & number. ",
+    "tags": [
+      "Ronaldo",
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "netherland-1992-away-kit-van-basten-fivesleeve-polo",
+    "name": "Netherland 1992 Away Kit Van Basten Fivesleeve Polo",
+    "shortName": "Netherland 1992 Away",
+    "country": "Netherland",
+    "flag": "🇳🇱",
+    "year": 1992,
+    "kit": "Away",
+    "player": "",
+    "type": "Standard",
+    "badge": "NED",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-31T134528.564.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-31T134528.564.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-31T134531.911.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "1992 Netherland Away Kit. ",
+    "tags": [
+      "Netherland",
+      "Away",
+      "1992",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "barcelona-x-olivia-rodrigo-25-26-special-edition-kit-pedri",
+    "name": "Barcelona X Olivia Rodrigo 25-26 Special Edition Kit Pedri",
+    "shortName": "Unknown 2026 Home – Rodrigo",
+    "country": "Barcelona",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "Rodrigo",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 419,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T191854.733.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T191854.733.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T191857.965.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit featuring Rodrigo's name & number. ",
+    "tags": [
+      "Rodrigo",
+      "Home",
+      "2026"
+    ]
+  },
+  {
+    "id": "barcelona-culers-kit-messi-fivesleeve-polo",
+    "name": "Barcelona Culers Kit Messi Fivesleeve Polo",
+    "shortName": "Unknown 2026 Home – Messi",
+    "country": "Barcelona",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "Messi",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": false,
+      "XL": false
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T185013.642.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T185013.642.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T185016.471.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit featuring Messi's name & number. ",
+    "tags": [
+      "Messi",
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "barcelona-anthracite-racing-fivesleeve-polo",
+    "name": "Barcelona Anthracite Racing Fivesleeve Polo",
+    "shortName": "Unknown 2026 Home",
+    "country": "Barcelona",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T184021.549.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T184021.549.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T184024.177.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "celtic-green-fivesleeve-polo",
+    "name": "Celtic Green Fivesleeve Polo",
+    "shortName": "Unknown 2026 Home",
+    "country": "Celtic",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T183344.707.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T183344.707.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T183347.373.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "celtic-black-fivesleeve-polo",
+    "name": "Celtic Black Fivesleeve Polo",
+    "shortName": "Unknown 2026 Home",
+    "country": "Celtic",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T182152.199.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T182152.199.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T182154.981.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "bayern-bavarian-giants-fivesleeve-polo",
+    "name": "Bayern Bavarian Giants Fivesleeve Polo",
+    "shortName": "Unknown 2026 Home",
+    "country": "Bayern",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T152945.443.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T152945.443.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T152948.283.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "barcelona-neymer-concept-kit-fivesleeve-embroidery",
+    "name": "Barcelona Neymer Concept Kit Fivesleeve Embroidery",
+    "shortName": "Unknown 2026 Third – Neymer",
+    "country": "Barcelona",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Third",
+    "player": "Neymer",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": false
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/f-2026-05-30T152118.016.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/f-2026-05-30T152118.016.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/C-2026-05-30T152122.196.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-30T152125.341.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Third Kit featuring Neymer's name & number. ",
+    "tags": [
+      "Neymer",
+      "Third",
+      "2026",
+      "Embroidery",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "england-1998-special-edition-kit-beckham-fivesleeve-polo",
+    "name": "England 1998 Special Edition Kit Beckham Fivesleeve Polo",
+    "shortName": "England 1998 Home",
+    "country": "England",
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 1998,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "ENG",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T200218.337.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T200218.337.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T200223.323.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "1998 England Home Kit. ",
+    "tags": [
+      "England",
+      "Home",
+      "1998",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "england-x-palace-2026-special-edition-kit-beckham-fivesleeve-polo",
+    "name": "England X Palace 2026 Special Edition Kit Beckham Fivesleeve Polo",
+    "shortName": "England 2026 Home",
+    "country": "England",
+    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "ENG",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T194311.010.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T194311.010.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T194313.787.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 England Home Kit. ",
+    "tags": [
+      "England",
+      "Home",
+      "2026",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "acmilan-2006-07-home-kit-kaka-fivesleeve-polo-embroidery-1",
+    "name": "Acmilan 2006-07 Home Kit Kaka Fivesleeve Polo Embroidery",
+    "shortName": "Unknown 2006 Home",
+    "country": "Acmilan",
+    "flag": "🏳",
+    "year": 2006,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 529,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": false,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": false
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T181812.625.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T181812.625.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/C-2026-05-29T181814.960.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T181817.634.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2006 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2006",
+      "Embroidery",
+      "Polo",
+      "Five Sleeve"
+    ]
+  },
+  {
+    "id": "sweden-2026-away-kit-gyokeres",
+    "name": "Sweden 2026 Away Kit Gyokeres",
+    "shortName": "Unknown 2026 Away",
+    "country": "Sweden",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Away",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 419,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T181005.384.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T181005.384.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T181008.094.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Away Kit. ",
+    "tags": [
+      "Away",
+      "2026"
+    ]
+  },
+  {
+    "id": "rcb-2026-grey-striper-polo",
+    "name": "Rcb 2026 Grey Striper Polo",
+    "shortName": "Rcb 2026 Home",
+    "country": "Rcb",
+    "flag": "🏏",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "RCB",
+    "originalPrice": 741,
+    "discountedPrice": 479,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T180244.848.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T180244.848.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T180248.047.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Rcb Home Kit. ",
+    "tags": [
+      "Rcb",
+      "Home",
+      "2026",
+      "Polo"
+    ]
+  },
+  {
+    "id": "brazil-2026-home-gk-kit-ederson",
+    "name": "Brazil 2026 Home Gk Kit Ederson",
+    "shortName": "Brazil 2026 Home",
+    "country": "Brazil",
+    "flag": "🇧🇷",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "BRA",
+    "originalPrice": 741,
+    "discountedPrice": 419,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T170611.910.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T170611.910.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T170614.803.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Brazil Home Kit. ",
+    "tags": [
+      "Brazil",
+      "Home",
+      "2026",
+      "Goalkeeper"
+    ]
+  },
+  {
+    "id": "portugal-25-26-white-kit-ronaldo-polo-embroidery",
+    "name": "Portugal 25-26 White Kit Ronaldo Polo Embroidery",
+    "shortName": "Portugal 2026 Home – Ronaldo",
+    "country": "Portugal",
+    "flag": "🇵🇹",
+    "year": 2026,
+    "kit": "Home",
+    "player": "Ronaldo",
+    "type": "Standard",
+    "badge": "POR",
+    "originalPrice": 741,
+    "discountedPrice": 499,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": false,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T151456.593.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-05-29T151456.593.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/C-2026-05-29T151458.993.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-05-29T151501.906.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Portugal Home Kit featuring Ronaldo's name & number. ",
+    "tags": [
+      "Portugal",
+      "Ronaldo",
+      "Home",
+      "2026",
+      "Embroidery",
+      "Polo"
+    ]
+  },
+  {
     "id": "uruguay-2026-away-kit-valverde-embroidery-premium",
     "name": "Uruguay 2026 Away Kit Valverde Embroidery Premium",
     "shortName": "Uruguay 2026 Away – Valverde",
@@ -51,9 +772,9 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": true,
-      "XXXL": true
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -98,11 +819,11 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": false,
       "XXL": true,
-      "XXXL": true,
+      "XXXL": false,
       "XXXXL": false
     },
     "inStock": true,
@@ -147,7 +868,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true,
       "XXL": true
     },
@@ -186,11 +907,11 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
-      "L": true,
-      "XL": true
+      "M": false,
+      "L": false,
+      "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-24T195147.272.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -226,12 +947,12 @@ export const JERSEYS: Jersey[] =[
       "XL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
-      "L": true,
-      "XL": true
+      "S": false,
+      "M": false,
+      "L": false,
+      "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-24T194446.708.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -267,12 +988,12 @@ export const JERSEYS: Jersey[] =[
       "XL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
-      "L": true,
+      "S": false,
+      "M": false,
+      "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/f-2026-05-24T193027.910.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -311,12 +1032,12 @@ export const JERSEYS: Jersey[] =[
       "3XL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true,
       "XXL": true,
-      "3XL": true
+      "3XL": false
     },
     "inStock": true,
     "images": [
@@ -361,11 +1082,11 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
-      "L": true,
-      "XL": true,
-      "XXL": true,
-      "XXXL": true
+      "M": false,
+      "L": false,
+      "XL": false,
+      "XXL": false,
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -458,7 +1179,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": true,
       "XXXL": false
@@ -504,13 +1225,13 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
-      "L": true,
-      "XL": true,
-      "XXL": true
+      "S": false,
+      "M": false,
+      "L": false,
+      "XL": false,
+      "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-20T203446.373.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -597,8 +1318,8 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": false
     },
     "inStock": true,
@@ -809,7 +1530,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false
     },
     "inStock": true,
@@ -936,13 +1657,13 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-19T194947.402.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -981,12 +1702,12 @@ export const JERSEYS: Jersey[] =[
       "XL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
+      "S": false,
+      "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-19T194413.620.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -1159,13 +1880,13 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-19T185601.974.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -1206,7 +1927,7 @@ export const JERSEYS: Jersey[] =[
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -1248,7 +1969,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false
     },
@@ -1292,7 +2013,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false
     },
@@ -1376,7 +2097,7 @@ export const JERSEYS: Jersey[] =[
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": true,
@@ -1656,7 +2377,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false,
       "XXXL": false
     },
@@ -1699,7 +2420,7 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": true,
@@ -1786,11 +2507,11 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-13T201444.004.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -1828,7 +2549,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true
     },
     "inStock": true,
@@ -1916,7 +2637,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": true
     },
@@ -2099,12 +2820,12 @@ export const JERSEYS: Jersey[] =[
       "XXXXL"
     ],
     "sizeStock": {
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": true,
-      "XXXXL": true
+      "XXXXL": false
     },
     "inStock": true,
     "images": [
@@ -2151,9 +2872,9 @@ export const JERSEYS: Jersey[] =[
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": true,
+      "XXL": false,
       "XXXL": true,
-      "XXXXL": true
+      "XXXXL": false
     },
     "inStock": true,
     "images": [
@@ -2246,14 +2967,14 @@ export const JERSEYS: Jersey[] =[
       "XXXXL"
     ],
     "sizeStock": {
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
-      "XXXL": true,
-      "XXXXL": true
+      "XXXL": false,
+      "XXXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-09T194009.400.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -2569,12 +3290,12 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-05T210109.835_6087cdd8-d121-4d40-a45a-954a324cfe24.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -2829,10 +3550,10 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -2914,10 +3635,10 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -2962,7 +3683,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -3052,7 +3773,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -3224,9 +3945,9 @@ export const JERSEYS: Jersey[] =[
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/f-2026-05-04T182904.682.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3460,7 +4181,7 @@ export const JERSEYS: Jersey[] =[
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true,
+      "XXL": false,
       "XXXL": false
     },
     "inStock": true,
@@ -3556,8 +4277,8 @@ export const JERSEYS: Jersey[] =[
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": true,
-      "3XL": true
+      "XXL": false,
+      "3XL": false
     },
     "inStock": true,
     "images": [
@@ -3603,7 +4324,7 @@ export const JERSEYS: Jersey[] =[
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -3688,7 +4409,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -3734,7 +4455,7 @@ export const JERSEYS: Jersey[] =[
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -3773,9 +4494,9 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": true,
-      "XL": true
+      "XL": false
     },
     "inStock": true,
     "images": [
@@ -3816,7 +4537,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": false,
-      "L": true,
+      "L": false,
       "XL": true
     },
     "inStock": true,
@@ -3856,12 +4577,12 @@ export const JERSEYS: Jersey[] =[
       "XL"
     ],
     "sizeStock": {
-      "S": false,
-      "M": false,
-      "L": false,
-      "XL": false
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true
     },
-    "inStock": false,
+    "inStock": true,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-29T204547.037.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3900,13 +4621,13 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
+      "S": false,
+      "M": false,
       "L": false,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-29T203250.995.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3989,10 +4710,10 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-29T201320.457.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4080,7 +4801,7 @@ export const JERSEYS: Jersey[] =[
       "L": true,
       "XL": true,
       "XXL": true,
-      "XXXL": true
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -4098,55 +4819,6 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
-  },
-  {
-    "id": "spain-2026-away-kit-pedri-embroidery-premium",
-    "name": "Spain 2026 Away Kit Pedri Embroidery Premium",
-    "shortName": "Spain 2026 Away – Pedri",
-    "country": "Spain",
-    "flag": "🇪🇸",
-    "year": 2026,
-    "kit": "Away",
-    "player": "Pedri",
-    "type": "Premium",
-    "badge": "ESP",
-    "originalPrice": 741,
-    "discountedPrice": 539,
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL",
-      "XXXL"
-    ],
-    "sizeStock": {
-      "S": true,
-      "M": true,
-      "L": true,
-      "XL": true,
-      "XXL": true,
-      "XXXL": false
-    },
-    "inStock": true,
-    "images": [
-      "http://www.thayyilsports.in/cdn/shop/files/f-2026-04-27T162318.743.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
-      "https://www.thayyilsports.in/cdn/shop/files/f-2026-04-27T162318.743.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/C-2026-04-27T162324.426.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/B-2026-04-27T162331.473.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/C-2026-04-27T162328.453.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
-    ],
-    "description": "2026 Spain Away Kit featuring Pedri's name & number. ",
-    "tags": [
-      "Spain",
-      "Pedri",
-      "Away",
-      "2026",
-      "Premium",
-      "Embroidery"
     ]
   },
   {
@@ -4215,11 +4887,11 @@ export const JERSEYS: Jersey[] =[
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": false,
       "XL": false,
-      "XXL": true,
+      "XXL": false,
       "XXXL": false
     },
     "inStock": true,
@@ -4306,7 +4978,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": false,
-      "L": true,
+      "L": false,
       "XL": true
     },
     "inStock": true,
@@ -4350,10 +5022,10 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
-      "L": true,
-      "XL": true,
+      "S": false,
+      "M": false,
+      "L": false,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -4440,11 +5112,11 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "M": false,
       "L": false,
-      "XL": true,
-      "XXL": true,
+      "XL": false,
+      "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-23T195610.082.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4706,8 +5378,8 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": true,
-      "L": true,
-      "XL": true
+      "L": false,
+      "XL": false
     },
     "inStock": true,
     "images": [
@@ -4746,7 +5418,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": true,
       "XL": true
     },
@@ -4787,7 +5459,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": true,
       "XL": true
     },
@@ -4870,11 +5542,11 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
-      "XL": true
+      "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/f-2026-04-20T183725.598.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4956,7 +5628,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true,
       "XXL": false
     },
@@ -5298,7 +5970,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -5384,7 +6056,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -5470,7 +6142,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -5787,8 +6459,8 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": true,
-      "L": true,
-      "XL": true,
+      "L": false,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -5878,8 +6550,8 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": true,
       "XXL": true,
       "XXXL": true
@@ -5924,7 +6596,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false
     },
     "inStock": true,
@@ -6149,7 +6821,7 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": true,
@@ -6330,7 +7002,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -6415,13 +7087,13 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-12T202844.225.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -6460,7 +7132,7 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
@@ -6691,10 +7363,10 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-08T202931.907.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -6950,8 +7622,8 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
-      "XL": true,
+      "L": false,
+      "XL": false,
       "XXL": false,
       "XXXL": true
     },
@@ -6997,10 +7669,10 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-04T184705.594.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -7038,9 +7710,9 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -7312,7 +7984,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -7535,11 +8207,11 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -7761,7 +8433,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": true,
@@ -7943,8 +8615,8 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": true,
       "XXL": true
     },
@@ -8080,7 +8752,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
@@ -8631,7 +9303,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -8939,12 +9611,12 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": false,
-      "L": true,
-      "XL": true,
+      "L": false,
+      "XL": false,
       "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-03-05T180201.854.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -8988,7 +9660,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": true,
       "XXXL": false
@@ -9035,13 +9707,13 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
-      "XXL": true,
+      "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-03-03T182740.438.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -9133,7 +9805,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false,
       "XXXL": false
     },
@@ -9175,12 +9847,12 @@ export const JERSEYS: Jersey[] =[
       "XL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-02-28T204140.486.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -9222,13 +9894,13 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-02-28T203835.879.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -9571,7 +10243,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": false,
       "L": true,
-      "XL": true
+      "XL": false
     },
     "inStock": true,
     "images": [
@@ -9798,11 +10470,11 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": false,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-02-23T181549.415.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -9846,7 +10518,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": true,
       "XXXL": false
     },
@@ -9985,10 +10657,10 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "L": false,
       "M": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-02-20T180831.003.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -10207,8 +10879,8 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
-      "XXL": true,
+      "XL": false,
+      "XXL": false,
       "XXXL": false
     },
     "inStock": true,
@@ -10298,10 +10970,10 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": false,
-      "L": true,
+      "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-02-17T171513.348.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -10341,7 +11013,7 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
@@ -10437,10 +11109,10 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-02-10T203720.624.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -10666,7 +11338,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
@@ -10935,8 +11607,8 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
-      "XL": true,
+      "L": false,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -10981,7 +11653,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
@@ -11121,7 +11793,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
@@ -11308,11 +11980,11 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-01-27T211313.544.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -11354,8 +12026,8 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
-      "XL": true,
+      "L": false,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -11400,7 +12072,7 @@ export const JERSEYS: Jersey[] =[
       "S": true,
       "M": true,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -11618,47 +12290,6 @@ export const JERSEYS: Jersey[] =[
     ]
   },
   {
-    "id": "shorts-pp-black-2",
-    "name": "Shorts Pp Black",
-    "shortName": "Unknown 2026 Home",
-    "country": "Shorts",
-    "flag": "🏳",
-    "year": 2026,
-    "kit": "Home",
-    "player": "",
-    "type": "Standard",
-    "badge": "UNK",
-    "originalPrice": 741,
-    "discountedPrice": 241,
-    "sizes": [
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "sizeStock": {
-      "M": true,
-      "L": true,
-      "XL": true,
-      "XXL": false
-    },
-    "inStock": true,
-    "images": [
-      "http://www.thayyilsports.in/cdn/shop/files/B-2025-07-30T171736.328_566639ae-01c1-4e77-b100-d215a37d370e.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
-      "https://www.thayyilsports.in/cdn/shop/files/B-2025-07-30T171736.328_566639ae-01c1-4e77-b100-d215a37d370e.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/C-100_7ba19a1b-5a93-4427-9316-74140b57e732.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/F-2025-07-30T171728.603_e8f0b072-a713-46ce-a5a0-1b077e12c571.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/B-2025-07-30T171754.346_00fcfe48-a68c-4fa8-800a-75fc52be1eef.webp",
-      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
-    ],
-    "description": "2026 Unknown Home Kit. ",
-    "tags": [
-      "Home",
-      "2026"
-    ]
-  },
-  {
     "id": "sao-paulo-2001-home-kit-kaka-fivesleeve",
     "name": "Sao Paulo 2001 Home Kit Kaka Fivesleeve",
     "shortName": "Unknown 2001 Home",
@@ -11716,10 +12347,10 @@ export const JERSEYS: Jersey[] =[
       "L"
     ],
     "sizeStock": {
-      "XXL": true,
+      "XXL": false,
       "L": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-11-28T163444.730_c96de51b-b4a6-430c-b39b-05a115a1e540.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -12062,7 +12693,7 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "XL": false,
       "L": true,
-      "M": false
+      "M": true
     },
     "inStock": true,
     "images": [
@@ -12548,7 +13179,7 @@ export const JERSEYS: Jersey[] =[
       "S"
     ],
     "sizeStock": {
-      "XL": true,
+      "XL": false,
       "M": false,
       "S": true
     },
@@ -12635,10 +13266,10 @@ export const JERSEYS: Jersey[] =[
     "sizeStock": {
       "S": false,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
-      "XXL": true,
-      "XXXL": true
+      "XXL": false,
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -12681,7 +13312,7 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": true,
@@ -13137,9 +13768,9 @@ export const JERSEYS: Jersey[] =[
       "S"
     ],
     "sizeStock": {
-      "S": true
+      "S": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-01-27T181317.173_9491175d-945e-4e2e-97d6-d20e98194557.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -13364,9 +13995,9 @@ export const JERSEYS: Jersey[] =[
       "S"
     ],
     "sizeStock": {
-      "S": true
+      "S": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-08-22T183021.217_c889fca0-6270-4c48-bf6b-681d75b1e2ab.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -14513,7 +15144,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": true,
       "XL": false,
       "XXL": false
@@ -15005,14 +15636,14 @@ export const JERSEYS: Jersey[] =[
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-01-06T184406.760_6529c880-bad0-4b2c-9fa4-2516655b4dcc.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -15174,7 +15805,7 @@ export const JERSEYS: Jersey[] =[
       "S": false,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false,
       "XXXL": false
     },
@@ -15526,7 +16157,7 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "XL": true,
-      "L": true
+      "L": false
     },
     "inStock": true,
     "images": [
@@ -15638,9 +16269,9 @@ export const JERSEYS: Jersey[] =[
       "S"
     ],
     "sizeStock": {
-      "S": true
+      "S": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-10-29T183603.946_dd702a5f-ef66-4b36-90dc-b5e8cc9a6b46.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -17048,9 +17679,9 @@ export const JERSEYS: Jersey[] =[
     ],
     "sizeStock": {
       "M": false,
-      "S": true
+      "S": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-12-16T163606.194_24aeeddb-17ec-4938-a4da-6bbc010091a4.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -17128,11 +17759,11 @@ export const JERSEYS: Jersey[] =[
       "M"
     ],
     "sizeStock": {
-      "XL": true,
+      "XL": false,
       "L": false,
       "M": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-08-27T192203.914_e3ef6952-045a-4dad-b40e-451225106d74.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -17321,7 +17952,7 @@ export const JERSEYS: Jersey[] =[
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": false,
       "XL": false,
@@ -17534,9 +18165,9 @@ export const JERSEYS: Jersey[] =[
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-11-02T190159.809_cdd17e4b-d928-45ab-87a9-d207f1794c37.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -17695,7 +18326,7 @@ export const JERSEYS: Jersey[] =[
       "XXL": false,
       "XL": true,
       "L": false,
-      "M": true,
+      "M": false,
       "S": true
     },
     "inStock": true,
@@ -18076,5 +18707,4 @@ export const JERSEYS: Jersey[] =[
     ]
   }
 ]
-
 ;

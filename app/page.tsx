@@ -28,22 +28,127 @@ export default function Home() {
 
   const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top', 'Other']
 
-  // Get unique main categories and sort them by the requested priority sequence.
-  const mainCategories = useMemo(() => {
-    const cats = [...new Set(JERSEYS.map(j => j.mainCategory))]
-    const ordered = categoryPriority.filter(c => c === 'All' || cats.includes(c))
-    return ordered
-  }, [])
-
   const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
 
+  const worldCupTeamOrder = [
+    'Brazil', 'Argentina', 'France', 'Germany', 'Spain', 'England', 'Italy', 'Portugal', 'Mexico', 'Croatia', 'Japan', 'Jamaica', 'Sao Paulo', 'Morocco', 'Norway'
+  ]
+
+  const clubPriority = [
+    'Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'AC Milan', 'Arsanel', 'Liverpool', 'Real', 'PSG', 'Juventus', 'Intermilan', 'InterMiami', 'Monaco'
+  ]
+
+  const jerseyText = (j: any) => [j.country, j.name, ...(j.tags ?? [])].filter(Boolean).join(' ').toLowerCase()
+
+  const isIPLJersey = (j: any) => {
+    const text = jerseyText(j)
+    return /\b(rcb|chennai|mumbai|kolkata|kolkatta|rajasthan|india)\b/i.test(text)
+  }
+
+  const getWorldCupTeam = (j: any) => {
+    const text = jerseyText(j)
+    if (/\bbrazil\b/i.test(text)) return 'Brazil'
+    if (/\bargentina\b/i.test(text)) return 'Argentina'
+    if (/\bfrance\b/i.test(text)) return 'France'
+    if (/\bgermany\b/i.test(text)) return 'Germany'
+    if (/\bspain\b/i.test(text)) return 'Spain'
+    if (/\bengland\b/i.test(text)) return 'England'
+    if (/\bitaly\b/i.test(text)) return 'Italy'
+    if (/\bportugal\b/i.test(text)) return 'Portugal'
+    if (/\bmexico\b/i.test(text)) return 'Mexico'
+    if (/\bcroatia\b/i.test(text)) return 'Croatia'
+    if (/\bjapan\b/i.test(text)) return 'Japan'
+    if (/\bjamaica\b/i.test(text)) return 'Jamaica'
+    if (/\bmorocco\b/i.test(text)) return 'Morocco'
+    if (/\bnorway\b/i.test(text)) return 'Norway'
+    if (/\bsao\s*paulo\b|\bsao\b/i.test(text)) return 'Sao Paulo'
+    return ''
+  }
+
+  const isWorldCupJersey = (j: any) => {
+    if (isIPLJersey(j)) return false
+    return Boolean(getWorldCupTeam(j))
+  }
+
+  const getClubLabel = (j: any) => {
+    const text = jerseyText(j)
+    if (/\bintermiami\b/i.test(text)) return 'InterMiami'
+    if (/\balnassr\b/i.test(text)) return 'Alnassr'
+    if (/\barsanel\b|\barsenal\b/i.test(text)) return 'Arsanel'
+    if (/\bac\s*milan\b|\bacmilan\b/i.test(text)) return 'AC Milan'
+    if (/\bintermilan\b/i.test(text)) return 'Intermilan'
+    if (/\bbarcelona\b/i.test(text)) return 'Barcelona'
+    if (/\bchelsea\b/i.test(text)) return 'Chelsea'
+    if (/\bliverpool\b/i.test(text)) return 'Liverpool'
+    if (/\bjuventus\b/i.test(text)) return 'Juventus'
+    if (/\bpsg\b/i.test(text) || /paris\s*saint\s*germain/i.test(text)) return 'PSG'
+    if (/\bmonaco\b/i.test(text)) return 'Monaco'
+    if (/\batletico\b|\bateltico\b/i.test(text)) return 'Atletico'
+    if (/\bpepsi\b/i.test(text)) return 'Pepsi'
+    if (/\b(united)\b/i.test(text)) return 'United'
+    if (/\broma\b/i.test(text)) return 'Roma'
+    if (/\bbayern\b/i.test(text)) return 'Bayern'
+    if (/\bajax\b/i.test(text)) return 'Ajax'
+    if (/\bparma\b/i.test(text)) return 'Parma'
+    if (/\bnewcastle\b/i.test(text)) return 'Newcastle'
+    if (/\bceltic\b/i.test(text)) return 'Celtic'
+    if (/\bboca\b/i.test(text)) return 'Boca'
+    if (/\bsporting\b/i.test(text)) return 'Sporting'
+    if (/\bfiorentina\b/i.test(text)) return 'Fiorentina'
+    if (/\bvalencia\b/i.test(text)) return 'Valencia'
+    if (/\blazio\b/i.test(text)) return 'Lazio'
+    return ''
+  }
+
+  const isClubJersey = (j: any) => Boolean(getClubLabel(j))
+
+  const isFullSleeveJersey = (j: any) => /full\s*sl?eeve|fullsleeve/i.test(jerseyText(j))
+  const isJacketJersey = (j: any) => /\bjacket\b/i.test(jerseyText(j))
+  const isF1Jersey = (j: any) => /\bf1\b/i.test(jerseyText(j)) || /formula\s*1/i.test(jerseyText(j))
+  const isShortsJersey = (j: any) => /\bshorts\b/i.test(jerseyText(j))
+  const isCropTopJersey = (j: any) => /\bcrop\b/i.test(jerseyText(j))
+
+  const getMainCategory = (j: any) => {
+    if (isWorldCupJersey(j)) return 'World Cup'
+    if (isClubJersey(j)) return 'Clubs'
+    if (isFullSleeveJersey(j)) return 'FullSleeve'
+    if (isJacketJersey(j)) return 'Jackets'
+    if (isF1Jersey(j)) return 'F1'
+    if (isShortsJersey(j)) return 'Shorts'
+    if (isIPLJersey(j)) return 'IPL'
+    if (isCropTopJersey(j)) return 'Crop Top'
+    return 'Other'
+  }
+
+  const getSubCategory = (j: any, mainCat: string) => {
+    if (mainCat === 'World Cup') return getWorldCupTeam(j)
+    if (mainCat === 'Clubs') return getClubLabel(j)
+    return ''
+  }
+
+  const mainCategories = useMemo(() => categoryPriority, [])
+
   const getSubCategories = (mainCat: string) => {
-    if (mainCat === 'All') return []
-    const subCats = JERSEYS
-      .filter(j => j.mainCategory === mainCat)
-      .map(j => j.subCategory)
-      .filter((v): v is string => !!v)
-    return [...new Set(subCats)].sort()
+    if (mainCat === 'All' || mainCat === 'IPL') return []
+
+    if (mainCat === 'World Cup') {
+      return worldCupTeamOrder.filter(team =>
+        JERSEYS.some(j => getMainCategory(j) === 'World Cup' && getSubCategory(j, 'World Cup') === team)
+      )
+    }
+
+    if (mainCat === 'Clubs') {
+      const clubSet = new Set(
+        JERSEYS.filter(j => getMainCategory(j) === 'Clubs')
+          .map(j => getSubCategory(j, 'Clubs'))
+          .filter(Boolean) as string[]
+      )
+      const ordered = clubPriority.filter(club => clubSet.has(club))
+      const remaining = [...clubSet].filter(club => !clubPriority.includes(club)).sort()
+      return [...ordered, ...remaining]
+    }
+
+    return []
   }
 
   const [filterMainCategory, setFilterMainCategory] = useState('All')
@@ -58,14 +163,50 @@ export default function Home() {
     setFilterSubCategory('All')
   }, [filterMainCategory])
 
-  const filtered = useMemo(() => JERSEYS.filter(j => {
-    if (filterMainCategory !== 'All' && j.mainCategory !== filterMainCategory) return false
-    if (filterMainCategory !== 'IPL' && filterSubCategory !== 'All' && j.subCategory !== filterSubCategory) return false
-    if (filterStock === 'In Stock' && !j.inStock) return false
-    if (filterStock === 'Out of Stock' && j.inStock) return false
-    if (search && !j.name.toLowerCase().includes(search.toLowerCase())) return false
-    return true
-  }), [filterMainCategory, filterSubCategory, filterStock, search])
+  const highPriorityJerseyNames = [
+    'Spain 2026 Away Kit Pedri Embroidery Premium',
+    'Portugal 2026 Black Kit Ronaldo Fullsleeve Polo Embroidery Premium',
+    'Argentina 2026 Home Kit Messi Embroidery With Knitted Rib Premium',
+    'Argentina 2026 Away Kit Messi Embroidery Premium',
+    'Argentina 2026 Away Kit Messi',
+    'Portugal 2026 Away Kit Ronaldo Embroidery Premium',
+    'Brazil 2026 Away Kit Neymer Embroidery Premium',
+    'Portugal 2026 Away Kit Ronaldo',
+    'Brazil 2026 Home Kit Neymer Embroidery Premium',
+    'Germany 2026 Home Kit Fivesleeve V Knitted Polo Embroidery Premium',
+    'Portugal 2026 Home Kit Ronaldo Embroidery Premium',
+    'Argentina 2026 Home Kit Messi Embroidery Premium',
+    'Spain 2026 Away Kit Pedri',
+    'Brazil 2026 Home Kit Neymer',
+    'Argentina 2026 Home Kit Messi',
+    'France 2026 Home Kit Mbappe Polo',
+  ]
+
+  const filtered = useMemo(() => {
+    const items = JERSEYS.filter(j => {
+      const mainCategory = getMainCategory(j)
+      const subCategory = getSubCategory(j, mainCategory)
+      if (filterMainCategory !== 'All' && mainCategory !== filterMainCategory) return false
+      if (filterMainCategory !== 'IPL' && filterSubCategory !== 'All' && subCategory !== filterSubCategory) return false
+      if (filterStock === 'In Stock' && !j.inStock) return false
+      if (filterStock === 'Out of Stock' && j.inStock) return false
+      if (search && !j.name.toLowerCase().includes(search.toLowerCase())) return false
+      return true
+    })
+
+    const shouldApplyPriority = filterMainCategory === 'All' || (filterMainCategory === 'World Cup' && filterSubCategory === 'All')
+    if (!shouldApplyPriority) return items
+
+    return items
+      .map((j, index) => ({ jersey: j, index, priority: highPriorityJerseyNames.indexOf(j.name) }))
+      .sort((a, b) => {
+        const aPriority = a.priority === -1 ? Number.MAX_SAFE_INTEGER : a.priority
+        const bPriority = b.priority === -1 ? Number.MAX_SAFE_INTEGER : b.priority
+        if (aPriority !== bPriority) return aPriority - bPriority
+        return a.index - b.index
+      })
+      .map(item => item.jersey)
+  }, [filterMainCategory, filterSubCategory, filterStock, search])
 
   const pill = (active: boolean): React.CSSProperties => ({
     background: active ? '#111' : '#fff',

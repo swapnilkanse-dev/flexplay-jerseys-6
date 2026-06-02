@@ -8,8 +8,6 @@ interface Props {
   onClose: () => void
 }
 
-type LocationStatus = 'idle' | 'loading' | 'done' | 'error'
-
 const WaIcon = ({ size = 18 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
@@ -20,11 +18,11 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
   const [size, setSize] = useState(initialSize)
   const [qty, setQty] = useState(1)
   const [name, setName] = useState('')
+  const [address, setAddress] = useState('')
+  const [city, setCity] = useState('')
+  const [pinCode, setPinCode] = useState('')
+  const [stateName, setStateName] = useState('')
   const [phone, setPhone] = useState('')
-  const [manualAddr, setManualAddr] = useState('')
-  const [gpsAddr, setGpsAddr] = useState('')
-  const [useGps, setUseGps] = useState(false)
-  const [locStatus, setLocStatus] = useState<LocationStatus>('idle')
   const [errors, setErrors] = useState<Record<string, string>>({})
 
   useEffect(() => {
@@ -32,36 +30,19 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
     return () => { document.body.style.overflow = '' }
   }, [])
 
-  async function fetchGps() {
-    if (!navigator.geolocation) { setLocStatus('error'); return }
-    setLocStatus('loading')
-    navigator.geolocation.getCurrentPosition(
-      async pos => {
-        const { latitude: lat, longitude: lng } = pos.coords
-        try {
-          const r = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`)
-          const d = await r.json()
-          setGpsAddr(d.display_name || `${lat.toFixed(5)}, ${lng.toFixed(5)}`)
-        } catch {
-          setGpsAddr(`${lat.toFixed(5)}, ${lng.toFixed(5)}`)
-        }
-        setUseGps(true)
-        setLocStatus('done')
-      },
-      () => setLocStatus('error'),
-      { timeout: 10000 }
-    )
-  }
-
   function validate() {
     const e: Record<string, string> = {}
     if (!name.trim()) e.name = 'Required'
+    if (!address.trim()) e.address = 'Required'
+    if (!city.trim()) e.city = 'Required'
+    if (!pinCode.trim()) e.pinCode = 'Required'
+    else if (!/^[0-9]{6}$/.test(pinCode)) e.pinCode = 'Enter a valid 6-digit PIN'
+    if (!stateName.trim()) e.state = 'Required'
     if (!phone.trim() || phone.replace(/\D/g, '').length < 10) e.phone = 'Enter a valid 10-digit number'
     if (!size) e.size = 'Please select a size'
     const isInStock = jersey.sizeStock?.[size] ?? true
     if (!isInStock) e.size = 'This size is out of stock'
-    const loc = useGps ? gpsAddr : manualAddr
-    if (!loc.trim()) e.location = 'Please enter or detect your delivery location'
+
     setErrors(e)
     return Object.keys(e).length === 0
   }
@@ -69,26 +50,25 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
   function sendOrder() {
     if (!validate()) return
     const wa = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919156165683'
-    const loc = useGps ? gpsAddr : manualAddr
     const total = jersey.discountedPrice * qty
+    const fullAddress = `${address}${city ? `, ${city}` : ''}`
+    const priceLine = qty > 1
+      ? `Price : ₹${jersey.discountedPrice} × ${qty} = ₹${total}`
+      : `Price : ₹${jersey.discountedPrice}`
     const msg = [
       `New Order – FlexPlay Jerseys`,
       ``,
-      `• Product`,
-      `${jersey.name}`,
-      `Kit: ${jersey.kit} | Country: ${jersey.country} ${jersey.flag}`,
-      `Player: ${jersey.player}`,
-      `Size: ${size} | Qty: ${qty}`,
-      `Price: ₹${jersey.discountedPrice} × ${qty} = ₹${total}`,
+      `*• Product* ${jersey.name}`,
+      `Size ${size} | Qty: ${qty}`,
+      priceLine,
+      `Free Delivery`,
       ``,
-      `• Customer`,
-      `Name: ${name}`,
-      `Phone: ${phone}`,
-      ``,
-      `• Delivery Address`,
-      loc,
-      ``,
-      `Ordered via FlexPlay Jerseys`,
+      `*• Customer*`,
+      `NAME : ${name}`,
+      `ADDRESS: ${fullAddress}`,
+      `PIN: ${pinCode}`,
+      `STATE: ${stateName}`,
+      `PHONE NUMBER: ${phone}`,
       ``,
       `Please confirm availability of above product`,
     ].join('\n')
@@ -103,6 +83,28 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
     background: 'white',
     color: 'var(--text)',
   })
+
+  const isSendDisabled =
+    !name.trim() ||
+    !address.trim() ||
+    !city.trim() ||
+    !pinCode.trim() ||
+    !stateName.trim() ||
+    phone.replace(/\D/g, '').length !== 10 ||
+    !size ||
+    !/^[0-9]{6}$/.test(pinCode)
+
+  const missingFieldWarning = isSendDisabled ?
+    !name.trim() ? 'Please enter your name.' :
+    !address.trim() ? 'Please enter your delivery address.' :
+    !city.trim() ? 'Please enter your city.' :
+    !pinCode.trim() ? 'Please enter your PIN code.' :
+    !/^[0-9]{6}$/.test(pinCode) ? 'Please enter a valid 6-digit PIN code.' :
+    !stateName.trim() ? 'Please enter your state.' :
+    !phone.trim() ? 'Please enter your WhatsApp number.' :
+    phone.replace(/\D/g, '').length !== 10 ? 'Please enter a valid 10-digit WhatsApp number.' :
+    !size ? 'Please select a size.' :
+    '' : ''
 
   return (
     <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center modal-backdrop"
@@ -191,15 +193,61 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
               className={inputCls(errors.name)} style={inputStyle(errors.name)} />
           </div>
 
-          {/* Phone */}
+          <div>
+            <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.address ? 'var(--sale-red)' : 'var(--text)' }}>
+              Address {errors.address && <span className="font-normal text-xs">— {errors.address}</span>}
+            </label>
+            <textarea rows={3} placeholder="Enter full delivery address" value={address}
+              onChange={e => { setAddress(e.target.value); setErrors(p => ({ ...p, address: '' })) }}
+              className={inputCls(errors.address)}
+              style={inputStyle(errors.address)} />
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.city ? 'var(--sale-red)' : 'var(--text)' }}>
+              City {errors.city && <span className="font-normal text-xs">— {errors.city}</span>}
+            </label>
+            <input type="text" placeholder="e.g. Coimbatore" value={city}
+              onChange={e => { setCity(e.target.value); setErrors(p => ({ ...p, city: '' })) }}
+              className={inputCls(errors.city)} style={inputStyle(errors.city)} />
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.pinCode ? 'var(--sale-red)' : 'var(--text)' }}>
+              PIN Code {errors.pinCode && <span className="font-normal text-xs">— {errors.pinCode}</span>}
+            </label>
+            <input type="tel" placeholder="e.g. 641005" value={pinCode}
+              onChange={e => {
+                const val = e.target.value.replace(/\D/g, '')
+                if (val.length <= 6) {
+                  setPinCode(val)
+                  setErrors(p => ({ ...p, pinCode: '' }))
+                }
+              }}
+              maxLength={6}
+              className={inputCls(errors.pinCode)} style={inputStyle(errors.pinCode)} />
+            <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
+              {pinCode.length === 0 ? '6-digit PIN code' : `${pinCode.length}/6 digits`}
+            </p>
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.state ? 'var(--sale-red)' : 'var(--text)' }}>
+              State {errors.state && <span className="font-normal text-xs">— {errors.state}</span>}
+            </label>
+            <input type="text" placeholder="e.g. Tamil Nadu" value={stateName}
+              onChange={e => { setStateName(e.target.value); setErrors(p => ({ ...p, state: '' })) }}
+              className={inputCls(errors.state)} style={inputStyle(errors.state)} />
+          </div>
+
           <div>
             <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.phone ? 'var(--sale-red)' : 'var(--text)' }}>
               WhatsApp Number {errors.phone && <span className="font-normal text-xs">— {errors.phone}</span>}
             </label>
             <div className="relative">
-              <input 
-                type="tel" 
-                placeholder="10-digit mobile number" 
+              <input
+                type="tel"
+                placeholder="10-digit mobile number"
                 value={phone}
                 onChange={e => {
                   const val = e.target.value.replace(/\D/g, '')
@@ -209,8 +257,8 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
                   }
                 }}
                 maxLength={10}
-                className={inputCls(errors.phone)} 
-                style={inputStyle(errors.phone)} 
+                className={inputCls(errors.phone)}
+                style={inputStyle(errors.phone)}
               />
               {phone.length > 0 && phone.length < 10 && (
                 <span className="absolute right-3 top-2.5 text-xs" style={{ color: '#f59e0b' }}>
@@ -228,59 +276,23 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
             </p>
           </div>
 
-          {/* Location */}
-          <div>
-            <label className="block text-sm font-semibold mb-1.5" style={{ color: errors.location ? 'var(--sale-red)' : 'var(--text)' }}>
-              Delivery Location {errors.location && <span className="font-normal text-xs">— {errors.location}</span>}
-            </label>
-
-            {/* GPS */}
-            <button onClick={fetchGps} disabled={locStatus === 'loading'}
-              className="w-full py-2.5 rounded border text-sm font-medium flex items-center justify-center gap-2 mb-3 transition-all hover:bg-gray-50 disabled:opacity-60"
-              style={{
-                borderColor: locStatus === 'done' ? '#22c55e' : 'var(--border-dark)',
-                color: locStatus === 'done' ? '#16a34a' : 'var(--text)',
-                background: locStatus === 'done' ? '#f0fdf4' : 'white',
-              }}>
-              {locStatus === 'loading'
-                ? <><span className="spinner inline-block w-4 h-4 border-2 border-current border-t-transparent rounded-full" /> Detecting location…</>
-                : locStatus === 'done'
-                  ? <>📍 Location Detected ✓</>
-                  : <>📍 Use My Current Location</>}
-            </button>
-
-            {locStatus === 'error' && (
-              <p className="text-xs mb-2" style={{ color: 'var(--sale-red)' }}>
-                ⚠ Could not access location. Please enable location permission or enter manually.
-              </p>
-            )}
-            {locStatus === 'done' && gpsAddr && (
-              <div className="rounded p-2 mb-2 text-xs" style={{ background: '#f0fdf4', border: '1px solid #bbf7d0', color: '#166534' }}>
-                <strong>Detected:</strong> {gpsAddr}
-              </div>
-            )}
-
-            <p className="text-xs mb-1.5" style={{ color: 'var(--text-muted)' }}>Or enter address manually:</p>
-            <textarea rows={3} placeholder="Flat no., Building, Area, City, State, PIN"
-              value={manualAddr}
-              onChange={e => { setManualAddr(e.target.value); setUseGps(false); setErrors(p => ({ ...p, location: '' })) }}
-              className={`${inputCls(errors.location)} resize-none`}
-              style={inputStyle(errors.location)} />
-
-            {(useGps ? gpsAddr : manualAddr) && (
-              <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>
-                ✓ Using {useGps ? 'GPS location' : 'manual address'}
-              </p>
-            )}
-          </div>
-
           {/* Send */}
           <button onClick={sendOrder}
-            className="w-full py-3.5 rounded font-bold text-white flex items-center justify-center gap-2 transition-opacity hover:opacity-90"
-            style={{ background: 'var(--wa-green)' }}>
+            disabled={isSendDisabled}
+            className="w-full py-3.5 rounded font-bold text-white flex items-center justify-center gap-2 transition-all"
+            style={{
+              background: isSendDisabled ? '#94d3a2' : 'var(--wa-green)',
+              opacity: isSendDisabled ? 0.65 : 1,
+              cursor: isSendDisabled ? 'not-allowed' : 'pointer',
+            }}>
             <WaIcon size={18} />
             Send Order on WhatsApp
           </button>
+          {missingFieldWarning && (
+            <p className="text-sm mt-3 text-center" style={{ color: '#b91c1c' }}>
+              {missingFieldWarning}
+            </p>
+          )}
           <p className="text-center text-xs pb-1" style={{ color: 'var(--text-muted)' }}>
             You&apos;ll be redirected to WhatsApp. We respond within minutes.
           </p>
