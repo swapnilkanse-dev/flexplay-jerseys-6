@@ -20,7 +20,7 @@ export type Jersey = {
   images: string[];
   description: string;
   tags: string[];
-  mainCategory: string;
+  mainCategory?: string;
   subCategory?: string;
   featured?: boolean;
 };
