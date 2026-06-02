@@ -51,7 +51,8 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
     if (!validate()) return
     const wa = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919156165683'
     const total = jersey.discountedPrice * qty
-    const fullAddress = `${address}${city ? `, ${city}` : ''}`
+    const normalizedAddress = address.trim().replace(/[\s,]+$/g, '')
+    const fullAddress = `${normalizedAddress}${city ? `, ${city.trim()}` : ''}`
     const priceLine = qty > 1
       ? `Price : ₹${jersey.discountedPrice} × ${qty} = ₹${total}`
       : `Price : ₹${jersey.discountedPrice}`
@@ -60,8 +61,7 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
       ``,
       `*• Product*`,
       `${jersey.name}`,
-      `Size: ${size}`,
-      `Quantity: ${qty}`,
+      `Size: ${size} | Qty: ${qty}`,
       priceLine,
       `Free Delivery`,
       ``,
@@ -71,6 +71,8 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
       `PIN: ${pinCode}`,
       `STATE: ${stateName}`,
       `PHONE NUMBER: ${phone}`,
+      ``,
+      `Please confirm availability of above product`,
     ].join('\n')
     window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, '_blank')
     onClose()
