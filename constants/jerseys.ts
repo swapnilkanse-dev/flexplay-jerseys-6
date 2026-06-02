@@ -20,12 +20,16 @@ export type Jersey = {
   images: string[];
   description: string;
   tags: string[];
+  mainCategory: string;
+  subCategory?: string;
+  featured?: boolean;
 };
 
 // ─── PASTE YOUR OWN IMAGE URLs IN THE images[] ARRAYS BELOW ───────────────────
 // You can use: https://res.cloudinary.com/... or any direct image link
 // The placeholder colors below match each jersey's actual colors
-export const JERSEYS: Jersey[] =[
+export const JERSEYS: Jersey[] =
+[
   {
     "id": "barcelona-2021-concept-kit-messi-fivesleeve-polo",
     "name": "Barcelona 2021 Concept Kit Messi Fivesleeve Polo",
@@ -750,9 +754,9 @@ export const JERSEYS: Jersey[] =[
   {
     "id": "uruguay-2026-away-kit-valverde-embroidery-premium",
     "name": "Uruguay 2026 Away Kit Valverde Embroidery Premium",
-    "shortName": "Uruguay 2026 Away – Valverde",
+    "shortName": "Uruguay 2026 Away \u2013 Valverde",
     "country": "Uruguay",
-    "flag": "🇺🇾",
+    "flag": "\ud83c\uddfa\ud83c\uddfe",
     "year": 2026,
     "kit": "Away",
     "player": "Valverde",
@@ -793,14 +797,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Uruguay"
   },
   {
     "id": "brazil-1998-white-kit-neymer-embroidery-premium",
     "name": "Brazil 1998 White Kit Neymer Embroidery Premium",
-    "shortName": "Brazil 1998 Home – Neymer",
+    "shortName": "Brazil 1998 Home \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 1998,
     "kit": "Home",
     "player": "Neymer",
@@ -843,14 +849,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "morocco-2026-home-kit-hakimi",
     "name": "Morocco 2026 Home Kit Hakimi",
     "shortName": "Unknown 2026 Home",
     "country": "Morocco",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -884,14 +892,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Morocco"
   },
   {
     "id": "manchester-united-beckham-special-edition-white-kit-fivesleeve-polo",
     "name": "Manchester United Beckham Special Edition White Kit Fivesleeve Polo",
     "shortName": "Unknown 2026 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -925,14 +935,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "real-madrid-1996-navy-concept-kit-carlos-fivesleeve-polo",
     "name": "Real Madrid 1996 Navy Concept Kit Carlos Fivesleeve Polo",
     "shortName": "Unknown 1996 Third",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1996,
     "kit": "Third",
     "player": "",
@@ -966,14 +978,16 @@ export const JERSEYS: Jersey[] =[
       "1996",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "brazil-2010-home-kit-kaka-fivesleeve-polo",
     "name": "Brazil 2010 Home Kit Kaka Fivesleeve Polo",
     "shortName": "Brazil 2010 Home",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2010,
     "kit": "Home",
     "player": "",
@@ -1008,14 +1022,16 @@ export const JERSEYS: Jersey[] =[
       "2010",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "france-2026-away-kit-mbappe-embroidery-premium",
     "name": "France 2026 Away Kit Mbappe Embroidery Premium",
-    "shortName": "France 2026 Away – Mbappe",
+    "shortName": "France 2026 Away \u2013 Mbappe",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Mbappe",
@@ -1057,14 +1073,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "real-madrid-25-26-home-kit-valverde-embroidery-premium-1",
     "name": "Real Madrid 25-26 Home Kit Valverde Embroidery Premium",
-    "shortName": "Unknown 2026 Home – Valverde",
+    "shortName": "Unknown 2026 Home \u2013 Valverde",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Valverde",
@@ -1104,14 +1122,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "spain-2026-home-kit-pedri-embroidery-premium-1",
     "name": "Spain 2026 Home Kit Pedri Embroidery Premium",
-    "shortName": "Spain 2026 Home – Pedri",
+    "shortName": "Spain 2026 Home \u2013 Pedri",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2026,
     "kit": "Home",
     "player": "Pedri",
@@ -1153,14 +1173,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "germany-2026-away-kit-musiala-knitted-polo-embroidery-premium",
     "name": "Germany 2026 Away Kit Musiala Knitted Polo Embroidery Premium",
-    "shortName": "Germany 2026 Away – Musiala",
+    "shortName": "Germany 2026 Away \u2013 Musiala",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Away",
     "player": "Musiala",
@@ -1202,14 +1224,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2026-home-kit-writz-knitted-polo-embroidery-premium-1",
     "name": "Germany 2026 Home Kit Writz Knitted Polo Embroidery Premium",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -1248,14 +1272,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "argentina-2026-away-kit-messi-fullsleeve-embroidery-premium",
     "name": "Argentina 2026 Away Kit Messi Fullsleeve Embroidery Premium",
-    "shortName": "Argentina 2026 Away – Messi",
+    "shortName": "Argentina 2026 Away \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Messi",
@@ -1295,14 +1321,15 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "portugal-2026-black-kit-with-shorts-imported",
     "name": "Portugal 2026 Black Kit With Shorts Imported",
     "shortName": "Portugal 2026 Third",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -1337,14 +1364,15 @@ export const JERSEYS: Jersey[] =[
       "Portugal",
       "Third",
       "2026"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "portugal-2026-away-kit-with-shorts-imported-copy",
     "name": "Portugal 2026 Away Kit With Shorts Imported",
     "shortName": "Portugal 2026 Away",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -1380,14 +1408,15 @@ export const JERSEYS: Jersey[] =[
       "Portugal",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "real-madrid-2006-away-kit-with-shorts-imported",
     "name": "Real Madrid 2006 Away Kit With Shorts Imported",
     "shortName": "Unknown 2006 Away",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Away",
     "player": "",
@@ -1422,14 +1451,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Away",
       "2006"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "france-1998-home-kit-with-shorts-imported",
     "name": "France 1998 Home Kit With Shorts Imported",
     "shortName": "France 1998 Home",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -1465,14 +1495,15 @@ export const JERSEYS: Jersey[] =[
       "France",
       "Home",
       "1998"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "barcelona-2008-09-home-kit-with-shorts-imported",
     "name": "Barcelona 2008-09 Home Kit With Shorts Imported",
     "shortName": "Unknown 2008 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2008,
     "kit": "Home",
     "player": "",
@@ -1506,14 +1537,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2008"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "argentina-2026-home-kit-with-shorts-imported",
     "name": "Argentina 2026 Home Kit With Shorts Imported",
     "shortName": "Argentina 2026 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -1549,14 +1581,15 @@ export const JERSEYS: Jersey[] =[
       "Argentina",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "acmilan-2006-third-kit-with-shorts-imported",
     "name": "Acmilan 2006 Third Kit With Shorts Imported",
     "shortName": "Unknown 2006 Third",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Third",
     "player": "",
@@ -1593,14 +1626,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Third",
       "2006"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "manchester-united-2008-home-kit-with-shorts-imported",
     "name": "Manchester United 2008 Home Kit With Shorts Imported",
     "shortName": "Unknown 2008 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2008,
     "kit": "Home",
     "player": "",
@@ -1634,14 +1668,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2008"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "portugal-2026-away-kit-ronaldo-fullsleeve-embroidery",
     "name": "Portugal 2026 Away Kit Ronaldo Fullsleeve Embroidery",
-    "shortName": "Portugal 2026 Away – Ronaldo",
+    "shortName": "Portugal 2026 Away \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Away",
     "player": "Ronaldo",
@@ -1680,14 +1715,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "rcb-2026-maroon-striper-polo",
     "name": "Rcb 2026 Maroon Striper Polo",
     "shortName": "Rcb 2026 Home",
     "country": "Rcb",
-    "flag": "🏏",
+    "flag": "\ud83c\udfcf",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -1721,14 +1757,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Rcb"
   },
   {
     "id": "brazil-2026-away-kit-neymer-fullsleeve-embroidery",
     "name": "Brazil 2026 Away Kit Neymer Fullsleeve Embroidery",
-    "shortName": "Brazil 2026 Away – Neymer",
+    "shortName": "Brazil 2026 Away \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Neymer",
@@ -1767,14 +1805,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "france-2026-home-kit-mbappe-fullsleeve-polo-embroidery",
     "name": "France 2026 Home Kit Mbappe Fullsleeve Polo Embroidery",
-    "shortName": "France 2026 Home – Mbappe",
+    "shortName": "France 2026 Home \u2013 Mbappe",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Mbappe",
@@ -1814,14 +1853,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "germany-2026-away-kit-wirtz-1",
     "name": "Germany 2026 Away Kit Wirtz",
-    "shortName": "Germany 2026 Away – Wirtz",
+    "shortName": "Germany 2026 Away \u2013 Wirtz",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Away",
     "player": "Wirtz",
@@ -1857,14 +1897,16 @@ export const JERSEYS: Jersey[] =[
       "Wirtz",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "portugal-2026-home-kit-ronaldo-1",
     "name": "Portugal 2026 Home Kit Ronaldo",
-    "shortName": "Portugal 2026 Home – Ronaldo",
+    "shortName": "Portugal 2026 Home \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "Ronaldo",
@@ -1900,14 +1942,16 @@ export const JERSEYS: Jersey[] =[
       "Ronaldo",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "argentina-2026-away-gk-kit-martinez",
     "name": "Argentina 2026 Away Gk Kit Martinez",
-    "shortName": "Argentina 2026 Away – Martinez",
+    "shortName": "Argentina 2026 Away \u2013 Martinez",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Martinez",
@@ -1944,14 +1988,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Goalkeeper"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "germany-2026-home-gk-kit-neuer",
     "name": "Germany 2026 Home Gk Kit Neuer",
-    "shortName": "Germany 2026 Home – Neuer",
+    "shortName": "Germany 2026 Home \u2013 Neuer",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "Neuer",
@@ -1988,14 +2034,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Goalkeeper"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2026-home-kit-wirtz",
     "name": "Germany 2026 Home Kit Wirtz",
-    "shortName": "Germany 2026 Home – Wirtz",
+    "shortName": "Germany 2026 Home \u2013 Wirtz",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "Wirtz",
@@ -2031,14 +2079,16 @@ export const JERSEYS: Jersey[] =[
       "Wirtz",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "jamaica-2026-away-kit-fivesleeve",
     "name": "Jamaica 2026 Away Kit Fivesleeve",
     "shortName": "Unknown 2026 Away",
     "country": "Jamaica",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -2073,14 +2123,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Jamaica"
   },
   {
     "id": "argentina-2026-home-kit-messi-embroidery-premium",
     "name": "Argentina 2026 Home Kit Messi Embroidery Premium",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -2122,14 +2174,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "japan-2026-away-kit-embroidery-premium",
     "name": "Japan 2026 Away Kit Embroidery Premium",
     "shortName": "Japan 2026 Away",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -2169,14 +2223,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "real-madrid-x-y-3-23-24-fourth-kit-bellingham-embroidery-premium",
     "name": "Real Madrid X Y-3 23-24 Fourth Kit Bellingham Embroidery Premium",
-    "shortName": "Unknown 2026 Home – Bellingham",
+    "shortName": "Unknown 2026 Home \u2013 Bellingham",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Bellingham",
@@ -2216,14 +2272,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "barcelona-2011-12-home-kit-messi-embroidery-premium",
     "name": "Barcelona 2011-12 Home Kit Messi Embroidery Premium",
-    "shortName": "Unknown 2011 Home – Messi",
+    "shortName": "Unknown 2011 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2011,
     "kit": "Home",
     "player": "Messi",
@@ -2259,14 +2317,16 @@ export const JERSEYS: Jersey[] =[
       "2011",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-22-23-fourth-kit-messi-embroidery-premium",
     "name": "Barcelona 22-23 Fourth Kit Messi Embroidery Premium",
-    "shortName": "Unknown 2026 Home – Messi",
+    "shortName": "Unknown 2026 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -2302,14 +2362,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "germany-20-21-away-kit-kroos-knitted-polo-embroidery-premium",
     "name": "Germany 20-21 Away Kit Kroos Knitted Polo Embroidery Premium",
     "shortName": "Germany 2026 Away",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -2350,14 +2412,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "acmilan-1997-98-away-kit-maldini-polo-embroidery-premium",
     "name": "Acmilan 1997-98 Away Kit Maldini Polo Embroidery Premium",
     "shortName": "Unknown 1997 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -2397,14 +2461,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "manchester-united-1998-99-third-kit-beckham-fivesleeve-polo-embroidery-with-zip",
     "name": "Manchester United 1998-99 Third Kit Beckham Fivesleeve Polo Embroidery With Zip",
     "shortName": "Unknown 1998 Third",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Third",
     "player": "",
@@ -2442,14 +2508,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "barcelona-blaugrana-special-kit-fivesleeve-polo",
     "name": "Barcelona Blaugrana Special Kit Messi Fivesleeve Polo",
-    "shortName": "Unknown 2026 Home – Messi",
+    "shortName": "Unknown 2026 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -2484,14 +2552,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-x-travis-scott-cactus-jack-black-special-kit-fivesleeve-polo",
     "name": "Barcelona X Travis Scott Cactus Jack Black Special Kit Fivesleeve Polo",
     "shortName": "Unknown 2026 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2525,14 +2595,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "france-fantasy-jersey-zidane-fivesleeve-polo-1",
     "name": "France Fantasy Jersey Zidane Fivesleeve Polo",
     "shortName": "France 2026 Home",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2567,14 +2639,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "real-madrid-2017-18-home-kit-ronaldo-fullsleeve-embroidery",
     "name": "Real Madrid 2017-18 Home Kit Ronaldo Fullsleeve Embroidery",
-    "shortName": "Unknown 2017 Home – Ronaldo",
+    "shortName": "Unknown 2017 Home \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2017,
     "kit": "Home",
     "player": "Ronaldo",
@@ -2612,14 +2686,15 @@ export const JERSEYS: Jersey[] =[
       "2017",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "juventus-2018-19-home-kit-ronaldo-fullsleeve-embroidery",
     "name": "Juventus 2018-19 Home Kit Ronaldo Fullsleeve Embroidery",
-    "shortName": "Unknown 2018 Home – Ronaldo",
+    "shortName": "Unknown 2018 Home \u2013 Ronaldo",
     "country": "Juventus",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2018,
     "kit": "Home",
     "player": "Ronaldo",
@@ -2657,14 +2732,15 @@ export const JERSEYS: Jersey[] =[
       "2018",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "spain-2026-away-kit-pedri-embroidery",
     "name": "Spain 2026 Away Kit Pedri Embroidery",
-    "shortName": "Spain 2026 Away – Pedri",
+    "shortName": "Spain 2026 Away \u2013 Pedri",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2026,
     "kit": "Away",
     "player": "Pedri",
@@ -2702,14 +2778,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "brazil-2026-away-kit-raphina-embroidery",
     "name": "Brazil 2026 Away Kit Raphina Embroidery",
-    "shortName": "Brazil 2026 Away – Raphina",
+    "shortName": "Brazil 2026 Away \u2013 Raphina",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Raphina",
@@ -2747,14 +2825,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "tshirt-france-white-polo-embroidery-premium",
     "name": "Tshirt France White Polo Embroidery Premium",
     "shortName": "France 2026 Home",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2796,14 +2876,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "tshirt-portugal-black-polo-embroidery-premium",
     "name": "Tshirt Portugal Black Polo Embroidery Premium",
     "shortName": "Portugal 2026 Home",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2845,14 +2927,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "tshirt-italy-green-black-polo-embroidery-premium",
     "name": "Tshirt Italy Green Polo Embroidery Premium",
     "shortName": "Italy 2026 Home",
     "country": "Italy",
-    "flag": "🇮🇹",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2894,14 +2978,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Italy"
   },
   {
     "id": "tshirt-brazil-black-polo-embroidery-premium",
     "name": "Tshirt Brazil Black Polo Embroidery Premium",
     "shortName": "Brazil 2026 Home",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2943,14 +3029,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "tshirt-germany-black-polo-embroidery-premium",
     "name": "Tshirt Germany Black Polo Embroidery Premium",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -2992,14 +3080,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "tshirt-argentina-black-polo-embroidery-premum",
     "name": "Tshirt Argentina Black Polo Embroidery Premium",
     "shortName": "Argentina 2026 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -3041,14 +3131,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "tshirt-portugal-red-polo-embroidery-premum",
     "name": "Tshirt Portugal Red Polo Embroidery Premum",
     "shortName": "Portugal 2026 Home",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -3089,14 +3181,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "portugal-1998-away-kit-rui-costa-fivesleeve-polo-embroidery-premium",
     "name": "Portugal 1998 Away Kit Rui Costa Fivesleeve Polo Embroidery Premium",
     "shortName": "Portugal 1998 Away",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -3134,14 +3228,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "mexico-2026-away-kit",
     "name": "Mexico 2026 Away Kit",
     "shortName": "Mexico 2026 Away",
     "country": "Mexico",
-    "flag": "🇲🇽",
+    "flag": "\ud83c\uddf2\ud83c\uddfd",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -3177,14 +3273,16 @@ export const JERSEYS: Jersey[] =[
       "Mexico",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Mexico"
   },
   {
     "id": "real-madrid-25-26-home-valverde-1",
     "name": "Real Madrid 25-26 Home Valverde",
-    "shortName": "Unknown 2026 Home – Valverde",
+    "shortName": "Unknown 2026 Home \u2013 Valverde",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Valverde",
@@ -3219,14 +3317,16 @@ export const JERSEYS: Jersey[] =[
       "Valverde",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "liverpool-1995-black-kit-polo-embroidery-premium",
     "name": "Liverpool 1995 Black Kit Polo Embroidery Premium",
     "shortName": "Unknown 1995 Third",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1995,
     "kit": "Third",
     "player": "",
@@ -3266,14 +3366,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "argentina-2026-tiro-polo-embroidery-premium",
     "name": "Argentina 2026 Tiro Polo Embroidery Premium",
     "shortName": "Argentina 2026 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -3312,14 +3414,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "barcelona-1996-97-ronaldinho-concept-kit-fivesleeve-polo-embroidery",
     "name": "Barcelona 1996-97 Ronaldinho Concept Kit Fivesleeve Polo Embroidery",
     "shortName": "Unknown 1996 Third",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1996,
     "kit": "Third",
     "player": "",
@@ -3357,14 +3461,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "manchester-united-1997-away-kit-gigs-fivesleeeve-polo",
     "name": "Manchester United 1997 Away Kit Gigs Fivesleeeve Polo",
     "shortName": "Unknown 1997 Away",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -3397,14 +3503,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "1997",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "japan-2026-away-kit",
     "name": "Japan 2026 Away Kit",
     "shortName": "Japan 2026 Away",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -3440,14 +3548,16 @@ export const JERSEYS: Jersey[] =[
       "Japan",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "croatia-2026-home-kit-modric",
     "name": "Croatia 2026 Home Kit Modric",
-    "shortName": "Croatia 2026 Home – Modric",
+    "shortName": "Croatia 2026 Home \u2013 Modric",
     "country": "Croatia",
-    "flag": "🇭🇷",
+    "flag": "\ud83c\udded\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Modric",
@@ -3483,14 +3593,16 @@ export const JERSEYS: Jersey[] =[
       "Modric",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Croatia"
   },
   {
     "id": "columbia-2026-away-kit-luis-diaz",
     "name": "Columbia 2026 Away Kit Luis Diaz",
-    "shortName": "Columbia 2026 Away – Luis Diaz",
+    "shortName": "Columbia 2026 Away \u2013 Luis Diaz",
     "country": "Columbia",
-    "flag": "🇨🇴",
+    "flag": "\ud83c\udde8\ud83c\uddf4",
     "year": 2026,
     "kit": "Away",
     "player": "Luis Diaz",
@@ -3526,14 +3638,16 @@ export const JERSEYS: Jersey[] =[
       "Luis Diaz",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Columbia"
   },
   {
     "id": "argentina-2026-away-kit-alvarez",
     "name": "Argentina 2026 Away Kit Alvarez",
-    "shortName": "Argentina 2026 Away – Alvarez",
+    "shortName": "Argentina 2026 Away \u2013 Alvarez",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Alvarez",
@@ -3569,14 +3683,16 @@ export const JERSEYS: Jersey[] =[
       "Alvarez",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "netherland-2026-home-kit-de-jong",
     "name": "Netherland 2026 Home Kit De Jong",
-    "shortName": "Netherland 2026 Home – De Jong",
+    "shortName": "Netherland 2026 Home \u2013 De Jong",
     "country": "Netherland",
-    "flag": "🇳🇱",
+    "flag": "\ud83c\uddf3\ud83c\uddf1",
     "year": 2026,
     "kit": "Home",
     "player": "De Jong",
@@ -3612,14 +3728,16 @@ export const JERSEYS: Jersey[] =[
       "De Jong",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Netherland"
   },
   {
     "id": "real-madrid-2016-17-away-kit-ronaldo-fullsleeve-embroidery",
     "name": "Real Madrid 2016-17 Away Kit Ronaldo Fullsleeve Embroidery",
-    "shortName": "Unknown 2016 Away – Ronaldo",
+    "shortName": "Unknown 2016 Away \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2016,
     "kit": "Away",
     "player": "Ronaldo",
@@ -3657,14 +3775,15 @@ export const JERSEYS: Jersey[] =[
       "2016",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "manchester-united-1998-99-home-kit-beckham-fullsleeve-polo-embroidery",
     "name": "Manchester United 1998-99 Home Kit Beckham Fullsleeve Polo Embroidery",
     "shortName": "Unknown 1998 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -3702,14 +3821,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "england-2026-home-kit-kane-embroidery",
     "name": "England 2026 Home Kit Kane Embroidery",
-    "shortName": "England 2026 Home – Kane",
+    "shortName": "England 2026 Home \u2013 Kane",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Home",
     "player": "Kane",
@@ -3747,14 +3867,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "norway-2026-home-kit-haaland-embroidery",
     "name": "Norway 2026 Home Kit Haaland Embroidery",
-    "shortName": "Norway 2026 Home – Haaland",
+    "shortName": "Norway 2026 Home \u2013 Haaland",
     "country": "Norway",
-    "flag": "🇳🇴",
+    "flag": "\ud83c\uddf3\ud83c\uddf4",
     "year": 2026,
     "kit": "Home",
     "player": "Haaland",
@@ -3792,14 +3914,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Norway"
   },
   {
     "id": "barcelona-black-fantasy-kit-messi-fivesleeve-polo",
     "name": "Barcelona Black Fantasy Kit Messi Fivesleeve Polo",
-    "shortName": "Unknown 2026 Home – Messi",
+    "shortName": "Unknown 2026 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -3834,14 +3958,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "acmilan-black-floral-special-kit-maldini-fivesleeve-polo",
     "name": "Acmilan Black Floral Special Kit Maldini Fivesleeve Polo",
     "shortName": "Unknown 2026 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -3875,14 +4001,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "intermilan-2009-10-home-kit-figo-embroidery",
     "name": "Intermilan 2009-10 Home Kit Figo Embroidery",
     "shortName": "Unknown 2009 Home",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2009,
     "kit": "Home",
     "player": "",
@@ -3918,14 +4046,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2009",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "barcelona-2016-17-home-kit-neymer-embroidery-1",
     "name": "Barcelona 2016-17 Home Kit Neymer Embroidery",
-    "shortName": "Unknown 2016 Home – Neymer",
+    "shortName": "Unknown 2016 Home \u2013 Neymer",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2016,
     "kit": "Home",
     "player": "Neymer",
@@ -3962,14 +4092,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2016",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "germany-1998-home-kit-moller-polo-embroidery-premium",
     "name": "Germany 1998 Home Kit Moller Polo Embroidery Premium",
     "shortName": "Germany 1998 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -4010,14 +4142,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "france-2026-home-kit-mbappe-polo-embroidery-premium-1",
     "name": "France 2026 Home Kit Mbappe Polo Embroidery Premium",
-    "shortName": "France 2026 Home – Mbappe",
+    "shortName": "France 2026 Home \u2013 Mbappe",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Mbappe",
@@ -4059,14 +4193,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "germany-24-25-black-kit-ozil-embroidery-premium",
     "name": "Germany 24-25 Black Kit Ozil Embroidery Premium",
     "shortName": "Germany 2026 Third",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -4106,14 +4242,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "manchester-united-90s-retro-inspired-kit-beckham-polo-embroidery-premium",
     "name": "Manchester United 90S Retro Inspired Kit Polo Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -4153,14 +4291,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "argentina-berbitos-special-kit-messi-embroidery-premium",
     "name": "Argentina Berbitos Special Kit Messi Embroidery Premium",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -4202,14 +4342,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "brazil-2004-home-kit-ronaldinho-embroidery-premium",
     "name": "Brazil 2004 Home Kit Ronaldinho Embroidery Premium",
     "shortName": "Brazil 2004 Home",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2004,
     "kit": "Home",
     "player": "",
@@ -4249,14 +4391,16 @@ export const JERSEYS: Jersey[] =[
       "2004",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "brazil-2026-home-kit-neymer-embroidery-premium",
     "name": "Brazil 2026 Home Kit Neymer Embroidery Premium",
-    "shortName": "Brazil 2026 Home – Neymer",
+    "shortName": "Brazil 2026 Home \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Neymer",
@@ -4297,14 +4441,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "argentina-2026-away-kit-depaul",
     "name": "Argentina 2026 Away Kit De Paul",
-    "shortName": "Argentina 2026 Away – De Paul",
+    "shortName": "Argentina 2026 Away \u2013 De Paul",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "De Paul",
@@ -4340,14 +4486,16 @@ export const JERSEYS: Jersey[] =[
       "De Paul",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "manchester-united-1998-white-kit-beckham-embroidery",
     "name": "Manchester United 1998 White Kit Beckham Embroidery",
     "shortName": "Unknown 1998 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -4383,14 +4531,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "1998",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "england-2026-away-kit-bellingham-embroidery",
     "name": "England 2026 Away Kit Bellingham Embroidery",
-    "shortName": "England 2026 Away – Bellingham",
+    "shortName": "England 2026 Away \u2013 Bellingham",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Away",
     "player": "Bellingham",
@@ -4428,14 +4578,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "spain-2026-home-kit-lamine-yamal",
     "name": "Spain 2026 Home Kit Lamine Yamal",
-    "shortName": "Spain 2026 Home – Lamine Yamal",
+    "shortName": "Spain 2026 Home \u2013 Lamine Yamal",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2026,
     "kit": "Home",
     "player": "Lamine Yamal",
@@ -4471,14 +4623,16 @@ export const JERSEYS: Jersey[] =[
       "Lamine Yamal",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "barcelona-2014-15-home-kit-neymer-fivesleeve-polo",
     "name": "Barcelona 2014-15 Home Kit Neymer Fivesleeve Polo",
-    "shortName": "Unknown 2014 Home – Neymer",
+    "shortName": "Unknown 2014 Home \u2013 Neymer",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2014,
     "kit": "Home",
     "player": "Neymer",
@@ -4513,14 +4667,16 @@ export const JERSEYS: Jersey[] =[
       "2014",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "real-madrid-black-concept-kit-ronaldo-fivesleeve-polo",
     "name": "Real Madrid Black Concept Kit Ronaldo Fivesleeve Polo",
-    "shortName": "Unknown 2026 Third – Ronaldo",
+    "shortName": "Unknown 2026 Third \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "Ronaldo",
@@ -4555,14 +4711,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "germany-2026-black-concept-kit-musiala-fivesleeve-polo",
     "name": "Germany 2026 Black Concept Kit Musiala Fivesleeve Polo",
-    "shortName": "Germany 2026 Third – Musiala",
+    "shortName": "Germany 2026 Third \u2013 Musiala",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Third",
     "player": "Musiala",
@@ -4598,14 +4756,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "norway-2026-away-kit-haaland",
     "name": "Norway 2026 Away Kit Haaland",
-    "shortName": "Norway 2026 Away – Haaland",
+    "shortName": "Norway 2026 Away \u2013 Haaland",
     "country": "Norway",
-    "flag": "🇳🇴",
+    "flag": "\ud83c\uddf3\ud83c\uddf4",
     "year": 2026,
     "kit": "Away",
     "player": "Haaland",
@@ -4641,14 +4801,16 @@ export const JERSEYS: Jersey[] =[
       "Haaland",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Norway"
   },
   {
     "id": "england-2026-away-kit-belingham-1",
     "name": "England 2026 Away Kit Belingham",
-    "shortName": "England 2026 Away – Belingham",
+    "shortName": "England 2026 Away \u2013 Belingham",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Away",
     "player": "Belingham",
@@ -4684,14 +4846,16 @@ export const JERSEYS: Jersey[] =[
       "Belingham",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "spain-2026-away-kit-rodrigo",
     "name": "Spain 2026 Away Kit Rodrigo",
-    "shortName": "Spain 2026 Away – Rodrigo",
+    "shortName": "Spain 2026 Away \u2013 Rodrigo",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2026,
     "kit": "Away",
     "player": "Rodrigo",
@@ -4727,14 +4891,16 @@ export const JERSEYS: Jersey[] =[
       "Rodrigo",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "mumbai-indians-2026-kit-rohit-polo-embroidery-premium",
     "name": "Mumbai Indians 2026 Kit Rohit Polo Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Mumbai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -4772,14 +4938,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Mumbai"
   },
   {
     "id": "mumbai-indians-2026-kit-rohit-polo-premium",
     "name": "Mumbai Indians 2026 Kit Rohit Polo Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Mumbai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -4819,14 +4987,67 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Mumbai"
+  },
+  {
+    "id": "spain-2026-away-kit-pedri-embroidery-premium",
+    "name": "Spain 2026 Away Kit Pedri Embroidery Premium",
+    "shortName": "Spain 2026 Away \u2013 Pedri",
+    "country": "Spain",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
+    "year": 2026,
+    "kit": "Away",
+    "player": "Pedri",
+    "type": "Premium",
+    "badge": "ESP",
+    "originalPrice": 741,
+    "discountedPrice": 539,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL",
+      "XXXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true,
+      "XXXL": false
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/f-2026-04-27T162318.743.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/f-2026-04-27T162318.743.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/C-2026-04-27T162324.426.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-04-27T162331.473.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/C-2026-04-27T162328.453.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Spain Away Kit featuring Pedri's name & number. ",
+    "tags": [
+      "Spain",
+      "Pedri",
+      "Away",
+      "2026",
+      "Premium",
+      "Embroidery"
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "intermilan-1998-99-third-kit-zanetti-polo-embroidery-premium-1",
     "name": "Intermilan 1998-99 Third Kit Zanetti Polo Embroidery Premium",
     "shortName": "Unknown 1998 Third",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Third",
     "player": "",
@@ -4863,14 +5084,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "intermilan-1998-99-third-kit-zanetti-polo-embroidery-premium",
     "name": "Liverpool 2021-22 Away Kit Diogo J. Polo Embroidery Premium",
     "shortName": "Unknown 2021 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2021,
     "kit": "Away",
     "player": "",
@@ -4910,14 +5133,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "newcastle-1995-96-away-kit-ginola-fivesleeve-polo-embroidery-premium",
     "name": "Newcastle 1995-96 Away Kit Ginola Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1995 Away",
     "country": "Newcastle",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1995,
     "kit": "Away",
     "player": "",
@@ -4954,14 +5179,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Newcastle"
   },
   {
     "id": "ateltico-madrid-1998-99-away-kit-torres-fivesleeve-polo-embroidery-premium",
     "name": "Ateltico Madrid 1998-99 Away Kit Torres Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1998 Away",
     "country": "Ateltico",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -4999,14 +5226,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Ateltico"
   },
   {
     "id": "argentina-2026-home-kit-messi-1",
     "name": "Argentina 2026 Home Kit Messi",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -5042,14 +5271,16 @@ export const JERSEYS: Jersey[] =[
       "Messi",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "france-2026-away-kit-olise",
     "name": "France 2026 Away Kit Olise",
-    "shortName": "France 2026 Away – Olise",
+    "shortName": "France 2026 Away \u2013 Olise",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Olise",
@@ -5085,14 +5316,16 @@ export const JERSEYS: Jersey[] =[
       "Olise",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "argentina-2026-away-kit-messi-embroidery-premium",
     "name": "Argentina 2026 Away Kit Messi Embroidery Premium",
-    "shortName": "Argentina 2026 Away – Messi",
+    "shortName": "Argentina 2026 Away \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Messi",
@@ -5134,14 +5367,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "portugal-2026-away-kit-ronaldo-embroidery-premium-1",
     "name": "Portugal 2026 Away Kit Ronaldo Embroidery Premium",
-    "shortName": "Portugal 2026 Away – Ronaldo",
+    "shortName": "Portugal 2026 Away \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Away",
     "player": "Ronaldo",
@@ -5183,14 +5418,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "portugal-2026-home-kit-ronaldo-embroidery-premium-3",
     "name": "Portugal 2026 Home Kit Ronaldo Embroidery Premium",
-    "shortName": "Portugal 2026 Home – Ronaldo",
+    "shortName": "Portugal 2026 Home \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "Ronaldo",
@@ -5231,14 +5468,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "brazil-2026-home-kit-neymer-1",
     "name": "Brazil 2026 Home Kit Neymer",
-    "shortName": "Brazil 2026 Home – Neymer",
+    "shortName": "Brazil 2026 Home \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Neymer",
@@ -5274,14 +5513,16 @@ export const JERSEYS: Jersey[] =[
       "Neymer",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "intermilan-2010-11-away-kit-zanetti-fivesleeve",
     "name": "Intermilan 2010-11 Away Kit Zanetti Fivesleeve",
     "shortName": "Unknown 2010 Away",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2010,
     "kit": "Away",
     "player": "",
@@ -5314,14 +5555,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2010",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "real-madrid-2010-11-home-kit-marcelo-fivesleeve",
     "name": "Real Madrid 2010-11 Home Kit Marcelo Fivesleeve",
     "shortName": "Unknown 2010 Home",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2010,
     "kit": "Home",
     "player": "",
@@ -5354,14 +5597,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2010",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "spain-2010-home-kit-ramos-fivesleeve",
     "name": "Spain 2010 Home Kit Ramos Fivesleeve",
     "shortName": "Spain 2010 Home",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2010,
     "kit": "Home",
     "player": "",
@@ -5395,14 +5640,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2010",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "barcelona-1992-vintage-special-kit-ronaldinho-fivesleeve-polo-1",
     "name": "Barcelona 1992 Vintage Special Kit Ronaldinho Fivesleeve Polo",
     "shortName": "Unknown 1992 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1992,
     "kit": "Home",
     "player": "",
@@ -5436,14 +5683,16 @@ export const JERSEYS: Jersey[] =[
       "1992",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "boca-juniors-96-97-away-kit-maradona-fivesleeve-polo-1",
     "name": "Boca Juniors 96-97 Away Kit Maradona Fivesleeve Polo",
     "shortName": "Unknown 2026 Away",
     "country": "Boca",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -5477,14 +5726,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Boca"
   },
   {
     "id": "italy-2016-17-away-kit-pirlo-fivesleeve-polo-1",
     "name": "Italy 2016-17 Away Kit Pirlo Fivesleeve Polo",
     "shortName": "Italy 2016 Away",
     "country": "Italy",
-    "flag": "🇮🇹",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
     "year": 2016,
     "kit": "Away",
     "player": "",
@@ -5519,14 +5770,16 @@ export const JERSEYS: Jersey[] =[
       "2016",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Italy"
   },
   {
     "id": "manchester-united-1998-white-kit-beckham-fivesleeve-polo",
     "name": "Manchester United 1998 White Kit Beckham Fivesleeve Polo",
     "shortName": "Unknown 1998 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -5560,14 +5813,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "japan-2026-away-kit-minamino",
     "name": "Japan 2026 Away Kit Minamino",
-    "shortName": "Japan 2026 Away – Minamino",
+    "shortName": "Japan 2026 Away \u2013 Minamino",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 2026,
     "kit": "Away",
     "player": "Minamino",
@@ -5603,14 +5858,16 @@ export const JERSEYS: Jersey[] =[
       "Minamino",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "brazil-2026-away-kit-raphina",
     "name": "Brazil 2026 Away Kit Raphina",
-    "shortName": "Brazil 2026 Away – Raphina",
+    "shortName": "Brazil 2026 Away \u2013 Raphina",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Raphina",
@@ -5646,14 +5903,16 @@ export const JERSEYS: Jersey[] =[
       "Raphina",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "brazil-2026-away-kit-neymer-1",
     "name": "Brazil 2026 Away Kit Neymer",
-    "shortName": "Brazil 2026 Away – Neymer",
+    "shortName": "Brazil 2026 Away \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Neymer",
@@ -5687,14 +5946,16 @@ export const JERSEYS: Jersey[] =[
       "Neymer",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "spain-2026-away-kit-pedri",
     "name": "Spain 2026 Away Kit Pedri",
-    "shortName": "Spain 2026 Away – Pedri",
+    "shortName": "Spain 2026 Away \u2013 Pedri",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2026,
     "kit": "Away",
     "player": "Pedri",
@@ -5730,14 +5991,16 @@ export const JERSEYS: Jersey[] =[
       "Pedri",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "argentina-1994-away-kit-messi-fivesleeve-polo-1",
     "name": "Argentina 1994 Away Kit Messi Fivesleeve Polo",
-    "shortName": "Argentina 1994 Away – Messi",
+    "shortName": "Argentina 1994 Away \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 1994,
     "kit": "Away",
     "player": "Messi",
@@ -5773,14 +6036,16 @@ export const JERSEYS: Jersey[] =[
       "1994",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "liverpool-1996-97-away-kit-owen-fivesleeve-polo",
     "name": "Liverpool 1996-97 Away Kit Owen Fivesleeve Polo",
     "shortName": "Unknown 1996 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1996,
     "kit": "Away",
     "player": "",
@@ -5814,14 +6079,16 @@ export const JERSEYS: Jersey[] =[
       "1996",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "france-2026-away-kit-dembele-1",
     "name": "France 2026 Away Kit Dembele",
-    "shortName": "France 2026 Away – Dembele",
+    "shortName": "France 2026 Away \u2013 Dembele",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Dembele",
@@ -5857,14 +6124,16 @@ export const JERSEYS: Jersey[] =[
       "Dembele",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "england-2026-away-kit-saka",
     "name": "England 2026 Away Kit Saka",
-    "shortName": "England 2026 Away – Saka",
+    "shortName": "England 2026 Away \u2013 Saka",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Away",
     "player": "Saka",
@@ -5900,14 +6169,16 @@ export const JERSEYS: Jersey[] =[
       "Saka",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "brazil-2026-away-gk-kit-a-becker",
     "name": "Brazil 2026 Away Gk Kit A.Becker",
-    "shortName": "Brazil 2026 Away – A.Becker",
+    "shortName": "Brazil 2026 Away \u2013 A.Becker",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "A.Becker",
@@ -5944,14 +6215,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Goalkeeper"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "netherlands-2026-away-kit-de-jong",
     "name": "Netherlands 2026 Away Kit De Jong",
-    "shortName": "Netherlands 2026 Away – De Jong",
+    "shortName": "Netherlands 2026 Away \u2013 De Jong",
     "country": "Netherlands",
-    "flag": "🇳🇱",
+    "flag": "\ud83c\uddf3\ud83c\uddf1",
     "year": 2026,
     "kit": "Away",
     "player": "De Jong",
@@ -5987,14 +6260,16 @@ export const JERSEYS: Jersey[] =[
       "De Jong",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Netherlands"
   },
   {
     "id": "uruguay-2026-home-kit-valverde",
     "name": "Uruguay 2026 Home Kit Valverde",
-    "shortName": "Uruguay 2026 Home – Valverde",
+    "shortName": "Uruguay 2026 Home \u2013 Valverde",
     "country": "Uruguay",
-    "flag": "🇺🇾",
+    "flag": "\ud83c\uddfa\ud83c\uddfe",
     "year": 2026,
     "kit": "Home",
     "player": "Valverde",
@@ -6030,14 +6305,16 @@ export const JERSEYS: Jersey[] =[
       "Valverde",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Uruguay"
   },
   {
     "id": "croatia-2026-away-kit-modric",
     "name": "Croatia 2026 Away Kit Modric",
-    "shortName": "Croatia 2026 Away – Modric",
+    "shortName": "Croatia 2026 Away \u2013 Modric",
     "country": "Croatia",
-    "flag": "🇭🇷",
+    "flag": "\ud83c\udded\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Modric",
@@ -6073,14 +6350,16 @@ export const JERSEYS: Jersey[] =[
       "Modric",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Croatia"
   },
   {
     "id": "france-2026-away-kit-dembele",
     "name": "France 2026 Away Kit Mbappe",
-    "shortName": "France 2026 Away – Mbappe",
+    "shortName": "France 2026 Away \u2013 Mbappe",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Mbappe",
@@ -6116,14 +6395,16 @@ export const JERSEYS: Jersey[] =[
       "Mbappe",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "norway-2026-home-kit-odegaard",
     "name": "Norway 2026 Home Kit Odegaard",
-    "shortName": "Norway 2026 Home – Odegaard",
+    "shortName": "Norway 2026 Home \u2013 Odegaard",
     "country": "Norway",
-    "flag": "🇳🇴",
+    "flag": "\ud83c\uddf3\ud83c\uddf4",
     "year": 2026,
     "kit": "Home",
     "player": "Odegaard",
@@ -6159,14 +6440,16 @@ export const JERSEYS: Jersey[] =[
       "Odegaard",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Norway"
   },
   {
     "id": "france-2026-home-kit-doue-polo",
     "name": "France 2026 Home Kit Doue Polo",
-    "shortName": "France 2026 Home – Doue",
+    "shortName": "France 2026 Home \u2013 Doue",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Doue",
@@ -6203,14 +6486,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "sporting-2001-02-home-kit-ronaldo-embroidery-premium-1",
     "name": "Sporting 2001-02 Home Kit Ronaldo Embroidery Premium",
-    "shortName": "Unknown 2001 Home – Ronaldo",
+    "shortName": "Unknown 2001 Home \u2013 Ronaldo",
     "country": "Sporting",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2001,
     "kit": "Home",
     "player": "Ronaldo",
@@ -6248,14 +6533,16 @@ export const JERSEYS: Jersey[] =[
       "2001",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Sporting"
   },
   {
     "id": "santos-2012-13-away-kit-neymer-embroidery-premium",
     "name": "Santos 2012-13 Away Kit Neymer Embroidery Premium",
-    "shortName": "Unknown 2012 Away – Neymer",
+    "shortName": "Unknown 2012 Away \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2012,
     "kit": "Away",
     "player": "Neymer",
@@ -6293,14 +6580,16 @@ export const JERSEYS: Jersey[] =[
       "2012",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "brazil-2026-away-kit-neymer-embroidery-premium-1",
     "name": "Brazil 2026 Away Kit Neymer Embroidery Premium",
-    "shortName": "Brazil 2026 Away – Neymer",
+    "shortName": "Brazil 2026 Away \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Neymer",
@@ -6341,14 +6630,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "france-2006-07-home-kit-zidane-embroidery-premium",
     "name": "France 2006-07 Home Kit Zidane Embroidery Premium",
     "shortName": "France 2006 Home",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2006,
     "kit": "Home",
     "player": "",
@@ -6387,14 +6678,16 @@ export const JERSEYS: Jersey[] =[
       "2006",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "england-1998-home-kit-beckham-fullsleeve-polo-embroidery-premium",
     "name": "England 1998 Home Kit Beckham Fullsleeve Polo Embroidery Premium",
     "shortName": "England 1998 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -6434,14 +6727,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "england-1996-home-beckham-polo-embroidery-premium",
     "name": "England 1996 Home Beckham Polo Embroidery Premium",
     "shortName": "England 1996 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 1996,
     "kit": "Home",
     "player": "",
@@ -6480,14 +6774,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "manchester-united-2000-01-third-kit-beckham-polo-embroidery-premium",
     "name": "Manchester United 2000-01 Third Kit Beckham Polo Embroidery Premium",
     "shortName": "Unknown 2000 Third",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2000,
     "kit": "Third",
     "player": "",
@@ -6525,14 +6821,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "rcb-2026-green-kit-virat-polo-premium",
     "name": "Rcb 2026 Green Kit Virat Polo Premium",
     "shortName": "Rcb 2026 Home",
     "country": "Rcb",
-    "flag": "🏏",
+    "flag": "\ud83c\udfcf",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -6572,14 +6870,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Rcb"
   },
   {
     "id": "liverpool-2006-07-home-kit-gerrard-polo-embroidery-premium",
     "name": "Liverpool 2006-07 Home Kit Gerrard Polo Embroidery Premium",
     "shortName": "Unknown 2006 Home",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Home",
     "player": "",
@@ -6615,14 +6915,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "argentina-2001-testimonial-jersey-maradona-polo-embroidery-premium",
     "name": "Argentina 2001 Testimonial Jersey Maradona Polo Embroidery Premium",
     "shortName": "Argentina 2001 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2001,
     "kit": "Home",
     "player": "",
@@ -6663,14 +6965,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "chelsea-2006-07-third-kit-ballack-polo-embroidery-premium",
     "name": "Chelsea 2006-07 Third Kit Ballack Polo Embroidery Premium",
     "shortName": "Unknown 2006 Third",
     "country": "Chelsea",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Third",
     "player": "",
@@ -6710,14 +7014,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Chelsea"
   },
   {
     "id": "juventus-2008-09-home-kit-embroidery-premium",
     "name": "Juventus 2008-09 Home Kit Embroidery Premium",
     "shortName": "Unknown 2008 Home",
     "country": "Juventus",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2008,
     "kit": "Home",
     "player": "",
@@ -6753,14 +7059,16 @@ export const JERSEYS: Jersey[] =[
       "2008",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Juventus"
   },
   {
     "id": "france-1998-home-kit-zidane-polo-embroidery-1",
     "name": "France 1998 Home Kit Zidane Polo Embroidery",
     "shortName": "France 1998 Home",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -6798,14 +7106,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "acmilan-1993-94-home-kit-maldini-polo-embroidery",
     "name": "Acmilan 1993-94 Home Kit Maldini Polo Embroidery",
     "shortName": "Unknown 1993 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1993,
     "kit": "Home",
     "player": "",
@@ -6842,14 +7152,16 @@ export const JERSEYS: Jersey[] =[
       "1993",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "manchester-united-2003-04-third-kit-ronaldo-polo-embroidery-1",
     "name": "Manchester United 2003-04 Third Kit Ronaldo Polo Embroidery",
-    "shortName": "Unknown 2003 Third – Ronaldo",
+    "shortName": "Unknown 2003 Third \u2013 Ronaldo",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Third",
     "player": "Ronaldo",
@@ -6887,14 +7199,16 @@ export const JERSEYS: Jersey[] =[
       "2003",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "argentina-dragon-special-edition-kit-messi-embroidery",
     "name": "Argentina Dragon Special Edition Kit Messi Embroidery",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -6932,14 +7246,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "germany-national-team-concept-edition-home-kit-kroos-embroidery",
     "name": "Germany National Team Concept Edition Home Kit Kroos Embroidery",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -6976,14 +7292,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "real-madrid-2017-18-third-kit-ronaldo-embroidery-1",
     "name": "Real Madrid 2017-18 Third Kit Ronaldo Embroidery",
-    "shortName": "Unknown 2017 Third – Ronaldo",
+    "shortName": "Unknown 2017 Third \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2017,
     "kit": "Third",
     "player": "Ronaldo",
@@ -7020,14 +7338,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2017",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-2006-home-ronaldo-embroidery",
     "name": "Real Madrid 2006 Home Ronaldo Embroidery",
-    "shortName": "Unknown 2006 Home – Ronaldo",
+    "shortName": "Unknown 2006 Home \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Home",
     "player": "Ronaldo",
@@ -7064,14 +7384,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2006",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "england-2026-home-kit-belingham-embroidery",
     "name": "England 2026 Home Kit Belingham Embroidery",
-    "shortName": "England 2026 Home – Belingham",
+    "shortName": "England 2026 Home \u2013 Belingham",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Home",
     "player": "Belingham",
@@ -7109,14 +7431,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "manchester-united-2007-08-away-kit-ronaldo-fullsleeve-embroidery-1",
     "name": "Manchester United 2007-08 Away Kit Ronaldo Fullsleeve Embroidery",
-    "shortName": "Unknown 2007 Away – Ronaldo",
+    "shortName": "Unknown 2007 Away \u2013 Ronaldo",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Away",
     "player": "Ronaldo",
@@ -7154,14 +7478,15 @@ export const JERSEYS: Jersey[] =[
       "2007",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "real-madrid-2017-18-third-kit-ronaldo-fullsleeve-embroidery-1",
     "name": "Real Madrid 2017-18 Third Kit Ronaldo Fullsleeve Embroidery",
-    "shortName": "Unknown 2017 Third – Ronaldo",
+    "shortName": "Unknown 2017 Third \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2017,
     "kit": "Third",
     "player": "Ronaldo",
@@ -7199,14 +7524,15 @@ export const JERSEYS: Jersey[] =[
       "2017",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "liverpool-2007-08-away-kit-torres-fullsleeve-embroidery",
     "name": "Liverpool 2007-08 Away Kit Torres Fullsleeve Embroidery",
     "shortName": "Unknown 2007 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Away",
     "player": "",
@@ -7243,14 +7569,15 @@ export const JERSEYS: Jersey[] =[
       "2007",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "rcb-2026-kit-virat-fullsleeve-polo-embroidery",
     "name": "Rcb 2026 Kit Virat Fullsleeve Polo Embroidery",
     "shortName": "Rcb 2026 Home",
     "country": "Rcb",
-    "flag": "🏏",
+    "flag": "\ud83c\udfcf",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7289,14 +7616,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "india-cricket-test-jersey-polo-embroidery-premium",
     "name": "India Cricket Test Jersey Polo Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "India",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7337,14 +7665,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "India"
   },
   {
     "id": "acmilan-2006-07-away-kit-maldini-fullsleeve-embroidery-premium",
     "name": "Acmilan 2006-07 Away Kit Maldini Fullsleeve Embroidery Premium",
     "shortName": "Unknown 2006 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Away",
     "player": "",
@@ -7382,14 +7712,15 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "barcelona-2008-09-messi-home-kit-embroidery-premium",
     "name": "Barcelona 2008-09 Messi Home Kit Embroidery Premium",
-    "shortName": "Unknown 2008 Home – Messi",
+    "shortName": "Unknown 2008 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2008,
     "kit": "Home",
     "player": "Messi",
@@ -7427,14 +7758,16 @@ export const JERSEYS: Jersey[] =[
       "2008",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "acmilan-2006-07-third-kit-maldini-embroidery-premium",
     "name": "Acmilan 2006-07 Third Kit Maldini Embroidery Premium",
     "shortName": "Unknown 2006 Third",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Third",
     "player": "",
@@ -7471,14 +7804,16 @@ export const JERSEYS: Jersey[] =[
       "2006",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "los-angles-lakers-lebron-james-sleeveless-premium",
     "name": "Los Angles Lakers Lebron James Sleeveless Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Los",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7513,14 +7848,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Premium"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "germany-1998-home-kit-bierhoff-fivesleeve",
     "name": "Germany 1998 Home Kit Bierhoff Fivesleeve",
     "shortName": "Germany 1998 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -7554,14 +7890,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "1998",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "argentina-1994-home-kit-batistuta-fivesleeve-polo",
     "name": "Argentina 1994 Home Kit Batistuta Fivesleeve Polo",
     "shortName": "Argentina 1994 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 1994,
     "kit": "Home",
     "player": "",
@@ -7596,14 +7934,16 @@ export const JERSEYS: Jersey[] =[
       "1994",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "real-madrid-25-26-third-kit-mbappe-embroidery-premium-1",
     "name": "Real Madrid 25-26 Third Kit Mbappe Embroidery Premium",
-    "shortName": "Unknown 2026 Third – Mbappe",
+    "shortName": "Unknown 2026 Third \u2013 Mbappe",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "Mbappe",
@@ -7643,14 +7983,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "argentina-2026-away-kit-messi",
     "name": "Argentina 2026 Away Kit Messi",
-    "shortName": "Argentina 2026 Away – Messi",
+    "shortName": "Argentina 2026 Away \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Messi",
@@ -7686,14 +8028,16 @@ export const JERSEYS: Jersey[] =[
       "Messi",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "portugal-2026-away-kit-ronaldo",
     "name": "Portugal 2026 Away Kit Ronaldo",
-    "shortName": "Portugal 2026 Away – Ronaldo",
+    "shortName": "Portugal 2026 Away \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Away",
     "player": "Ronaldo",
@@ -7729,14 +8073,16 @@ export const JERSEYS: Jersey[] =[
       "Ronaldo",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "england-2026-away-kit-belingham",
     "name": "England 2026 Away Kit Belingham",
-    "shortName": "England 2026 Away – Belingham",
+    "shortName": "England 2026 Away \u2013 Belingham",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Away",
     "player": "Belingham",
@@ -7772,14 +8118,16 @@ export const JERSEYS: Jersey[] =[
       "Belingham",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "jacket-manchester-united-navy-blue-1",
     "name": "Jacket Manchester United Navy Blue",
     "shortName": "Unknown 2026 Home",
     "country": "Jacket",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7810,14 +8158,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Jackets"
   },
   {
     "id": "jacket-manchester-united-navy-blue",
     "name": "Jacket Manchester United Red",
     "shortName": "Unknown 2026 Home",
     "country": "Jacket",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7848,14 +8197,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Jackets"
   },
   {
     "id": "jacket-manchester-united-black",
     "name": "Jacket Manchester United Black",
     "shortName": "Unknown 2026 Home",
     "country": "Jacket",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7886,14 +8236,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Jackets"
   },
   {
     "id": "jacket-real-madrid-red",
     "name": "Jacket Real Madrid Red",
     "shortName": "Unknown 2026 Home",
     "country": "Jacket",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7924,14 +8275,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Jackets"
   },
   {
     "id": "jacket-real-madrid-navy-blue",
     "name": "Jacket Real Madrid Navy Blue",
     "shortName": "Unknown 2026 Home",
     "country": "Jacket",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -7962,14 +8314,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Jackets"
   },
   {
     "id": "jacket-real-madrid-black",
     "name": "Jacket Real Madrid Black",
     "shortName": "Unknown 2026 Home",
     "country": "Jacket",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -8000,14 +8353,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Jackets"
   },
   {
     "id": "mumbai-indians-2026-kit-hardik-polo-embroidery-premium",
     "name": "Mumbai Indians 2026 Kit Hardik Polo Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Mumbai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -8048,14 +8402,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Mumbai"
   },
   {
     "id": "ajax-1997-98-away-kit-cruyff-polo-embroidery-premium",
     "name": "Ajax 1997-98 Away Kit Cruyff Polo Embroidery Premium",
     "shortName": "Unknown 1997 Away",
     "country": "Ajax",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -8095,14 +8451,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Ajax"
   },
   {
     "id": "real-madrid-2006-07-away-kit-beckham-fullsleeve-polo-embroidery-premium",
     "name": "Real Madrid 2006-07 Away Kit Beckham Fullsleeve Polo Embroidery Premium",
     "shortName": "Unknown 2006 Away",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Away",
     "player": "",
@@ -8140,14 +8498,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "france-2026-home-kit-mbappe-polo-1",
     "name": "France 2026 Home Kit Mbappe Polo",
-    "shortName": "France 2026 Home – Mbappe",
+    "shortName": "France 2026 Home \u2013 Mbappe",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Mbappe",
@@ -8184,14 +8543,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "argentina-2006-away-kit-messi-embroidery-premium",
     "name": "Argentina 2006 Away Kit Messi Embroidery Premium",
-    "shortName": "Argentina 2006 Away – Messi",
+    "shortName": "Argentina 2006 Away \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2006,
     "kit": "Away",
     "player": "Messi",
@@ -8230,14 +8591,16 @@ export const JERSEYS: Jersey[] =[
       "2006",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "chennai-super-kings-2026-kit-dhoni-polo-embroidery-premium",
     "name": "Chennai Super Kings 2026 Kit Dhoni Polo Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Chennai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -8278,14 +8641,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Chennai"
   },
   {
     "id": "manchester-united-2007-08-home-kit-ronaldo-embroidery-premium",
     "name": "Manchester United 2007-08 Home Kit Ronaldo Embroidery Premium",
-    "shortName": "Unknown 2007 Home – Ronaldo",
+    "shortName": "Unknown 2007 Home \u2013 Ronaldo",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Home",
     "player": "Ronaldo",
@@ -8323,14 +8688,16 @@ export const JERSEYS: Jersey[] =[
       "2007",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "juventus-2005-06-home-kit-embroidery-premium",
     "name": "Juventus 2005-06 Home Kit Embroidery Premium",
     "shortName": "Unknown 2005 Home",
     "country": "Juventus",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2005,
     "kit": "Home",
     "player": "",
@@ -8365,14 +8732,16 @@ export const JERSEYS: Jersey[] =[
       "2005",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Juventus"
   },
   {
     "id": "liverpool-2007-08-away-kit-torres-fivesleeve-embroidery-premium",
     "name": "Liverpool 2007-08 Away Kit Torres Fivesleeve Embroidery Premium",
     "shortName": "Unknown 2007 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Away",
     "player": "",
@@ -8408,14 +8777,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "rcb-2026-home-kit-virat-polo-embroidery-premium",
     "name": "Rcb 2026 Home Kit Virat Polo Embroidery Premium",
     "shortName": "Rcb 2026 Home",
     "country": "Rcb",
-    "flag": "🏏",
+    "flag": "\ud83c\udfcf",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -8457,14 +8828,17 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Rcb",
+    "featured": true
   },
   {
     "id": "arsanel-25-26-third-kit-fullsleeve-polo-embroidery-premium",
     "name": "Arsanel 25-26 Third Kit Fullsleeve Polo Embroidery Premium",
     "shortName": "Unknown 2026 Third",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -8504,14 +8878,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "brazil-2026-away-kit-vini",
     "name": "Brazil 2026 Away Kit Vini",
-    "shortName": "Brazil 2026 Away – Vini",
+    "shortName": "Brazil 2026 Away \u2013 Vini",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Vini",
@@ -8547,14 +8922,16 @@ export const JERSEYS: Jersey[] =[
       "Vini",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "japan-2016-away-kit-embroidery-1",
     "name": "Japan 2016 Away Kit Embroidery",
     "shortName": "Japan 2016 Away",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 2016,
     "kit": "Away",
     "player": "",
@@ -8591,14 +8968,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2016",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "barcelona-2008-09-home-kit-messi-fullsleeve-embroidery-1",
     "name": "Barcelona 2008-09 Home Kit Messi Fullsleeve Embroidery",
-    "shortName": "Unknown 2008 Home – Messi",
+    "shortName": "Unknown 2008 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2008,
     "kit": "Home",
     "player": "Messi",
@@ -8636,14 +9015,15 @@ export const JERSEYS: Jersey[] =[
       "2008",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "brazil-2019-away-kit-neymer-embroidery-1",
     "name": "Brazil 2019 Away Kit Neymer Embroidery",
-    "shortName": "Brazil 2019 Away – Neymer",
+    "shortName": "Brazil 2019 Away \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2019,
     "kit": "Away",
     "player": "Neymer",
@@ -8681,14 +9061,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2019",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "argentina-2026-training-kit-messi-embroidery-1",
     "name": "Argentina 2026 Training Kit Messi Embroidery",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -8727,14 +9109,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Training"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "arsanel-x-stussy-special-edition-kit-ozil-embroidery-premium",
     "name": "Arsanel X Stussy Special Edition Kit Ozil Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -8774,14 +9158,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "liverpool-1993-94-home-kit-torres-polo-embroidery-premium",
     "name": "Liverpool 1993-94 Home Kit Torres Polo Embroidery Premium",
     "shortName": "Unknown 1993 Home",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1993,
     "kit": "Home",
     "player": "",
@@ -8819,14 +9205,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "mumbai-indians-2026-home-kit-rohit-polo-embroidey",
     "name": "Mumbai Indians 2026 Home Kit Rohit Polo Embroidey",
     "shortName": "Unknown 2026 Home",
     "country": "Mumbai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -8862,14 +9250,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Mumbai"
   },
   {
     "id": "juventus-1995-96-home-kit-del-piero-polo-embroidery-premium",
     "name": "Juventus 1995-96 Home Kit Del Piero Polo Embroidery Premium",
     "shortName": "Unknown 1995 Home",
     "country": "Juventus",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1995,
     "kit": "Home",
     "player": "",
@@ -8910,14 +9300,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Juventus"
   },
   {
     "id": "italy-1996-97-training-kit-maldini-fivesleeve-embroidery-premium",
     "name": "Italy 1996-97 Training Kit Maldini Fivesleeve Embroidery Premium",
     "shortName": "Italy 1996 Home",
     "country": "Italy",
-    "flag": "🇮🇹",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
     "year": 1996,
     "kit": "Home",
     "player": "",
@@ -8957,14 +9349,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Training",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Italy"
   },
   {
     "id": "chennai-super-kings-2026-kit-dhoni-polo-premium",
     "name": "Chennai Super Kings 2026 Kit Dhoni Polo Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Chennai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9003,14 +9397,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Chennai"
   },
   {
     "id": "chennai-super-kings-2026-kit-sams0n-polo-premium",
     "name": "Chennai Super Kings 2026 Kit Sams0N Polo Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Chennai",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9049,14 +9445,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Chennai"
   },
   {
     "id": "barcelona-125th-anniversary-kit-neymer-fivesleeve-polo-embroidery-premium",
     "name": "Barcelona 125Th Anniversary Kit Neymer Fivesleeve Polo Embroidery Premium",
-    "shortName": "Unknown 2026 Home – Neymer",
+    "shortName": "Unknown 2026 Home \u2013 Neymer",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Neymer",
@@ -9096,14 +9494,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "spain-2026-home-kit-lamine-yamal-embroidery-premium",
     "name": "Spain 2026 Home Kit Lamine Yamal Embroidery Premium",
-    "shortName": "Spain 2026 Home – Lamine Yamal",
+    "shortName": "Spain 2026 Home \u2013 Lamine Yamal",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2026,
     "kit": "Home",
     "player": "Lamine Yamal",
@@ -9145,14 +9545,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "rcb-2026-home-kit-virat-polo-embroidery",
     "name": "Rcb 2026 Home Kit Virat Polo Embroidery",
     "shortName": "Rcb 2026 Home",
     "country": "Rcb",
-    "flag": "🏏",
+    "flag": "\ud83c\udfcf",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9186,14 +9588,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Rcb"
   },
   {
     "id": "intermilan-1996-97-away-kit-zanetti-fivesleeve-polo-embroidery-premium",
     "name": "Intermilan 1996-97 Away Kit Zanetti Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1996 Away",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1996,
     "kit": "Away",
     "player": "",
@@ -9230,14 +9634,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "newcastle-1999-2000-away-kit-shearer-fivesleeve-polo-embroidery-premium",
     "name": "Newcastle 1999-2000 Away Kit Shearer Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1999 Away",
     "country": "Newcastle",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Away",
     "player": "",
@@ -9277,14 +9683,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Newcastle"
   },
   {
     "id": "acmilan-2011-12-third-kit-ibrahimovic-polo-embroidery-premium",
     "name": "Acmilan 2011-12 Third Kit Ibrahimovic Polo Embroidery Premium",
     "shortName": "Unknown 2011 Third",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2011,
     "kit": "Third",
     "player": "",
@@ -9322,14 +9730,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "japan-x-stussy-1998-home-kit-nakata-fivesleeve-polo-embroidery-premium",
     "name": "Japan X Stussy 1998 Home Kit Nakata Fivesleeve Polo Embroidery Premium",
     "shortName": "Japan 1998 Home",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -9370,14 +9780,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "acmilan-2009-10-home-kit-maldini-polo-embroidery-premium",
     "name": "Acmilan 2009-10 Home Kit Maldini Polo Embroidery Premium",
     "shortName": "Unknown 2009 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2009,
     "kit": "Home",
     "player": "",
@@ -9417,14 +9829,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "real-madrid-golden-lion-special-edition-kit-embroidery-premium",
     "name": "Real Madrid Golden Lion Special Edition Kit Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9463,14 +9877,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "olympique-lyonnais-2007-08-third-kit-juninho-embroidery-premium",
     "name": "Olympique Lyonnais 2007-08 Third Kit Juninho Embroidery Premium",
     "shortName": "Unknown 2007 Third",
     "country": "Olympique",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Third",
     "player": "",
@@ -9507,14 +9923,16 @@ export const JERSEYS: Jersey[] =[
       "2007",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Olympique"
   },
   {
     "id": "shorts-dotknit-black-embroidery",
     "name": "Shorts Dotknit Black Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Shorts",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9546,14 +9964,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "shorts-dotknit-white-embroidery",
     "name": "Shorts Dotknit White Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Shorts",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9585,14 +10004,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "brazil-1998-home-kit-ronaldo-embroidery-premium",
     "name": "Brazil 1998 Home Kit Ronaldo Embroidery Premium",
-    "shortName": "Brazil 1998 Home – Ronaldo",
+    "shortName": "Brazil 1998 Home \u2013 Ronaldo",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 1998,
     "kit": "Home",
     "player": "Ronaldo",
@@ -9634,14 +10054,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "mexico-2026-home-kit-embroidery-premium-1",
     "name": "Mexico 2026 Home Kit Embroidery Premium",
     "shortName": "Mexico 2026 Home",
     "country": "Mexico",
-    "flag": "🇲🇽",
+    "flag": "\ud83c\uddf2\ud83c\uddfd",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -9682,14 +10104,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Mexico"
   },
   {
     "id": "barcelona-2014-15-home-kit-messi-embroidery-premium",
     "name": "Barcelona 2014-15 Home Kit Messi Embroidery Premium",
-    "shortName": "Unknown 2014 Home – Messi",
+    "shortName": "Unknown 2014 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2014,
     "kit": "Home",
     "player": "Messi",
@@ -9729,14 +10153,16 @@ export const JERSEYS: Jersey[] =[
       "2014",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "germany-1996-home-kit-beckenbauer-polo-embroidery-premium",
     "name": "Germany 1996 Home Kit Beckenbauer Polo Embroidery Premium",
     "shortName": "Germany 1996 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 1996,
     "kit": "Home",
     "player": "",
@@ -9778,14 +10204,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "italy-2014-away-kit-pirlo-embroidery-premium",
     "name": "Italy 2014 Away Kit Pirlo Embroidery Premium",
     "shortName": "Italy 2014 Away",
     "country": "Italy",
-    "flag": "🇮🇹",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
     "year": 2014,
     "kit": "Away",
     "player": "",
@@ -9825,14 +10253,16 @@ export const JERSEYS: Jersey[] =[
       "2014",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Italy"
   },
   {
     "id": "fiorentina-1992-93-away-kit-batistuta-fivesleeve-polo-embroidery-premium",
     "name": "Fiorentina 1992-93 Away Kit Batistuta Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1992 Away",
     "country": "Fiorentina",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1992,
     "kit": "Away",
     "player": "",
@@ -9869,14 +10299,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Fiorentina"
   },
   {
     "id": "liverpool-2000-01-home-kit-owen-polo-embroidery-premium",
     "name": "Liverpool 2000-01 Home Kit Owen Polo Embroidery Premium",
     "shortName": "Unknown 2000 Home",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2000,
     "kit": "Home",
     "player": "",
@@ -9916,14 +10348,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "acmilan-1999-2000-home-kit-maldini-polo-embroidery",
     "name": "Acmilan 1999-2000 Home Kit Maldini Polo Embroidery",
     "shortName": "Unknown 1999 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -9958,14 +10392,16 @@ export const JERSEYS: Jersey[] =[
       "1999",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "germany-2026-training-kit-embroidery",
     "name": "Germany 2026 Training Kit Embroidery",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -10001,14 +10437,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Training"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "portugal-2010-away-kit-ronaldo-embroidery",
     "name": "Portugal 2010 Away Kit Ronaldo Embroidery",
-    "shortName": "Portugal 2010 Away – Ronaldo",
+    "shortName": "Portugal 2010 Away \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2010,
     "kit": "Away",
     "player": "Ronaldo",
@@ -10046,14 +10484,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2010",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "manchester-united-2007-08-home-kit-ronaldo-embroidery-1",
     "name": "Manchester United 2007-08 Home Kit Ronaldo Embroidery",
-    "shortName": "Unknown 2007 Home – Ronaldo",
+    "shortName": "Unknown 2007 Home \u2013 Ronaldo",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Home",
     "player": "Ronaldo",
@@ -10090,14 +10530,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2007",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "real-madrid-2019-20-home-kit-modric-embroidery",
     "name": "Real Madrid 2019-20 Home Kit Modric Embroidery",
-    "shortName": "Unknown 2019 Home – Modric",
+    "shortName": "Unknown 2019 Home \u2013 Modric",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2019,
     "kit": "Home",
     "player": "Modric",
@@ -10134,14 +10576,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2019",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "tshirt-fullsleeve-emirates-r-w",
     "name": "Tshirt Fullsleeve Emirates R/W",
     "shortName": "Unknown 2026 Home",
     "country": "Tshirt",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -10176,14 +10620,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "T-Shirt",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "tshirt-fullsleeve-emirates-g-w-r",
     "name": "Tshirt Fullsleeve Emirates G/W/R",
     "shortName": "Unknown 2026 Home",
     "country": "Tshirt",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -10218,14 +10663,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "T-Shirt",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "tshirt-fullsleeve-emirates-b-g-r",
     "name": "Tshirt Fullsleeve Emirates B/G/R",
     "shortName": "Unknown 2026 Home",
     "country": "Tshirt",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -10260,14 +10706,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "T-Shirt",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "roma-1999-2000-home-kit-totti-fivesleeve-polo-embroidery-premium",
     "name": "Roma 1999-2000 Home Kit Totti Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1999 Home",
     "country": "Roma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -10304,14 +10751,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Roma"
   },
   {
     "id": "intermilan-2014-15-home-kit-icardi-polo-embroidery-premium",
     "name": "Intermilan 2014-15 Home Kit Icardi Polo Embroidery Premium",
     "shortName": "Unknown 2014 Home",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2014,
     "kit": "Home",
     "player": "",
@@ -10351,14 +10800,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "argentina-2026-home-kit-messi-embroidery-premium-1",
     "name": "Argentina 2026 Home Kit Messi Embroidery With Knitted Rib Premium",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -10401,14 +10852,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "bayern-2013-14-third-kit-kroos-embroidery-premium",
     "name": "Bayern 2013-14 Third Kit Kroos Embroidery Premium",
     "shortName": "Unknown 2013 Third",
     "country": "Bayern",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2013,
     "kit": "Third",
     "player": "",
@@ -10445,14 +10898,16 @@ export const JERSEYS: Jersey[] =[
       "2013",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Bayern"
   },
   {
     "id": "barcelona-2003-04-away-kit-ronaldinho-polo-embroidery-premium",
     "name": "Barcelona 2003-04 Away Kit Ronaldinho Polo Embroidery Premium",
     "shortName": "Unknown 2003 Away",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Away",
     "player": "",
@@ -10491,14 +10946,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "india-26-27-t20-kit-embroidery-premium",
     "name": "India 26-27 T20 Kit Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "India",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -10538,14 +10995,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "India"
   },
   {
     "id": "real-madrid-starlight-special-edition-kit-ronaldo-polo-embroidery-premium",
     "name": "Real Madrid Starlight Special Edition Kit Ronaldo Polo Embroidery Premium",
-    "shortName": "Unknown 2026 Home – Ronaldo",
+    "shortName": "Unknown 2026 Home \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Ronaldo",
@@ -10586,14 +11045,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "liverpool-terrace-icon-kit-fivesleeve-embroidery-premium",
     "name": "Liverpool Terrace Icon Kit Fivesleeve Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -10631,14 +11092,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "bayern-1998-99-away-kit-matthaus-fivesleeve-polo",
     "name": "Bayern 1998-99 Away Kit Matthaus Fivesleeve Polo",
     "shortName": "Unknown 1998 Away",
     "country": "Bayern",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -10674,14 +11137,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Bayern"
   },
   {
     "id": "manchester-united-1998-away-kit-beckham-polo-embroidery-premium",
     "name": "Manchester United 1998 Black Kit Beckham Polo Embroidery Premium",
     "shortName": "Unknown 1998 Third",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Third",
     "player": "",
@@ -10719,14 +11184,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "spain-1996-home-kit-luis-enrique-fivesleeve-polo-embroidery-premium",
     "name": "Spain 1996 Home Kit Luis Enrique Fivesleeve Polo Embroidery Premium",
     "shortName": "Spain 1996 Home",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 1996,
     "kit": "Home",
     "player": "",
@@ -10764,14 +11231,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "acmilan-1995-96-home-kit-baggio-fivesleeve-polo-embroidery",
     "name": "Acmilan 1995-96 Home Kit Baggio Fivesleeve Polo Embroidery",
     "shortName": "Unknown 1995 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1995,
     "kit": "Home",
     "player": "",
@@ -10809,14 +11278,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1993-94-home-kit-gullit-fivesleeve",
     "name": "Acmilan 1993-94 Home Kit Gullit Fivesleeve Polo",
     "shortName": "Unknown 1993 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1993,
     "kit": "Home",
     "player": "",
@@ -10852,14 +11323,16 @@ export const JERSEYS: Jersey[] =[
       "1993",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "india-1999-world-cup-kit-tendulkar-polo-embroidery-premium",
     "name": "India 1999 World Cup Kit Tendulkar Polo Embroidery Premium",
     "shortName": "Unknown 1999 Home",
     "country": "India",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -10900,14 +11373,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "India"
   },
   {
     "id": "germany-2008-09-away-kit-ballack-fivesleeve-embroidery-premium",
     "name": "Germany 2008-09 Away Kit Ballack Fivesleeve Embroidery Premium",
     "shortName": "Germany 2008 Away",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2008,
     "kit": "Away",
     "player": "",
@@ -10946,14 +11421,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "sporting-2001-02-home-kit-ronaldo-fivesleeve-embroidery-premium",
     "name": "Sporting 2001-02 Home Kit Ronaldo Fivesleeve Embroidery Premium",
-    "shortName": "Unknown 2001 Home – Ronaldo",
+    "shortName": "Unknown 2001 Home \u2013 Ronaldo",
     "country": "Sporting",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2001,
     "kit": "Home",
     "player": "Ronaldo",
@@ -10990,14 +11467,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Sporting"
   },
   {
     "id": "barcelona-x-coldplay-special-edition-kit-raphina-embroidery-premium",
     "name": "Barcelona X Coldplay Special Edition Kit Raphina Embroidery Premium",
-    "shortName": "Unknown 2026 Home – Raphina",
+    "shortName": "Unknown 2026 Home \u2013 Raphina",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Raphina",
@@ -11035,14 +11514,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "brazil-x-stussy-2002-home-kit-ronaldo-embroidery-premium",
     "name": "Brazil X Stussy 2002 Home Kit Ronaldo Embroidery Premium",
-    "shortName": "Brazil 2002 Home – Ronaldo",
+    "shortName": "Brazil 2002 Home \u2013 Ronaldo",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2002,
     "kit": "Home",
     "player": "Ronaldo",
@@ -11083,14 +11564,16 @@ export const JERSEYS: Jersey[] =[
       "2002",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "barcelona-2004-05-away-kit-messi-fivesleeve-embroidery",
     "name": "Barcelona 2004-05 Away Kit Messi Fivesleeve Embroidery",
-    "shortName": "Unknown 2004 Away – Messi",
+    "shortName": "Unknown 2004 Away \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2004,
     "kit": "Away",
     "player": "Messi",
@@ -11128,14 +11611,16 @@ export const JERSEYS: Jersey[] =[
       "2004",
       "Embroidery",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-1999-2000-home-kit-puyol-polo-embroidery-premium",
     "name": "Barcelona 1999-2000 Home Kit Puyol Polo Embroidery Premium",
     "shortName": "Unknown 1999 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -11175,14 +11660,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "arsanel-2017-18-home-kit-ozil-polo-embroidery-premium-1",
     "name": "Arsanel 2017-18 Home Kit Ozil Polo Embroidery Premium",
     "shortName": "Unknown 2017 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2017,
     "kit": "Home",
     "player": "",
@@ -11220,14 +11707,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "germany-2006-home-kit-kroos-embroidery-premium-1",
     "name": "Germany 2006 Home Kit Kroos Embroidery Premium",
     "shortName": "Germany 2006 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2006,
     "kit": "Home",
     "player": "",
@@ -11267,14 +11756,16 @@ export const JERSEYS: Jersey[] =[
       "2006",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "santos-2012-13-home-kit-neymer-embroidery-premium-1",
     "name": "Santos 2012-13 Home Kit Neymer Embroidery Premium",
-    "shortName": "Unknown 2012 Home – Neymer",
+    "shortName": "Unknown 2012 Home \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2012,
     "kit": "Home",
     "player": "Neymer",
@@ -11312,14 +11803,16 @@ export const JERSEYS: Jersey[] =[
       "2012",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "england-2004-05-away-kit-beckham-embroidery-premium",
     "name": "England 2004-05 Away Kit Beckham Embroidery Premium",
     "shortName": "England 2004 Away",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2004,
     "kit": "Away",
     "player": "",
@@ -11359,14 +11852,16 @@ export const JERSEYS: Jersey[] =[
       "2004",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "brazil-2026-away-kit-neymer-embroidery-1",
     "name": "Brazil 2026 Away Kit Neymer Embroidery",
-    "shortName": "Brazil 2026 Away – Neymer",
+    "shortName": "Brazil 2026 Away \u2013 Neymer",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Away",
     "player": "Neymer",
@@ -11404,14 +11899,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "arsanel-2022-23-home-kit-odegaard-polo-embroidery",
     "name": "Arsanel 2022-23 Home Kit Odegaard Polo Embroidery",
-    "shortName": "Unknown 2022 Home – Odegaard",
+    "shortName": "Unknown 2022 Home \u2013 Odegaard",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2022,
     "kit": "Home",
     "player": "Odegaard",
@@ -11449,14 +11946,16 @@ export const JERSEYS: Jersey[] =[
       "2022",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "manchester-united-fantasy-kit-beckham-fivesleeve-polo",
     "name": "Manchester United Fantasy Kit Beckham Fivesleeve Polo",
     "shortName": "Unknown 2026 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -11490,14 +11989,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "argentina-la-albiceleste-10-black-kit-fivesleeve-polo-embroidery-premium",
     "name": "Argentina La-Albiceleste 10 Black Kit Fivesleeve Polo Embroidery Premium",
     "shortName": "Argentina 2026 Third",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -11536,14 +12037,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "intermilan-1997-98-home-kit-ronaldo-polo-embroidery-premium",
     "name": "Intermilan 1997-98 Home Kit Ronaldo Polo Embroidery Premium",
-    "shortName": "Unknown 1997 Home – Ronaldo",
+    "shortName": "Unknown 1997 Home \u2013 Ronaldo",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Home",
     "player": "Ronaldo",
@@ -11582,14 +12085,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "arsanel-2005-06-home-kit-henry-polo-embroidery-premium",
     "name": "Arsanel 2005-06 Home Kit Henry Polo Embroidery Premium",
     "shortName": "Unknown 2005 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2005,
     "kit": "Home",
     "player": "",
@@ -11627,14 +12132,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "liverpool-1989-90-home-kit-embroidery-premium",
     "name": "Liverpool 1989-90 Home Kit Embroidery Premium",
     "shortName": "Unknown 1989 Home",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1989,
     "kit": "Home",
     "player": "",
@@ -11673,14 +12180,16 @@ export const JERSEYS: Jersey[] =[
       "1989",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "portugal-2026-home-kit-ronaldo-embroidery-with-shorts",
     "name": "Portugal 2026 Home Kit Ronaldo Embroidery With Shorts",
-    "shortName": "Portugal 2026 Home – Ronaldo",
+    "shortName": "Portugal 2026 Home \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "Ronaldo",
@@ -11721,14 +12230,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "real-madrid-2017-18-third-kit-ronaldo-fullsleeve-embroidery-premium",
     "name": "Real Madrid 2017-18 Third Kit Ronaldo Fullsleeve Embroidery Premium",
-    "shortName": "Unknown 2017 Third – Ronaldo",
+    "shortName": "Unknown 2017 Third \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2017,
     "kit": "Third",
     "player": "Ronaldo",
@@ -11767,14 +12277,15 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "real-madrid-2016-17-home-kit-ronaldo-polo-embroidery-premium",
     "name": "Real Madrid 2016-17 Home Kit Ronaldo Polo Embroidery Premium",
-    "shortName": "Unknown 2016 Home – Ronaldo",
+    "shortName": "Unknown 2016 Home \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2016,
     "kit": "Home",
     "player": "Ronaldo",
@@ -11815,14 +12326,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-2011-12-home-kit-ronaldo-polo-embroidery-premium",
     "name": "Real Madrid 2011-12 Home Kit Ronaldo Polo Embroidery Premium",
-    "shortName": "Unknown 2011 Home – Ronaldo",
+    "shortName": "Unknown 2011 Home \u2013 Ronaldo",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2011,
     "kit": "Home",
     "player": "Ronaldo",
@@ -11863,14 +12376,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "roma-25-26-third-kit-dybala-polo-embroidery-premium",
     "name": "Roma 25-26 Third Kit Dybala Polo Embroidery Premium",
     "shortName": "Unknown 2026 Third",
     "country": "Roma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -11911,14 +12426,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Roma"
   },
   {
     "id": "barcelona-2014-15-third-kit-messi-polo-embroidery-premium",
     "name": "Barcelona 2014-15 Third Kit Messi Polo Embroidery Premium",
-    "shortName": "Unknown 2014 Third – Messi",
+    "shortName": "Unknown 2014 Third \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2014,
     "kit": "Third",
     "player": "Messi",
@@ -11957,14 +12474,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "arsanel-1990-91-home-kit-adams-fivesleeve-knitted-polo-embroidery-premium",
     "name": "Arsanel 1990-91 Home Kit Adams Fivesleeve Knitted Polo Embroidery Premium",
     "shortName": "Unknown 1990 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1990,
     "kit": "Home",
     "player": "",
@@ -12001,14 +12520,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "mexico-gold-cup-edition-kit-embroidery-premium",
     "name": "Mexico Gold Cup Edition Kit Embroidery Premium",
     "shortName": "Mexico 2026 Home",
     "country": "Mexico",
-    "flag": "🇲🇽",
+    "flag": "\ud83c\uddf2\ud83c\uddfd",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -12046,14 +12567,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Mexico"
   },
   {
     "id": "juventus-2015-16-home-kit-pogba-embroidery",
     "name": "Juventus 2015-16 Home Kit Pogba Embroidery",
     "shortName": "Unknown 2015 Home",
     "country": "Juventus",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2015,
     "kit": "Home",
     "player": "",
@@ -12089,14 +12612,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2015",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Juventus"
   },
   {
     "id": "valencia-2006-away-kit-david-villa-embroiery",
     "name": "Valencia 2006 Away Kit David Villa Embroiery",
     "shortName": "Unknown 2006 Away",
     "country": "Valencia",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Away",
     "player": "",
@@ -12123,14 +12648,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Away",
       "2006"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Valencia"
   },
   {
     "id": "united-2007-08-away-kit-ronaldo-with-shorts",
     "name": "United 2007-08 Away Kit Ronaldo With Shorts",
-    "shortName": "Unknown 2007 Away – Ronaldo",
+    "shortName": "Unknown 2007 Away \u2013 Ronaldo",
     "country": "United",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Away",
     "player": "Ronaldo",
@@ -12167,14 +12694,15 @@ export const JERSEYS: Jersey[] =[
       "Ronaldo",
       "Away",
       "2007"
-    ]
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "sporting-2000-01-home-kit-ronaldo",
     "name": "Sporting 2000-01 Home Kit Ronaldo",
-    "shortName": "Unknown 2000 Home – Ronaldo",
+    "shortName": "Unknown 2000 Home \u2013 Ronaldo",
     "country": "Sporting",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2000,
     "kit": "Home",
     "player": "Ronaldo",
@@ -12209,14 +12737,16 @@ export const JERSEYS: Jersey[] =[
       "Ronaldo",
       "Home",
       "2000"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Sporting"
   },
   {
     "id": "spain-2016-17-away-kit-iniesta-embroidery",
     "name": "Spain 2016-17 Away Kit Iniesta Embroidery",
     "shortName": "Spain 2016 Away",
     "country": "Spain",
-    "flag": "🇪🇸",
+    "flag": "\ud83c\uddea\ud83c\uddf8",
     "year": 2016,
     "kit": "Away",
     "player": "",
@@ -12247,14 +12777,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2016",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Spain"
   },
   {
     "id": "shorts-pp-white-2",
     "name": "Shorts Pp White",
     "shortName": "Unknown 2026 Home",
     "country": "Shorts",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -12287,14 +12819,57 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Shorts"
+  },
+  {
+    "id": "shorts-pp-black-2",
+    "name": "Shorts Pp Black",
+    "shortName": "Unknown 2026 Home",
+    "country": "Shorts",
+    "flag": "\ud83c\udff3",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 241,
+    "sizes": [
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": false
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/B-2025-07-30T171736.328_566639ae-01c1-4e77-b100-d215a37d370e.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2025-07-30T171736.328_566639ae-01c1-4e77-b100-d215a37d370e.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/C-100_7ba19a1b-5a93-4427-9316-74140b57e732.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2025-07-30T171728.603_e8f0b072-a713-46ce-a5a0-1b077e12c571.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2025-07-30T171754.346_00fcfe48-a68c-4fa8-800a-75fc52be1eef.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026"
+    ],
+    "mainCategory": "Shorts"
   },
   {
     "id": "sao-paulo-2001-home-kit-kaka-fivesleeve",
     "name": "Sao Paulo 2001 Home Kit Kaka Fivesleeve",
     "shortName": "Unknown 2001 Home",
     "country": "Sao",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2001,
     "kit": "Home",
     "player": "",
@@ -12327,14 +12902,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2001",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Sao Paulo"
   },
   {
     "id": "santos-x-charlie-brown-jr-1992-white-special-edition-kit-neymer-polo-embroidery-premium",
     "name": "Santos X Charlie Brown Jr 1992 White Special Edition Kit Neymer Polo Embroidery Premium",
-    "shortName": "Unknown 1992 Home – Neymer",
+    "shortName": "Unknown 1992 Home \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1992,
     "kit": "Home",
     "player": "Neymer",
@@ -12367,14 +12944,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "santos-25-26-blue-dragon-special-edition-kit-neymer-embroidery",
     "name": "Santos 25-26 Blue Dragon Special Edition Kit Neymer Embroidery",
-    "shortName": "Unknown 2026 Home – Neymer",
+    "shortName": "Unknown 2026 Home \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Neymer",
@@ -12405,14 +12984,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "santos-2012-13-home-kit-neymer-fivesleeve-2",
     "name": "Santos 2012-13 Home Kit Neymer Fivesleeve",
-    "shortName": "Unknown 2012 Home – Neymer",
+    "shortName": "Unknown 2012 Home \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2012,
     "kit": "Home",
     "player": "Neymer",
@@ -12440,14 +13021,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2012",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "santos-2012-13-home-kit-neymer-embroidery-2",
     "name": "Santos 2012-13 Home Kit Neymer Embroidery",
-    "shortName": "Unknown 2012 Home – Neymer",
+    "shortName": "Unknown 2012 Home \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2012,
     "kit": "Home",
     "player": "Neymer",
@@ -12478,14 +13061,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2012",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "santos-2012-black-kit-neymer-embroidery",
     "name": "Santos 2012 Black Kit Neymer Embroidery",
-    "shortName": "Unknown 2012 Third – Neymer",
+    "shortName": "Unknown 2012 Third \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2012,
     "kit": "Third",
     "player": "Neymer",
@@ -12520,14 +13105,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2012",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "santos-2011-12-home-kit-neymer-fivesleeve-embroidery",
     "name": "Santos 2011-12 Home Kit Neymer Fivesleeve Embroidery",
-    "shortName": "Unknown 2011 Home – Neymer",
+    "shortName": "Unknown 2011 Home \u2013 Neymer",
     "country": "Santos",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2011,
     "kit": "Home",
     "player": "Neymer",
@@ -12557,14 +13144,16 @@ export const JERSEYS: Jersey[] =[
       "2011",
       "Embroidery",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Santos"
   },
   {
     "id": "roma-25-26-third-kit-dybala-polo",
     "name": "Roma 25-26 Third Kit Dybala Polo",
     "shortName": "Unknown 2026 Third",
     "country": "Roma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -12591,14 +13180,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Roma"
   },
   {
     "id": "roma-20-21-third-kit-totti-fivesleeve",
     "name": "Roma 20-21 Third Kit Totti Fivesleeve",
     "shortName": "Unknown 2026 Third",
     "country": "Roma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -12629,14 +13220,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Roma"
   },
   {
     "id": "roma-1999-2000-home-kit-cafu-fivesleeve-polo",
     "name": "Roma 1999-2000 Home Kit Cafu Fivesleeve Polo",
     "shortName": "Unknown 1999 Home",
     "country": "Roma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -12670,14 +13263,16 @@ export const JERSEYS: Jersey[] =[
       "1999",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Roma"
   },
   {
     "id": "roma-1997-98-away-kit-totti-fivesleeve-polo-2",
     "name": "Roma 1997-98 Away Kit Totti Fivesleeve Polo",
     "shortName": "Unknown 1997 Away",
     "country": "Roma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -12709,14 +13304,16 @@ export const JERSEYS: Jersey[] =[
       "1997",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Roma"
   },
   {
     "id": "real-madrid-fivesleeve-white",
     "name": "Real Madrid Fivesleeve White",
     "shortName": "Unknown 2026 Home",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -12743,14 +13340,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-champions-edition-kit-fivesleeve",
     "name": "Real Madrid Champions Edition Kit Fivesleeve",
     "shortName": "Unknown 2026 Home",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -12783,14 +13382,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-25-26-third-kit-huijsen",
     "name": "Real Madrid 25-26 Third Kit Huijsen",
     "shortName": "Unknown 2026 Third",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -12816,14 +13417,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Third",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-25-26-away-kit-trent-embroidery-premium",
     "name": "Real Madrid 25-26 Away Kit Trent Embroidery Premium",
     "shortName": "Unknown 2026 Away",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -12856,14 +13459,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-2025-26-away-kit-vini-jr",
     "name": "Real Madrid 2025-26 Away Kit Vini Jr",
-    "shortName": "Unknown 2025 Away – Vini",
+    "shortName": "Unknown 2025 Away \u2013 Vini",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2025,
     "kit": "Away",
     "player": "Vini",
@@ -12890,14 +13495,16 @@ export const JERSEYS: Jersey[] =[
       "Vini",
       "Away",
       "2025"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-2017-18-third-kit-ramos",
     "name": "Real Madrid 2017-18 Third Kit Ramos",
     "shortName": "Unknown 2017 Third",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2017,
     "kit": "Third",
     "player": "",
@@ -12923,14 +13530,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Third",
       "2017"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-2009-10-home-kit-marcelo-fivesleeve",
     "name": "Real Madrid 2009-10 Home Kit Marcelo Fivesleeve",
     "shortName": "Unknown 2009 Home",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2009,
     "kit": "Home",
     "player": "",
@@ -12959,14 +13568,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2009",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-1999-2000-home-kit-carlos-polo-embroidery-premium",
     "name": "Real Madrid 1999-2000 Home Kit Carlos Polo Embroidery Premium",
     "shortName": "Unknown 1999 Home",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -13006,14 +13617,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "real-madrid-1999-2000-away-kit-fivesleeve-polo",
     "name": "Real Madrid 1999-2000 Away Kit Fivesleeve Polo",
     "shortName": "Unknown 1999 Away",
     "country": "Real",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Away",
     "player": "",
@@ -13043,14 +13656,16 @@ export const JERSEYS: Jersey[] =[
       "1999",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "rajasthan-royals-2025-kit-sanju-samson-polo",
     "name": "Rajasthan Royals 2025 Kit Sanju Samson Polo",
     "shortName": "Unknown 2025 Home",
     "country": "Rajasthan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2025,
     "kit": "Home",
     "player": "",
@@ -13081,14 +13696,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2025",
       "Polo"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Rajasthan"
   },
   {
     "id": "psg-25-26-third-kit-marquinhos",
     "name": "Psg 25-26 Third Kit Marquinhos",
     "shortName": "Unknown 2026 Third",
     "country": "Psg",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -13120,14 +13737,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Third",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Psg"
   },
   {
     "id": "psg-25-26-third-kit-dembele",
     "name": "Psg 25-26 Third Kit Dembele",
-    "shortName": "Unknown 2026 Third – Dembele",
+    "shortName": "Unknown 2026 Third \u2013 Dembele",
     "country": "Psg",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "Dembele",
@@ -13158,14 +13777,16 @@ export const JERSEYS: Jersey[] =[
       "Dembele",
       "Third",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Psg"
   },
   {
     "id": "psg-2025-champions-special-kit",
     "name": "Psg 2025 Champions Special Kit",
     "shortName": "Unknown 2025 Home",
     "country": "Psg",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2025,
     "kit": "Home",
     "player": "",
@@ -13195,14 +13816,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2025"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Psg"
   },
   {
     "id": "portugal-vintage-jersey-fivesleeve-polo-premium",
     "name": "Portugal Vintage Jersey Fivesleeve Polo Premium",
     "shortName": "Portugal 2026 Home",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13240,14 +13863,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "portugal-25-26-black-kit-ronaldo-polo-embroidery-premium",
     "name": "Portugal 25-26 Black Kit Ronaldo Polo Embroidery Premium",
-    "shortName": "Portugal 2026 Third – Ronaldo",
+    "shortName": "Portugal 2026 Third \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Third",
     "player": "Ronaldo",
@@ -13289,14 +13914,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Portugal"
   },
   {
     "id": "portugal-2026-black-kit-ronaldo-fullsleeve-polo-embroidery-premium-2",
     "name": "Portugal 2026 Black Kit Ronaldo Fullsleeve Polo Embroidery Premium",
-    "shortName": "Portugal 2026 Third – Ronaldo",
+    "shortName": "Portugal 2026 Third \u2013 Ronaldo",
     "country": "Portugal",
-    "flag": "🇵🇹",
+    "flag": "\ud83c\uddf5\ud83c\uddf9",
     "year": 2026,
     "kit": "Third",
     "player": "Ronaldo",
@@ -13337,14 +13964,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "pepsi-football-kit-ronaldinho-embroidery",
     "name": "Pepsi Football Kit Ronaldinho Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Pepsi",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13378,14 +14006,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Pepsi"
   },
   {
     "id": "parma-calcio-2001-02-third-kit-adriano-fivesleeve-polo",
     "name": "Parma Calcio 2001-02 Third Kit Adriano Fivesleeve Polo",
     "shortName": "Unknown 2001 Third",
     "country": "Parma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2001,
     "kit": "Third",
     "player": "",
@@ -13413,14 +14043,16 @@ export const JERSEYS: Jersey[] =[
       "2001",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Parma"
   },
   {
     "id": "parma-97-98-gk-kit-buffon",
     "name": "Parma 97-98 Gk Kit Buffon",
     "shortName": "Unknown 2026 Home",
     "country": "Parma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13453,14 +14085,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Goalkeeper"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Parma"
   },
   {
     "id": "parma-2003-04-home-kit-crespo-fivesleeve-polo",
     "name": "Parma 2003-04 Home Kit Crespo Fivesleeve Polo",
     "shortName": "Unknown 2003 Home",
     "country": "Parma",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Home",
     "player": "",
@@ -13494,14 +14128,16 @@ export const JERSEYS: Jersey[] =[
       "2003",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Parma"
   },
   {
     "id": "nfl-rrr-99-fivesleeve",
     "name": "Nfl Rrr 99 Fivesleeve",
     "shortName": "Unknown 2026 Home",
     "country": "Nfl",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13530,14 +14166,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "nfl-lwmoney-fivesleeve-blue",
     "name": "Nfl Lwmoney Fivesleeve Blue",
     "shortName": "Unknown 2026 Home",
     "country": "Nfl",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13568,14 +14205,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "nfl-99-blue-fivesleeve",
     "name": "Nfl 99 Blue Fivesleeve",
     "shortName": "Unknown 2026 Home",
     "country": "Nfl",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13604,14 +14242,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "neymer-all-team-tribute-jersey",
     "name": "Neymer All Team Tribute Jersey",
-    "shortName": "Unknown 2026 Home – Neymer",
+    "shortName": "Unknown 2026 Home \u2013 Neymer",
     "country": "Neymer",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Neymer",
@@ -13638,14 +14277,15 @@ export const JERSEYS: Jersey[] =[
       "Neymer",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "monaco-1999-2000-home-kit-henry-fivesleeve-polo",
     "name": "Monaco 1999-2000 Home Kit Henry Fivesleeve Polo",
     "shortName": "Unknown 1999 Home",
     "country": "Monaco",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -13675,14 +14315,16 @@ export const JERSEYS: Jersey[] =[
       "1999",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Monaco"
   },
   {
     "id": "monaco-1997-98-home-kit-henry-fivesleeve",
     "name": "Monaco 1997-98 Home Kit Henry Fivesleeve",
     "shortName": "Unknown 1997 Home",
     "country": "Monaco",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Home",
     "player": "",
@@ -13713,14 +14355,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "1997",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Monaco"
   },
   {
     "id": "manchester-united-2014-15-training-kit-embroidery",
     "name": "Manchester United 2014-15 Training Kit Embroidery",
     "shortName": "Unknown 2014 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2014,
     "kit": "Home",
     "player": "",
@@ -13749,14 +14393,16 @@ export const JERSEYS: Jersey[] =[
       "2014",
       "Embroidery",
       "Training"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "manchester-united-2011-12-giggs-embroidery",
     "name": "Manchester United 2011-12 Giggs Embroidery",
     "shortName": "Unknown 2011 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2011,
     "kit": "Home",
     "player": "",
@@ -13784,14 +14430,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2011",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "manchester-united-2007-08-home-kit-ronaldo-embroidery",
     "name": "Manchester United 2007-08 Home Kit Ronaldo Embroidery",
-    "shortName": "Unknown 2007 Home – Ronaldo",
+    "shortName": "Unknown 2007 Home \u2013 Ronaldo",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Home",
     "player": "Ronaldo",
@@ -13822,14 +14470,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2007",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "manchester-united-2002-03-away-kit-beckham-embroidery",
     "name": "Manchester United 2002-03 Away Kit Beckham Embroidery",
     "shortName": "Unknown 2002 Away",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2002,
     "kit": "Away",
     "player": "",
@@ -13857,14 +14507,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2002",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "manchester-united-1998-99-home-kit-beckham-polo-embroidery-premium",
     "name": "Manchester United 1998-99 Home Kit Beckham Polo Embroidery Premium",
     "shortName": "Unknown 1998 Home",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -13903,14 +14555,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "manchester-city-2020-21-third-kit-embroidery",
     "name": "Manchester City 2020-21 Third Kit Embroidery",
     "shortName": "Unknown 2020 Third",
     "country": "Manchester",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2020,
     "kit": "Third",
     "player": "",
@@ -13942,14 +14596,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2020",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Manchester"
   },
   {
     "id": "columbia-1990-kit-valderamma-fivesleeve",
     "name": "Lwmoney Fivesleeve Jersey",
     "shortName": "Unknown 2026 Home",
     "country": "Lwmoney",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -13976,14 +14632,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "liverpool-25-26-away-kit-wirtz",
     "name": "Liverpool 25-26 Away Kit Wirtz",
-    "shortName": "Unknown 2026 Away – Wirtz",
+    "shortName": "Unknown 2026 Away \u2013 Wirtz",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "Wirtz",
@@ -14010,14 +14667,16 @@ export const JERSEYS: Jersey[] =[
       "Wirtz",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2013-14-third-kit-coutinho-embroidery-premium",
     "name": "Liverpool 2013-14 Third Kit Coutinho Embroidery Premium",
     "shortName": "Unknown 2013 Third",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2013,
     "kit": "Third",
     "player": "",
@@ -14056,14 +14715,16 @@ export const JERSEYS: Jersey[] =[
       "2013",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2013-14-away-kit-gerrard-embroidery-premium",
     "name": "Liverpool 2013-14 Away Kit Gerrard Embroidery Premium",
     "shortName": "Unknown 2013 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2013,
     "kit": "Away",
     "player": "",
@@ -14101,14 +14762,16 @@ export const JERSEYS: Jersey[] =[
       "2013",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2011-12-away-kit-torres-fivesleeve",
     "name": "Liverpool 2011-12 Away Kit Torres Fivesleeve",
     "shortName": "Unknown 2011 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2011,
     "kit": "Away",
     "player": "",
@@ -14135,14 +14798,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2011",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2008-09-third-kit-torres-polo-embroidery",
     "name": "Liverpool 2008-09 Third Kit Torres Polo Embroidery",
     "shortName": "Unknown 2008 Third",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2008,
     "kit": "Third",
     "player": "",
@@ -14171,14 +14836,16 @@ export const JERSEYS: Jersey[] =[
       "2008",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2005-06-away-kit-gerrard-embroidery",
     "name": "Liverpool 2005-06 Away Kit Gerrard Embroidery",
     "shortName": "Unknown 2005 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2005,
     "kit": "Away",
     "player": "",
@@ -14214,14 +14881,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2005",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2003-04-away-kit-gerrard-embroidery",
     "name": "Liverpool 2003-04 Away Kit Gerrard Embroidery",
     "shortName": "Unknown 2003 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Away",
     "player": "",
@@ -14257,14 +14926,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2003",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-2002-03-away-kit-owen-embroidery",
     "name": "Liverpool 2002-03 Away Kit Owen Embroidery",
     "shortName": "Unknown 2002 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2002,
     "kit": "Away",
     "player": "",
@@ -14294,14 +14965,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2002",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-1997-98-away-kit-owen-fivesleeve",
     "name": "Liverpool 1997-98 Away Kit Owen  Fivesleeve",
     "shortName": "Unknown 1997 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -14334,14 +15007,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "1997",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-1995-96-away-kit-fowler-polo-embroidery-premium",
     "name": "Liverpool 1995-96 Away Kit Fowler Polo Embroidery Premium",
     "shortName": "Unknown 1995 Away",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1995,
     "kit": "Away",
     "player": "",
@@ -14379,14 +15054,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "liverpool-1993-94-home-kit-fowler-embroidery",
     "name": "Liverpool 1993-94 Home Kit Fowler Embroidery",
     "shortName": "Unknown 1993 Home",
     "country": "Liverpool",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1993,
     "kit": "Home",
     "player": "",
@@ -14418,14 +15095,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "1993",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Liverpool"
   },
   {
     "id": "lazio-2000-01-away-kit-crespo-fivesleeve",
     "name": "Lazio 2000-01 Away Kit Crespo Fivesleeve",
     "shortName": "Unknown 2000 Away",
     "country": "Lazio",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2000,
     "kit": "Away",
     "player": "",
@@ -14452,14 +15131,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2000",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Lazio"
   },
   {
     "id": "kolkata-knight-riders-2025-kit-ajinkya",
     "name": "Kolkata Knight Riders 2025 Kit Ajinkya",
     "shortName": "Unknown 2025 Home",
     "country": "Kolkata",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2025,
     "kit": "Home",
     "player": "",
@@ -14489,14 +15170,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2025"
-    ]
+    ],
+    "mainCategory": "IPL",
+    "subCategory": "Kolkata"
   },
   {
     "id": "kerala-blasters-25-26-away-kit-a-luna-polo",
     "name": "Kerala Blasters 25-26 Away Kit A.Luna Polo",
     "shortName": "Unknown 2026 Away",
     "country": "Kerala",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -14525,14 +15208,15 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "japan-anime-special-kit-tokyo-ghoul-embroidery",
     "name": "Japan Anime Special Kit Tokyo Ghoul Embroidery",
     "shortName": "Japan 2026 Home",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -14569,14 +15253,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "japan-2026-home-kit",
     "name": "Japan 2026 Home Kit",
     "shortName": "Japan 2026 Home",
     "country": "Japan",
-    "flag": "🇯🇵",
+    "flag": "\ud83c\uddef\ud83c\uddf5",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -14611,14 +15297,16 @@ export const JERSEYS: Jersey[] =[
       "Japan",
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Japan"
   },
   {
     "id": "italy-1996-away-kit-maldini-fivesleeve-polo-embroidery-premium",
     "name": "Italy 1996 Away Kit Maldini Fivesleeve Polo Embroidery Premium",
     "shortName": "Italy 1996 Away",
     "country": "Italy",
-    "flag": "🇮🇹",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
     "year": 1996,
     "kit": "Away",
     "player": "",
@@ -14656,14 +15344,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Italy"
   },
   {
     "id": "italy-1995-away-kit-baggio-fivesleeve-polo",
     "name": "Italy 1995 Away Kit Baggio Fivesleeve Polo",
     "shortName": "Italy 1995 Away",
     "country": "Italy",
-    "flag": "🇮🇹",
+    "flag": "\ud83c\uddee\ud83c\uddf9",
     "year": 1995,
     "kit": "Away",
     "player": "",
@@ -14696,14 +15386,16 @@ export const JERSEYS: Jersey[] =[
       "1995",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Italy"
   },
   {
     "id": "itali-1994-away-kit-baggio-polo-embroidery-2",
     "name": "Itali 1994 Away Kit Baggio Polo Embroidery",
     "shortName": "Unknown 1994 Away",
     "country": "Itali",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1994,
     "kit": "Away",
     "player": "",
@@ -14735,14 +15427,15 @@ export const JERSEYS: Jersey[] =[
       "1994",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "intermilan-25-26-home-kit-lautaro",
     "name": "Intermilan 25-26 Home Kit Lautaro",
     "shortName": "Unknown 2026 Home",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -14768,14 +15461,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "intermilan-25-26-away-kit-lautaro",
     "name": "Intermilan 25-26 Away Kit Lautaro",
     "shortName": "Unknown 2026 Away",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "",
@@ -14801,14 +15496,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "intermilan-2007-08-home-kit-ibrahimovic-fivesleeve",
     "name": "Intermilan 2007-08 Home Kit Ibrahimovic Fivesleeve",
     "shortName": "Unknown 2007 Home",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2007,
     "kit": "Home",
     "player": "",
@@ -14835,14 +15532,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2007",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "intermilan-1999-2000-home-kit-ronaldo-embroidery",
     "name": "Intermilan 1999-2000 Home Kit Ronaldo Embroidery",
-    "shortName": "Unknown 1999 Home – Ronaldo",
+    "shortName": "Unknown 1999 Home \u2013 Ronaldo",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "Ronaldo",
@@ -14879,14 +15578,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "1999",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "intermilan-1997-98-away-kit-ronaldo-fivesleeve",
     "name": "Intermilan 1997-98 Away Kit Ronaldo Fivesleeve",
-    "shortName": "Unknown 1997 Away – Ronaldo",
+    "shortName": "Unknown 1997 Away \u2013 Ronaldo",
     "country": "Intermilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "Ronaldo",
@@ -14920,14 +15621,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "1997",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermilan"
   },
   {
     "id": "intermiami-flame-edition-kit-messi-embroidery-2",
     "name": "Intermiami Flame Edition Kit Messi Embroidery",
-    "shortName": "Unknown 2026 Home – Messi",
+    "shortName": "Unknown 2026 Home \u2013 Messi",
     "country": "Intermiami",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -14964,14 +15667,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Intermiami"
   },
   {
     "id": "holland-away-football-shirt-2002-04-v-nistelrody-sublimation",
     "name": "Holland Away Football Shirt 2002/04 V.Nistelrody Sublimation",
     "shortName": "Unknown 2002 Away",
     "country": "Holland",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2002,
     "kit": "Away",
     "player": "",
@@ -14999,14 +15704,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Away",
       "2002"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Holland"
   },
   {
     "id": "germany-fantasy-kit-beckenbauer-polo-embroidery",
     "name": "Germany Fantasy Kit Beckenbauer Polo Embroidery",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15044,14 +15751,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-24-25-third-kit-kroos-embroidery-2",
     "name": "Germany 24-25 Third Kit Kroos Embroidery",
     "shortName": "Germany 2026 Third",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -15080,14 +15789,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-24-25-pre-match-kit-kroos-embroidery",
     "name": "Germany 24-25 Pre-Match Kit Kroos Embroidery",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15120,14 +15831,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2026-home-kit-fivesleeve-v-knitted-polo-embroidery-premium",
     "name": "Germany 2026 Home Kit Fivesleeve V Knitted Polo Embroidery Premium",
     "shortName": "Germany 2026 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15168,14 +15881,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2024-away-kit-kroos-embroidery",
     "name": "Germany 2024 Away Kit Kroos Embroidery",
     "shortName": "Germany 2024 Away",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2024,
     "kit": "Away",
     "player": "",
@@ -15208,14 +15923,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2024",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2024-away-kit-kroos-2",
     "name": "Germany 2024 Away Kit Kroos",
     "shortName": "Germany 2024 Away",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2024,
     "kit": "Away",
     "player": "",
@@ -15242,14 +15959,16 @@ export const JERSEYS: Jersey[] =[
       "Germany",
       "Away",
       "2024"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2014-away-kit-kroos",
     "name": "Germany 2014 Away Kit Kroos",
     "shortName": "Germany 2014 Away",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2014,
     "kit": "Away",
     "player": "",
@@ -15280,14 +15999,16 @@ export const JERSEYS: Jersey[] =[
       "Germany",
       "Away",
       "2014"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2008-09-home-kit-ballack-embroidery-2",
     "name": "Germany 2008-09 Home Kit Ballack Embroidery",
     "shortName": "Germany 2008 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2008,
     "kit": "Home",
     "player": "",
@@ -15316,14 +16037,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2008",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-2004-05-home-kit-ballack-fivesleeve",
     "name": "Germany 2004-05 Home Kit Ballack Fivesleeve",
     "shortName": "Germany 2004 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 2004,
     "kit": "Home",
     "player": "",
@@ -15357,14 +16080,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2004",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-1998-home-kit-klinsmann-embroidery",
     "name": "Germany 1998 Home Kit Klinsmann Embroidery",
     "shortName": "Germany 1998 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -15393,14 +16118,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "1998",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-1992-93-training-kit-beckenbauer-fivesleeve",
     "name": "Germany 1992-93 Training Kit Beckenbauer Fivesleeve",
     "shortName": "Germany 1992 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 1992,
     "kit": "Home",
     "player": "",
@@ -15435,14 +16162,16 @@ export const JERSEYS: Jersey[] =[
       "1992",
       "Training",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "germany-1992-special-kit-polo-embroidery",
     "name": "Germany 1992 Special Kit Polo Embroidery",
     "shortName": "Germany 1992 Home",
     "country": "Germany",
-    "flag": "🇩🇪",
+    "flag": "\ud83c\udde9\ud83c\uddea",
     "year": 1992,
     "kit": "Home",
     "player": "",
@@ -15478,14 +16207,16 @@ export const JERSEYS: Jersey[] =[
       "1992",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Germany"
   },
   {
     "id": "france-1998-away-kit-zidane-polo-embroidery-premium",
     "name": "France 1998 Away Kit Zidane Polo Embroidery Premium",
     "shortName": "France 1998 Away",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -15524,14 +16255,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "france-1998-away-kit-zidane-polo-embroidery-4",
     "name": "France 1998 Away Kit Zidane Polo Embroidery",
     "shortName": "France 1998 Away",
     "country": "France",
-    "flag": "🇫🇷",
+    "flag": "\ud83c\uddeb\ud83c\uddf7",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -15567,14 +16300,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "France"
   },
   {
     "id": "f1-mercedes-petronas-black-polo-premium",
     "name": "F1 Mercedes Petronas Black Polo Premium",
     "shortName": "Unknown 2026 Home",
     "country": "F1",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15612,14 +16347,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
+    ],
+    "mainCategory": "F1"
   },
   {
     "id": "f1-ferrari-scuderia-red-polo-premium",
     "name": "F1 Ferrari Scuderia Red Polo Premium",
     "shortName": "Unknown 2026 Home",
     "country": "F1",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15658,14 +16394,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Premium",
       "Polo"
-    ]
+    ],
+    "mainCategory": "F1"
   },
   {
     "id": "england-vintage-kit-fivesleeve-polo-embroidery-premium",
     "name": "England Vintage Kit Fivesleeve Polo Embroidery Premium",
     "shortName": "England 2026 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15703,14 +16440,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "england-2004-home-kit-beckham-polo-embroidery",
     "name": "England 2004 Home Kit Beckham Polo Embroidery",
     "shortName": "England 2004 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2004,
     "kit": "Home",
     "player": "",
@@ -15742,14 +16481,16 @@ export const JERSEYS: Jersey[] =[
       "2004",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "england-2004-home-david-beckham-jersey-home-kit-embroidery",
     "name": "England 2004 Home David Beckham Jersey Home Kit Embroidery",
     "shortName": "England 2004 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 2004,
     "kit": "Home",
     "player": "",
@@ -15778,14 +16519,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2004",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "england-1998-home-kit-beckham-polo-embroidery-premium",
     "name": "England 1998 Home Kit Beckham Polo Embroidery Premium",
     "shortName": "England 1998 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -15826,14 +16569,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "england-1998-home-kit-beckham-polo-embroidery-2",
     "name": "England 1998 Home Kit Beckham Polo Embroidery",
     "shortName": "England 1998 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -15865,14 +16610,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "england-1998-home-kit-beckham-fivesleeve-polo-embroidery-premium",
     "name": "England 1998 Home Kit Beckham Fivesleeve Polo Embroidery Premium",
     "shortName": "England 1998 Home",
     "country": "England",
-    "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "flag": "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -15912,14 +16659,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "England"
   },
   {
     "id": "dickies-oversized-tshirt-embroidery",
     "name": "Dickies Oversized Tshirt Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Dickies",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15950,14 +16699,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "dickies-oversized-tshirt-black-embroidery",
     "name": "Dickies Oversized Tshirt Black Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Dickies",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -15990,14 +16740,15 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "T-Shirt"
-    ]
+    ],
+    "mainCategory": "Other"
   },
   {
     "id": "crop-top-real-madrid-25-26-away-kit-belingham",
     "name": "Crop Top Real Madrid 25-26 Away Kit Belingham",
-    "shortName": "Unknown 2026 Away – Belingham",
+    "shortName": "Unknown 2026 Away \u2013 Belingham",
     "country": "Crop",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "Belingham",
@@ -16026,14 +16777,15 @@ export const JERSEYS: Jersey[] =[
       "Belingham",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "Crop Top"
   },
   {
     "id": "crop-top-liverpool-25-26-home-writz",
     "name": "Crop Top Liverpool 25-26 Home Writz",
     "shortName": "Unknown 2026 Home",
     "country": "Crop",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16061,14 +16813,15 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Crop Top"
   },
   {
     "id": "crop-top-intermilan-ronaldo-polo",
     "name": "Crop Top Intermilan Ronaldo Polo",
-    "shortName": "Unknown 2026 Home – Ronaldo",
+    "shortName": "Unknown 2026 Home \u2013 Ronaldo",
     "country": "Crop",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Ronaldo",
@@ -16100,14 +16853,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Crop Top"
   },
   {
     "id": "crop-top-arsanel-rice-polo",
     "name": "Crop Top Arsanel Rice Polo",
     "shortName": "Unknown 2026 Home",
     "country": "Crop",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16136,14 +16890,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Crop Top"
   },
   {
     "id": "crop-top-argentina-maradona-polo",
     "name": "Crop Top Argentina Maradona Polo",
     "shortName": "Argentina 2026 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16173,14 +16928,15 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Crop Top"
   },
   {
     "id": "croatia-1998-99-home-kit-suker-fivesleeve-polo",
     "name": "Croatia 1998-99 Home Kit Suker Fivesleeve Polo",
     "shortName": "Croatia 1998 Home",
     "country": "Croatia",
-    "flag": "🇭🇷",
+    "flag": "\ud83c\udded\ud83c\uddf7",
     "year": 1998,
     "kit": "Home",
     "player": "",
@@ -16217,14 +16973,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Croatia"
   },
   {
     "id": "chelsea-year-of-the-snake-special-edition-kit-enzo",
     "name": "Chelsea Year Of The Snake Special Edition Kit Enzo",
     "shortName": "Unknown 2026 Home",
     "country": "Chelsea",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16250,14 +17008,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Chelsea"
   },
   {
     "id": "chelsea-2012-13-home-kit-hazard-embroidery",
     "name": "Chelsea 2012-13 Home Kit Hazard Embroidery",
     "shortName": "Unknown 2012 Home",
     "country": "Chelsea",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2012,
     "kit": "Home",
     "player": "",
@@ -16285,14 +17045,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2012",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Chelsea"
   },
   {
     "id": "brazil-black-concept-kit-polo-embroidery-premium",
     "name": "Brazil Black Concept Kit Polo Embroidery Premium",
     "shortName": "Brazil 2026 Third",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -16331,14 +17093,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "brazil-2002-away-kit-ronaldo-polo-embroidery-premium",
     "name": "Brazil 2002 Away Kit Ronaldo Polo Embroidery Premium",
-    "shortName": "Brazil 2002 Away – Ronaldo",
+    "shortName": "Brazil 2002 Away \u2013 Ronaldo",
     "country": "Brazil",
-    "flag": "🇧🇷",
+    "flag": "\ud83c\udde7\ud83c\uddf7",
     "year": 2002,
     "kit": "Away",
     "player": "Ronaldo",
@@ -16380,14 +17144,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Brazil"
   },
   {
     "id": "boca-juniors-1996-97-home-kit-maradona-polo-embroidery-premium",
     "name": "Boca Juniors 1996-97 Home Kit Maradona Polo Embroidery Premium",
     "shortName": "Unknown 1996 Home",
     "country": "Boca",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1996,
     "kit": "Home",
     "player": "",
@@ -16421,14 +17187,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Boca"
   },
   {
     "id": "boca-juniors-1996-97-away-kit-maradona-polo-embroidery-premium",
     "name": "Boca Juniors 1996-97 Away Kit Maradona Polo Embroidery Premium",
     "shortName": "Unknown 1996 Away",
     "country": "Boca",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1996,
     "kit": "Away",
     "player": "",
@@ -16464,14 +17232,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Boca"
   },
   {
     "id": "bayern-2009-10-third-kit-robben-polo-embroidery-premium",
     "name": "Bayern 2009-10 Third Kit Robben Polo Embroidery Premium",
     "shortName": "Unknown 2009 Third",
     "country": "Bayern",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2009,
     "kit": "Third",
     "player": "",
@@ -16509,14 +17279,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Bayern"
   },
   {
     "id": "bayern-1998-99-away-kit-matthaus-polo-embroidery",
     "name": "Bayern 1998-99 Away Kit Matthaus Polo Embroidery",
     "shortName": "Unknown 1998 Away",
     "country": "Bayern",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -16549,14 +17321,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Bayern"
   },
   {
     "id": "barcelona-x-santos-neymer-special-edition-kit-embroidery-2",
     "name": "Barcelona X Santos Neymer Special Edition Kit Embroidery",
-    "shortName": "Unknown 2026 Home – Neymer",
+    "shortName": "Unknown 2026 Home \u2013 Neymer",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Neymer",
@@ -16589,14 +17363,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-pedri-special-edition-kit-embroidery",
     "name": "Barcelona Pedri Special Edition Kit Embroidery",
-    "shortName": "Unknown 2026 Home – Pedri",
+    "shortName": "Unknown 2026 Home \u2013 Pedri",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "Pedri",
@@ -16629,14 +17405,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-halloween-special-edition-kit-embroidery",
     "name": "Barcelona Halloween Special Edition Kit Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16668,14 +17446,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-2005-06-home-kit-messi-embroidery",
     "name": "Barcelona 2005-06 Home Kit Messi Embroidery",
-    "shortName": "Unknown 2005 Home – Messi",
+    "shortName": "Unknown 2005 Home \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2005,
     "kit": "Home",
     "player": "Messi",
@@ -16712,14 +17492,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2005",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-2003-04-home-kit-ronaldinho-fivesleeve-polo-3",
     "name": "Barcelona 2003-04 Home Kit Ronaldinho Fivesleeve Polo",
     "shortName": "Unknown 2003 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Home",
     "player": "",
@@ -16751,14 +17533,16 @@ export const JERSEYS: Jersey[] =[
       "2003",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-2003-04-away-kit-messi-polo-embroidery-premium",
     "name": "Barcelona 2003-04 Away Kit Messi Polo Embroidery Premium",
-    "shortName": "Unknown 2003 Away – Messi",
+    "shortName": "Unknown 2003 Away \u2013 Messi",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Away",
     "player": "Messi",
@@ -16796,14 +17580,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-2002-03-home-kit-puyol-fivesleeve",
     "name": "Barcelona 2002-03 Home Kit Puyol Fivesleeve",
     "shortName": "Unknown 2002 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2002,
     "kit": "Home",
     "player": "",
@@ -16834,14 +17620,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2002",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-2001-02-home-kit-fivesleeve-polo",
     "name": "Barcelona 2001-02 Home Kit Fivesleeve Polo",
     "shortName": "Unknown 2001 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2001,
     "kit": "Home",
     "player": "",
@@ -16870,14 +17658,16 @@ export const JERSEYS: Jersey[] =[
       "2001",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "barcelona-1999-home-kit-rivaldo-fullsleeve-polo-embroidery-premium",
     "name": "Barcelona 1999 Home Kit Rivaldo Fullsleeve Polo Embroidery Premium",
     "shortName": "Unknown 1999 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -16916,14 +17706,15 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Full Sleeve"
-    ]
+    ],
+    "mainCategory": "FullSleeve"
   },
   {
     "id": "barcelona-125th-anniversary-kit-cruyff-fivesleeve-polo-embroidery-premium-2",
     "name": "Barcelona 125Th Anniversary Kit Cruyff Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 2026 Home",
     "country": "Barcelona",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16962,14 +17753,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Barcelona"
   },
   {
     "id": "atletico-madrid-wonder-women-special-edition-kit-griezmann-embroidery",
     "name": "Atletico Madrid Wonder Women Special Edition Kit Griezmann Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Atletico",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -16999,14 +17792,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Atletico"
   },
   {
     "id": "atletico-madrid-25-26-third-kit-alvarez",
     "name": "Atletico Madrid 25-26 Third Kit Alvarez",
-    "shortName": "Unknown 2026 Third – Alvarez",
+    "shortName": "Unknown 2026 Third \u2013 Alvarez",
     "country": "Atletico",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "Alvarez",
@@ -17037,14 +17832,16 @@ export const JERSEYS: Jersey[] =[
       "Alvarez",
       "Third",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Atletico"
   },
   {
     "id": "atletico-madrid-25-26-away-kit-alvarez",
     "name": "Atletico Madrid 25-26 Away Kit Alvarez",
-    "shortName": "Unknown 2026 Away – Alvarez",
+    "shortName": "Unknown 2026 Away \u2013 Alvarez",
     "country": "Atletico",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Away",
     "player": "Alvarez",
@@ -17073,14 +17870,16 @@ export const JERSEYS: Jersey[] =[
       "Alvarez",
       "Away",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Atletico"
   },
   {
     "id": "aston-2019-20-home-kit-grealish-embroidery",
     "name": "Aston 2019-20 Home Kit Grealish Embroidery",
     "shortName": "Unknown 2019 Home",
     "country": "Aston",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2019,
     "kit": "Home",
     "player": "",
@@ -17112,14 +17911,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2019",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Real"
   },
   {
     "id": "arsanel-tiro25-competition-training-kit",
     "name": "Arsanel Tiro25 Competition Training Kit",
     "shortName": "Unknown 2026 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -17146,14 +17947,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Training"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-25-26-third-kit-eze-polo-embroidery-premium",
     "name": "Arsanel 25-26 Third Kit Eze Polo Embroidery Premium",
     "shortName": "Unknown 2026 Third",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "",
@@ -17192,14 +17995,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-25-26-pre-match-kit",
     "name": "Arsanel 25-26 Pre-Match Kit",
     "shortName": "Unknown 2026 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -17229,14 +18034,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-25-26-home-kit-zubimendi",
     "name": "Arsanel 25-26 Home Kit Zubimendi",
     "shortName": "Unknown 2026 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -17264,14 +18071,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-25-26-home-kit-rice",
     "name": "Arsanel 25-26 Home Kit Rice",
     "shortName": "Unknown 2026 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -17297,14 +18106,16 @@ export const JERSEYS: Jersey[] =[
     "tags": [
       "Home",
       "2026"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-2015-16-third-kit-ozil-embroidery",
     "name": "Arsanel 2015-16 Third Kit Ozil Embroidery",
     "shortName": "Unknown 2015 Third",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2015,
     "kit": "Third",
     "player": "",
@@ -17332,14 +18143,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "2015",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-2015-16-home-kit-ozil-polo-embroidery",
     "name": "Arsanel 2015-16 Home Kit Ozil Polo Embroidery",
     "shortName": "Unknown 2015 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2015,
     "kit": "Home",
     "player": "",
@@ -17368,14 +18181,16 @@ export const JERSEYS: Jersey[] =[
       "2015",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-2013-14-away-kit-ozil-polo",
     "name": "Arsanel 2013-14 Away Kit Ozil Polo",
     "shortName": "Unknown 2013 Away",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2013,
     "kit": "Away",
     "player": "",
@@ -17402,14 +18217,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "2013",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-2009-10-third-kit-fabregas-fivesleeve-polo",
     "name": "Arsanel 2009-10 Third Kit Fabregas Fivesleeve Polo",
     "shortName": "Unknown 2009 Third",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2009,
     "kit": "Third",
     "player": "",
@@ -17445,14 +18262,16 @@ export const JERSEYS: Jersey[] =[
       "2009",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-2003-04-away-kit-henry-polo-embroidery",
     "name": "Arsanel 2003-04 Away Kit Henry Polo Embroidery",
     "shortName": "Unknown 2003 Away",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2003,
     "kit": "Away",
     "player": "",
@@ -17486,14 +18305,16 @@ export const JERSEYS: Jersey[] =[
       "2003",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-1994-home-wright-fivesleeve-polo-embroidery",
     "name": "Arsanel 1994 Home Wright Fivesleeve Polo Embroidery",
     "shortName": "Unknown 1994 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1994,
     "kit": "Home",
     "player": "",
@@ -17531,14 +18352,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "arsanel-1992-93-home-kit-v-knitted-polo-fivesleeve-embroidery-premium",
     "name": "Arsanel 1992-93 Home Kit V Knitted Polo Fivesleeve Embroidery Premium",
     "shortName": "Unknown 1992 Home",
     "country": "Arsanel",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1992,
     "kit": "Home",
     "player": "",
@@ -17578,14 +18401,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Arsanel"
   },
   {
     "id": "argentina-x-dragon-ball-special-edition-kit-messi-embroidery",
     "name": "Argentina X Dragon Ball Special Edition Kit Messi Embroidery",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -17615,14 +18440,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "argentina-la-pulga-special-edition-messi-embroidery-2",
     "name": "Argentina La Pulga Special Edition Messi Embroidery",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -17658,14 +18485,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "argentina-2026-training-kit-messi",
     "name": "Argentina 2026 Training Kit Messi",
-    "shortName": "Argentina 2026 Home – Messi",
+    "shortName": "Argentina 2026 Home \u2013 Messi",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "Messi",
@@ -17696,14 +18525,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Training"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "argentina-2026-gk-kit-e-martinez",
     "name": "Argentina 2026 Gk Kit E.Martinez",
-    "shortName": "Argentina 2026 Home – E.Martinez",
+    "shortName": "Argentina 2026 Home \u2013 E.Martinez",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2026,
     "kit": "Home",
     "player": "E.Martinez",
@@ -17738,14 +18569,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Goalkeeper"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "argentina-2002-03-home-kit-batistuta-fivesleeve",
     "name": "Argentina 2002-03 Home Kit Batistuta Fivesleeve",
     "shortName": "Argentina 2002 Home",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 2002,
     "kit": "Home",
     "player": "",
@@ -17777,14 +18610,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2002",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "argentina-1996-97-third-kit-fivesleeve",
     "name": "Argentina 1996-97 Third Kit Fivesleeve",
     "shortName": "Argentina 1996 Third",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 1996,
     "kit": "Third",
     "player": "",
@@ -17812,14 +18647,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "1996",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "argentina-1996-97-third-kit-batistuta-fivesleeve",
     "name": "Argentina 1996-97 Third Kit Batistuta Fivesleeve",
     "shortName": "Argentina 1996 Third",
     "country": "Argentina",
-    "flag": "🇦🇷",
+    "flag": "\ud83c\udde6\ud83c\uddf7",
     "year": 1996,
     "kit": "Third",
     "player": "",
@@ -17851,14 +18688,16 @@ export const JERSEYS: Jersey[] =[
       "Third",
       "1996",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "World Cup",
+    "subCategory": "Argentina"
   },
   {
     "id": "alnassr-25-26-third-kit-ronaldo-polo-embroidery-2",
     "name": "Alnassr 25-26 Third Kit Ronaldo Polo Embroidery",
-    "shortName": "Unknown 2026 Third – Ronaldo",
+    "shortName": "Unknown 2026 Third \u2013 Ronaldo",
     "country": "Alnassr",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Third",
     "player": "Ronaldo",
@@ -17888,14 +18727,16 @@ export const JERSEYS: Jersey[] =[
       "2026",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Alnassr"
   },
   {
     "id": "ajax-25-26-home-kit-hato-embroidery",
     "name": "Ajax 25-26 Home Kit Hato Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Ajax",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -17929,14 +18770,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Ajax"
   },
   {
     "id": "ajax-2021-22-third-kit-antony-polo-embroidery",
     "name": "Ajax 2021-22 Third Kit Antony Polo Embroidery",
     "shortName": "Unknown 2021 Third",
     "country": "Ajax",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2021,
     "kit": "Third",
     "player": "",
@@ -17973,14 +18816,16 @@ export const JERSEYS: Jersey[] =[
       "2021",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Ajax"
   },
   {
     "id": "ajax-1993-home-kit-cruyff-fivesleeve-polo-embroidery-premium",
     "name": "Ajax 1993 Home Kit Cruyff Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1993 Home",
     "country": "Ajax",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1993,
     "kit": "Home",
     "player": "",
@@ -18017,14 +18862,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Ajax"
   },
   {
     "id": "acmilan-2013-14-away-kit-kaka-embroidery-premium",
     "name": "Acmilan 2013-14 Away Kit Kaka Embroidery Premium",
     "shortName": "Unknown 2013 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2013,
     "kit": "Away",
     "player": "",
@@ -18055,14 +18902,16 @@ export const JERSEYS: Jersey[] =[
       "2013",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-2009-10-away-kit-ronaldinho-fivesleeve-polo-2",
     "name": "Acmilan 2009-10 Away Kit Ronaldinho Fivesleeve Polo",
     "shortName": "Unknown 2009 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2009,
     "kit": "Away",
     "player": "",
@@ -18096,14 +18945,16 @@ export const JERSEYS: Jersey[] =[
       "2009",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-2006-07-home-kit-ronaldo-retro-embroidery-2",
     "name": "Acmilan 2006-07 Home Kit Ronaldo Retro Embroidery",
-    "shortName": "Unknown 2006 Home – Ronaldo",
+    "shortName": "Unknown 2006 Home \u2013 Ronaldo",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Home",
     "player": "Ronaldo",
@@ -18138,14 +18989,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2006",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-2006-07-away-kit-maldini-embroidery-premium-2",
     "name": "Acmilan 2006-07 Away Kit Maldini Embroidery Premium",
     "shortName": "Unknown 2006 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2006,
     "kit": "Away",
     "player": "",
@@ -18182,14 +19035,16 @@ export const JERSEYS: Jersey[] =[
       "2006",
       "Premium",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-2000-01-training-kit",
     "name": "Acmilan 2000-01 Training Kit",
     "shortName": "Unknown 2000 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2000,
     "kit": "Home",
     "player": "",
@@ -18223,14 +19078,16 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2000",
       "Training"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1999-2000-home-kit-maldini-polo-embroidery-2",
     "name": "Acmilan 1999-2000 Home Kit Maldini Polo Embroidery",
     "shortName": "Unknown 1999 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -18259,14 +19116,16 @@ export const JERSEYS: Jersey[] =[
       "1999",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1999-2000-home-kit-maldini-fivesleeve-polo-3",
     "name": "Acmilan 1999-2000 Home Kit Maldini Fivesleeve Polo",
     "shortName": "Unknown 1999 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1999,
     "kit": "Home",
     "player": "",
@@ -18300,14 +19159,16 @@ export const JERSEYS: Jersey[] =[
       "1999",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1998-99-away-kit-maldini-polo-embroidery",
     "name": "Acmilan 1998-99 Away Kit Maldini Polo Embroidery",
     "shortName": "Unknown 1998 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1998,
     "kit": "Away",
     "player": "",
@@ -18344,14 +19205,16 @@ export const JERSEYS: Jersey[] =[
       "1998",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1997-98-third-kit-maldini-polo-embroidery-premium",
     "name": "Acmilan 1997-98 Third Kit Maldini Polo Embroidery Premium",
     "shortName": "Unknown 1997 Third",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Third",
     "player": "",
@@ -18389,14 +19252,16 @@ export const JERSEYS: Jersey[] =[
       "Premium",
       "Embroidery",
       "Polo"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1997-98-home-kit-maldini-fivesleeve-polo",
     "name": "Acmilan 1997-98 Home Kit Maldini Fivesleeve Polo",
     "shortName": "Unknown 1997 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Home",
     "player": "",
@@ -18430,14 +19295,16 @@ export const JERSEYS: Jersey[] =[
       "1997",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1997-98-away-kit-maldini-fivesleeve-polo-embroidery-premium",
     "name": "Acmilan 1997-98 Away Kit Maldini Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1997 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -18474,14 +19341,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1997-98-away-kit-maldini-fivesleeve-2",
     "name": "Acmilan 1997-98 Away Kit Maldini Fivesleeve",
     "shortName": "Unknown 1997 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -18510,14 +19379,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "1997",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1997-98-away-kit-maldini-embroidery",
     "name": "Acmilan 1997-98 Away Kit Maldini Embroidery",
     "shortName": "Unknown 1997 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1997,
     "kit": "Away",
     "player": "",
@@ -18545,14 +19416,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "1997",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1994-95-away-kit-maldini-fivesleeve-polo-embroidery-premium",
     "name": "Acmilan 1994-95 Away Kit Maldini Fivesleeve Polo Embroidery Premium",
     "shortName": "Unknown 1994 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1994,
     "kit": "Away",
     "player": "",
@@ -18589,14 +19462,16 @@ export const JERSEYS: Jersey[] =[
       "Embroidery",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1994-95-away-kit-maldini-embroidery",
     "name": "Acmilan 1994-95 Away Kit Maldini Embroidery",
     "shortName": "Unknown 1994 Away",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1994,
     "kit": "Away",
     "player": "",
@@ -18628,14 +19503,16 @@ export const JERSEYS: Jersey[] =[
       "Away",
       "1994",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-1990-91-home-kit-van-basten-fivesleeve-polo",
     "name": "Acmilan 1990-91 Home Kit Van Basten Fivesleeve Polo",
     "shortName": "Unknown 1990 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 1990,
     "kit": "Home",
     "player": "",
@@ -18669,14 +19546,16 @@ export const JERSEYS: Jersey[] =[
       "1990",
       "Polo",
       "Five Sleeve"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   },
   {
     "id": "acmilan-120th-anniversary-edition-kit-ibrahimovic-embroidery",
     "name": "Acmilan 120Th Anniversary Edition Kit Ibrahimovic Embroidery",
     "shortName": "Unknown 2026 Home",
     "country": "Acmilan",
-    "flag": "🏳",
+    "flag": "\ud83c\udff3",
     "year": 2026,
     "kit": "Home",
     "player": "",
@@ -18704,7 +19583,9 @@ export const JERSEYS: Jersey[] =[
       "Home",
       "2026",
       "Embroidery"
-    ]
+    ],
+    "mainCategory": "Clubs",
+    "subCategory": "Acmilan"
   }
 ]
 ;

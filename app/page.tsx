@@ -28,14 +28,20 @@ export default function Home() {
 
   const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top', 'Other']
 
+  // Sub-category priority for Clubs
+  const clubsPriority = ['Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'Acmilan', 'Psg', 'Juventus', 'Intermilan', 'Intermiami', 'Monaco']
+
+  // Get unique main categories and sort them by the requested priority sequence.
+  const mainCategories = useMemo(() => {
+    const cats = [...new Set(JERSEYS.map(j => j.mainCategory))]
+    const ordered = categoryPriority.filter(c => c === 'All' || cats.includes(c))
+    return ordered
+  }, [])
+
   const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
 
   const worldCupTeamOrder = [
     'Brazil', 'Argentina', 'France', 'Germany', 'Spain', 'England', 'Italy', 'Portugal', 'Mexico', 'Croatia', 'Japan', 'Jamaica', 'Sao Paulo', 'Morocco', 'Norway'
-  ]
-
-  const clubPriority = [
-    'Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'AC Milan', 'Arsanel', 'Liverpool', 'Real', 'PSG', 'Juventus', 'Intermilan', 'InterMiami', 'Monaco'
   ]
 
   const jerseyText = (j: any) => [j.country, j.name, ...(j.tags ?? [])].filter(Boolean).join(' ').toLowerCase()
@@ -126,8 +132,6 @@ export default function Home() {
     return ''
   }
 
-  const mainCategories = useMemo(() => categoryPriority, [])
-
   const getSubCategories = (mainCat: string) => {
     if (mainCat === 'All' || mainCat === 'IPL') return []
 
@@ -143,8 +147,8 @@ export default function Home() {
           .map(j => getSubCategory(j, 'Clubs'))
           .filter(Boolean) as string[]
       )
-      const ordered = clubPriority.filter(club => clubSet.has(club))
-      const remaining = [...clubSet].filter(club => !clubPriority.includes(club)).sort()
+      const ordered = clubsPriority.filter(club => clubSet.has(club))
+      const remaining = [...clubSet].filter(club => !clubsPriority.includes(club)).sort()
       return [...ordered, ...remaining]
     }
 
