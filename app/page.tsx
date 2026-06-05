@@ -28,8 +28,10 @@ export default function Home() {
 
   const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top', 'Other']
 
-  // Sub-category priority for Clubs
-  const clubsPriority = ['Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'Acmilan', 'Psg', 'Juventus', 'Intermilan', 'Intermiami', 'Monaco']
+  // Sub-category priority for Clubs (priority order per user instructions)
+  const clubsPriority = [
+    'Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'AC Milan', 'Arsanel', 'Liverpool', 'Real', 'PSG', 'Juventus', 'Intermilan', 'InterMiami', 'Monaco'
+  ]
 
   const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
 
@@ -159,6 +161,14 @@ export default function Home() {
   const [filterStock, setFilterStock] = useState('All')
   const [search, setSearch] = useState('')
 
+  // Reset all filters and clear search
+  const resetFilters = () => {
+    setFilterMainCategory('All')
+    setFilterSubCategory('All')
+    setFilterStock('All')
+    setSearch('')
+  }
+
   const subCategories = useMemo(() => getSubCategories(filterMainCategory), [filterMainCategory])
 
   // Reset sub-category when main category changes
@@ -176,7 +186,7 @@ export default function Home() {
     'Brazil 2026 Away Kit Neymer Embroidery Premium',
     'Portugal 2026 Away Kit Ronaldo',
     'Brazil 2026 Home Kit Neymer Embroidery Premium',
-    'Germany 2026 Home Kit Fivesleeve V Knitted Polo Embroidery Premium',
+    'Germany 2026 Home Kit Writz Knitted Polo Embroidery Premium',
     'Portugal 2026 Home Kit Ronaldo Embroidery Premium',
     'Argentina 2026 Home Kit Messi Embroidery Premium',
     'Spain 2026 Away Kit Pedri',
@@ -239,22 +249,33 @@ export default function Home() {
               {filtered.length} product{filtered.length !== 1 ? 's' : ''}
             </p>
           </div>
-          {/* Search */}
-          <div style={{ position: 'relative', width: '100%', maxWidth: 240 }} className="w-full sm:w-auto">
-            <input
-              type="text" placeholder="Search jerseys…" value={search}
-              onChange={e => setSearch(e.target.value)}
+          {/* Search + Clear */}
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center', width: '100%', maxWidth: 360 }} className="w-full sm:w-auto">
+            <div style={{ position: 'relative', flex: 1, minWidth: 0 }}>
+              <input
+                type="text" placeholder="Search jerseys…" value={search}
+                onChange={e => setSearch(e.target.value)}
+                style={{
+                  width: '100%', padding: '8px 12px 8px 32px',
+                  fontSize: 13, borderRadius: 8, outline: 'none',
+                  border: '1px solid #d0d0d0', background: 'white', color: '#111',
+                  boxSizing: 'border-box',
+                }}
+              />
+              <svg style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', opacity: 0.35 }}
+                width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+            </div>
+            <button
+              onClick={resetFilters}
               style={{
-                width: '100%', padding: '8px 12px 8px 32px',
-                fontSize: 13, borderRadius: 8, outline: 'none',
-                border: '1px solid #d0d0d0', background: 'white', color: '#111',
-                boxSizing: 'border-box',
+                padding: '8px 12px', borderRadius: 8, border: '1px solid #d0d0d0', background: '#fff', color: '#111',
+                cursor: 'pointer', fontSize: 13, fontWeight: 600
               }}
-            />
-            <svg style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', opacity: 0.35 }}
-              width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
-            </svg>
+            >
+              Clear
+            </button>
           </div>
         </div>
 
