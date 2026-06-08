@@ -207,12 +207,18 @@ export default function Home() {
       return true
     })
 
-    const shouldApplyPriority = filterMainCategory === 'All' || (filterMainCategory === 'World Cup' && filterSubCategory === 'All')
+    const shouldApplyPriority = filterMainCategory === 'All' || (filterMainCategory === 'World Cup' && filterSubCategory === 'All') || (filterMainCategory === 'IPL')
     if (!shouldApplyPriority) return items
 
     return items
-      .map((j, index) => ({ jersey: j, index, priority: highPriorityJerseyNames.indexOf(j.name) }))
+      .map((j, index) => ({ jersey: j, index, priority: highPriorityJerseyNames.indexOf(j.name), featured: j.featured || false }))
       .sort((a, b) => {
+        // For IPL, sort by featured status first
+        if (filterMainCategory === 'IPL') {
+          if (a.featured !== b.featured) {
+            return (a.featured ? 0 : 1) - (b.featured ? 0 : 1)
+          }
+        }
         const aPriority = a.priority === -1 ? Number.MAX_SAFE_INTEGER : a.priority
         const bPriority = b.priority === -1 ? Number.MAX_SAFE_INTEGER : b.priority
         if (aPriority !== bPriority) return aPriority - bPriority

@@ -142,6 +142,13 @@ export const FILTER_CONFIG = {
       return /CROP.TOP|CROP\s*TOP|CROP/.test(name);
     },
   },
+
+  // ─── OTHER CATEGORY ───────────────────────────────────────────────────────
+  'Other': {
+    order: 999,
+    subFilters: [{ name: 'All', order: 0 }],
+    detector: (_jersey: any) => false,
+  },
 } as const;
 
 /**
@@ -186,6 +193,11 @@ export const FEATURED_PRIORITY_ORDER: Record<string, string[]> = {
     'mumbai-indians-2026-kit-hardik-polo-embroidery-premium',
     'kolkata-knight-riders-2025-kit-ajinkya',
     'rajasthan-royals-2025-kit-sanju-samson-polo',
+  ],
+
+  // India Cricket sub-filter priority
+  'IPL/India Cricket': [
+    'india-cricket-test-jersey-polo-embroidery-premium',
   ],
 };
 
