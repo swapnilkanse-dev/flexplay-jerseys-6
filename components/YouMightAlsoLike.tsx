@@ -236,7 +236,15 @@ export default function YouMightAlsoLike({ currentJerseyId }: { currentJerseyId:
     setCurrentPage(pageIndex)
     setScrollPos(scrollAmount)
   }
-  
+  const handleScroll = () => {
+  const container = document.getElementById('you-might-also-like-scroll')
+  if (!container) return
+
+  const pageWidth = container.offsetWidth
+  const page = Math.round(container.scrollLeft / pageWidth)
+
+  setCurrentPage(page)
+}
   return (
     <section style={{
       maxWidth: 1100,
@@ -260,6 +268,7 @@ export default function YouMightAlsoLike({ currentJerseyId }: { currentJerseyId:
         {/* Scroll container */}
         <div
           id="you-might-also-like-scroll"
+          onScroll={handleScroll}
           style={{
             display: 'flex',
             gap: 16,
