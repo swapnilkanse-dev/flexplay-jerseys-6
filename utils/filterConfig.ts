@@ -9,7 +9,7 @@
 export type MainFilter = 
   | 'World Cup'
   | 'Clubs'
-  | 'Full Sleeve'
+  | 'FullSleeve'
   | 'Jackets'
   | 'F1'
   | 'Shorts'
@@ -75,7 +75,7 @@ export const FILTER_CONFIG = {
   },
 
   // ─── FULL SLEEVE FILTER ────────────────────────────────────────────────────
-  'Full Sleeve': {
+  'FullSleeve': {
     order: 3,
     subFilters: [{ name: 'All', order: 0 }],
     detector: (jersey: any) => {
@@ -110,7 +110,7 @@ export const FILTER_CONFIG = {
     subFilters: [{ name: 'All', order: 0 }],
     detector: (jersey: any) => {
       const name = jersey.name.toUpperCase();
-      // Must be shorts, not jerseys with shorts
+      // Must be shorts only, not jerseys with shorts
       return /^SHORTS|SHORTS\s*$|SHORTS\s*\d+/.test(name) && !/JERSEY.*SHORTS|KIT.*SHORTS/.test(name);
     },
   },
@@ -129,7 +129,7 @@ export const FILTER_CONFIG = {
     ],
     detector: (jersey: any) => {
       const name = jersey.name.toUpperCase();
-      return /IPL|RCB|MUMBAI|KOLKATA|RAJASTHAN|CHENNAI|CHELSEA SUPER|DELHI|PUNJAB|LUCKNOW|INDIA\s*CRICKET/.test(name);
+      return /IPL|RCB|MUMBAI|KOLKATA|RAJASTHAN|CHENNAI|SUPER.KINGS|DELHI|PUNJAB|LUCKNOW|INDIA\s*CRICKET|INDIA\s*TEST|ROYAL.CHALLENGERS|KNIGHT.RIDERS/.test(name);
     },
   },
 
@@ -187,9 +187,9 @@ export const FEATURED_PRIORITY_ORDER: Record<string, string[]> = {
     'rcb-2026-maroon-striper-polo',
     'chennai-super-kings-2026-kit-dhoni-polo-embroidery-premium',
     'chennai-super-kings-2026-kit-dhoni-polo-premium',
-    'chennai-super-kings-2026-kit-samson-polo-premium',
+    'chennai-super-kings-2026-kit-sams0n-polo-premium',
     'mumbai-indians-2026-kit-rohit-polo-embroidery-premium',
-    'mumbai-indians-2026-home-kit-rohit-polo-embroidery',
+    'mumbai-indians-2026-home-kit-rohit-polo-embroidey',
     'mumbai-indians-2026-kit-hardik-polo-embroidery-premium',
     'kolkata-knight-riders-2025-kit-ajinkya',
     'rajasthan-royals-2025-kit-sanju-samson-polo',
@@ -250,7 +250,7 @@ export const SUBFILTER_MATCHERS: Record<string, Record<string, (name: string) =>
   },
   'IPL': {
     'India Cricket': (name) => /INDIA.*CRICKET|INDIA.*TEST|INDIA.*JERSEY/.test(name.toUpperCase()),
-    'RCB': (name) => /RCB|ROYAL.CHALLENGERS/.test(name.toUpperCase()),
+    'RCB': (name) => /RCB|ROYAL.CHALLENGERS|BANGALORE/.test(name.toUpperCase()),
     'Chennai': (name) => /CHENNAI|CSK|SUPER.KINGS/.test(name.toUpperCase()),
     'Mumbai': (name) => /MUMBAI|MI\s|MI\s*2/.test(name.toUpperCase()),
     'Kolkata': (name) => /KOLKATA|KKR|KNIGHT.RIDERS/.test(name.toUpperCase()),

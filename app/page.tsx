@@ -2,6 +2,17 @@
 import { useState, useMemo, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { JERSEYS } from '@/constants/jerseys'
+import { 
+  WORLD_CUP_PRIORITY, 
+  IPL_PRIORITY, 
+  CLUBS_PRIORITY, 
+  FULLSLEEVE_PRIORITY,
+  JACKETS_PRIORITY,
+  F1_PRIORITY,
+  SHORTS_PRIORITY,
+  CROPTOP_PRIORITY,
+  GLOBAL_PRIORITY 
+} from '@/constants/jerseyPriority'
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import JerseyCard from '@/components/JerseyCard'
@@ -30,7 +41,7 @@ export default function Home() {
 
   // Sub-category priority for Clubs (priority order per user instructions)
   const clubsPriority = [
-    'Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'AC Milan', 'Arsanel', 'Liverpool', 'Real', 'PSG', 'Juventus', 'Intermilan', 'InterMiami', 'Monaco'
+    'All', 'Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'AC Milan', 'Arsenal', 'Liverpool', 'Real Madrid', 'PSG', 'Juventus', 'Inter Milan', 'Inter Miami', 'Monaco'
   ]
 
   const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
@@ -41,9 +52,11 @@ export default function Home() {
 
   const jerseyText = (j: any) => [j.country, j.name, ...(j.tags ?? [])].filter(Boolean).join(' ').toLowerCase()
 
+  // IPL - Check FIRST before World Cup to avoid conflicts with India
   const isIPLJersey = (j: any) => {
     const text = jerseyText(j)
-    return /\b(rcb|chennai|mumbai|kolkata|kolkatta|rajasthan|india)\b/i.test(text)
+    return /\b(rcb|royal\s*challengers|bangalore|chennai|super\s*kings|csk|mumbai|indians|mi\s|kolkata|knight\s*riders|kkr|rajasthan|royals)\b/i.test(text) ||
+           (/\bindia\b/i.test(text) && /\b(ipl|cricket|t20|test|jersey|polo)\b/i.test(text))
   }
 
   const getWorldCupTeam = (j: any) => {
@@ -62,7 +75,7 @@ export default function Home() {
     if (/\bjamaica\b/i.test(text)) return 'Jamaica'
     if (/\bmorocco\b/i.test(text)) return 'Morocco'
     if (/\bnorway\b/i.test(text)) return 'Norway'
-    if (/\bsao\s*paulo\b|\bsao\b/i.test(text)) return 'Sao Paulo'
+    if (/\bsao\s*paulo\b/i.test(text)) return 'Sao Paulo'
     return ''
   }
 
@@ -73,20 +86,27 @@ export default function Home() {
 
   const getClubLabel = (j: any) => {
     const text = jerseyText(j)
-    if (/\bintermiami\b/i.test(text)) return 'InterMiami'
-    if (/\balnassr\b/i.test(text)) return 'Alnassr'
-    if (/\barsanel\b|\barsenal\b/i.test(text)) return 'Arsanel'
-    if (/\bac\s*milan\b|\bacmilan\b/i.test(text)) return 'AC Milan'
-    if (/\bintermilan\b/i.test(text)) return 'Intermilan'
+    
+    // Check Inter Miami BEFORE Inter Milan to avoid Inter Milan matching
+    if (/\binter\s*miami\b|\bintermiami\b/i.test(text)) return 'Inter Miami'
+    
+    // Check specific clubs - order matters to avoid partial matches
     if (/\bbarcelona\b/i.test(text)) return 'Barcelona'
+    if (/\bmanchester\b/i.test(text)) return 'Manchester'
+    if (/\balnassr\b/i.test(text)) return 'Alnassr'
     if (/\bchelsea\b/i.test(text)) return 'Chelsea'
+    if (/\bac\s*milan\b|\bacmilan\b/i.test(text)) return 'AC Milan'
+    if (/\barsenal\b/i.test(text)) return 'Arsenal'
     if (/\bliverpool\b/i.test(text)) return 'Liverpool'
+    if (/\breal\s*madrid\b|\brealmadrid\b/i.test(text)) return 'Real Madrid'
+    if (/\bpsg\b|\bparis\s*saint\s*germain\b/i.test(text)) return 'PSG'
     if (/\bjuventus\b/i.test(text)) return 'Juventus'
-    if (/\bpsg\b/i.test(text) || /paris\s*saint\s*germain/i.test(text)) return 'PSG'
+    if (/\binter\s*milan\b|\bintermilan\b/i.test(text)) return 'Inter Milan'
     if (/\bmonaco\b/i.test(text)) return 'Monaco'
-    if (/\batletico\b|\bateltico\b/i.test(text)) return 'Atletico'
+    
+    // Additional clubs (not in priority)
+    if (/\batletico\b|\batlético\b/i.test(text)) return 'Atletico'
     if (/\bpepsi\b/i.test(text)) return 'Pepsi'
-    if (/\b(united)\b/i.test(text)) return 'United'
     if (/\broma\b/i.test(text)) return 'Roma'
     if (/\bbayern\b/i.test(text)) return 'Bayern'
     if (/\bajax\b/i.test(text)) return 'Ajax'
@@ -98,26 +118,36 @@ export default function Home() {
     if (/\bfiorentina\b/i.test(text)) return 'Fiorentina'
     if (/\bvalencia\b/i.test(text)) return 'Valencia'
     if (/\blazio\b/i.test(text)) return 'Lazio'
+    if (/\bunited\b/i.test(text)) return 'United'
+    
     return ''
   }
 
   const isClubJersey = (j: any) => Boolean(getClubLabel(j))
 
-  const isFullSleeveJersey = (j: any) => /full\s*sl?eeve|fullsleeve/i.test(jerseyText(j))
-  const isJacketJersey = (j: any) => /\bjacket\b/i.test(jerseyText(j))
-  const isF1Jersey = (j: any) => /\bf1\b/i.test(jerseyText(j)) || /formula\s*1/i.test(jerseyText(j))
-  const isShortsJersey = (j: any) => /\bshorts\b/i.test(jerseyText(j))
-  const isCropTopJersey = (j: any) => /\bcrop\b/i.test(jerseyText(j))
+  // Specific category detectors - must be precise to avoid conflicts
+  const isFullSleeveJersey = (j: any) => /\bfull\s*sleeves?\b|\bfullsleeve\b|\blong\s*sleeves?\b/i.test(jerseyText(j))
+  const isJacketJersey = (j: any) => /\bjackets?\b|\bwindbreaker\b/i.test(jerseyText(j))
+  const isF1Jersey = (j: any) => {
+    const text = jerseyText(j)
+    return /\bf1\b|\bformula\s*1\b|\bformula1\b|\bmclaren\b|\bferrari\b|\bredbull\b|\bmerc(edes)?\b/i.test(text)
+  }
+  const isShortsJersey = (j: any) => {
+    const text = jerseyText(j)
+    // Only match pure shorts, not jerseys with shorts
+    return /^shorts\b|^shorts\s|\bshorts\s*$|\bshorts\s*\d+\b/i.test(text) && !/\b(jersey|kit|polo|tshirt|t-shirt|top)\b.*\bshorts\b|\bshorts\b.*\b(jersey|kit|polo|tshirt|t-shirt|top)\b/i.test(text)
+  }
+  const isCropTopJersey = (j: any) => /\bcrop\s*tops?\b|\bcropped\s*tops?\b|\bcrop\b(?!ped)/i.test(jerseyText(j))
 
   function getMainCategory(j: any) {
     if (isWorldCupJersey(j)) return 'World Cup'
-    if (isClubJersey(j)) return 'Clubs'
     if (isFullSleeveJersey(j)) return 'FullSleeve'
     if (isJacketJersey(j)) return 'Jackets'
     if (isF1Jersey(j)) return 'F1'
     if (isShortsJersey(j)) return 'Shorts'
-    if (isIPLJersey(j)) return 'IPL'
     if (isCropTopJersey(j)) return 'Crop Top'
+    if (isIPLJersey(j)) return 'IPL'
+    if (isClubJersey(j)) return 'Clubs'
     return 'Other'
   }
 
@@ -176,24 +206,19 @@ export default function Home() {
     setFilterSubCategory('All')
   }, [filterMainCategory])
 
-  const highPriorityJerseyNames = [
-    'Spain 2026 Away Kit Pedri Embroidery Premium',
-    'Portugal 2026 Black Kit Ronaldo Fullsleeve Polo Embroidery Premium',
-    'Argentina 2026 Home Kit Messi Embroidery With Knitted Rib Premium',
-    'Argentina 2026 Away Kit Messi Embroidery Premium',
-    'Argentina 2026 Away Kit Messi',
-    'Portugal 2026 Away Kit Ronaldo Embroidery Premium',
-    'Brazil 2026 Away Kit Neymer Embroidery Premium',
-    'Portugal 2026 Away Kit Ronaldo',
-    'Brazil 2026 Home Kit Neymer Embroidery Premium',
-    'Germany 2026 Home Kit Writz Knitted Polo Embroidery Premium',
-    'Portugal 2026 Home Kit Ronaldo Embroidery Premium',
-    'Argentina 2026 Home Kit Messi Embroidery Premium',
-    'Spain 2026 Away Kit Pedri',
-    'Brazil 2026 Home Kit Neymer',
-    'Argentina 2026 Home Kit Messi',
-    'France 2026 Home Kit Mbappe Polo',
-  ]
+  // Get priority list based on current filter category
+  const getActivePriorityList = (): string[] => {
+    if (filterMainCategory === 'All') return GLOBAL_PRIORITY
+    if (filterMainCategory === 'World Cup' && filterSubCategory === 'All') return WORLD_CUP_PRIORITY
+    if (filterMainCategory === 'Clubs' && filterSubCategory === 'All') return CLUBS_PRIORITY
+    if (filterMainCategory === 'FullSleeve') return FULLSLEEVE_PRIORITY
+    if (filterMainCategory === 'Jackets') return JACKETS_PRIORITY
+    if (filterMainCategory === 'F1') return F1_PRIORITY
+    if (filterMainCategory === 'Shorts') return SHORTS_PRIORITY
+    if (filterMainCategory === 'IPL') return IPL_PRIORITY
+    if (filterMainCategory === 'Crop Top') return CROPTOP_PRIORITY
+    return []
+  }
 
   const filtered = useMemo(() => {
     const items = JERSEYS.filter(j => {
@@ -207,11 +232,28 @@ export default function Home() {
       return true
     })
 
-    const shouldApplyPriority = filterMainCategory === 'All' || (filterMainCategory === 'World Cup' && filterSubCategory === 'All') || (filterMainCategory === 'IPL')
+    const shouldApplyPriority = 
+      filterMainCategory === 'All' ||
+      (filterMainCategory === 'World Cup' && filterSubCategory === 'All') ||
+      (filterMainCategory === 'Clubs' && filterSubCategory === 'All') ||
+      filterMainCategory === 'FullSleeve' ||
+      filterMainCategory === 'Jackets' ||
+      filterMainCategory === 'F1' ||
+      filterMainCategory === 'Shorts' ||
+      filterMainCategory === 'IPL' ||
+      filterMainCategory === 'Crop Top'
+    
     if (!shouldApplyPriority) return items
 
+    const priorityList = getActivePriorityList()
+
     return items
-      .map((j, index) => ({ jersey: j, index, priority: highPriorityJerseyNames.indexOf(j.name), featured: j.featured || false }))
+      .map((j, index) => {
+        // Case-insensitive priority matching
+        const normalizedName = j.name.toLowerCase().trim()
+        const priority = priorityList.findIndex(item => item.toLowerCase().trim() === normalizedName)
+        return { jersey: j, index, priority, featured: j.featured || false }
+      })
       .sort((a, b) => {
         // For IPL, sort by featured status first
         if (filterMainCategory === 'IPL') {
