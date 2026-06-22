@@ -24,16 +24,25 @@ export default function Home() {
   const router = useRouter()
 
   // Restore scroll position immediately on mount, before any rendering
-  useEffect(() => {
-    const savedPosition = sessionStorage.getItem('flexplay_scroll_position')
-    
-    if (savedPosition !== null) {
-      const position = JSON.parse(savedPosition)
-      // Restore immediately without any delay
+ useEffect(() => {
+  const savedPosition = sessionStorage.getItem('flexplay_scroll_position')
+
+  if (savedPosition !== null && Number(savedPosition) > 0) {
+    const position = JSON.parse(savedPosition)
+
+    requestAnimationFrame(() => {
       window.scrollTo(0, position)
       sessionStorage.removeItem('flexplay_scroll_position')
-    }
-  }, [])
+    })
+  } else {
+    // Fresh visit → jump to jersey collection
+    requestAnimationFrame(() => {
+      document
+        .getElementById('collection')
+        ?.scrollIntoView({ behavior: 'auto' })
+    })
+  }
+}, [])
 
   const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top', 'Other']
 
