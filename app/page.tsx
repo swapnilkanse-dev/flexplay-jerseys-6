@@ -309,7 +309,7 @@ export default function Home() {
             <div style={{ position: 'relative', flex: 1, minWidth: 0 }}>
               <input
                 type="text" 
-                placeholder="👉 You will find any jersey here! 👈" 
+                placeholder="👉 You will find any Jersey here! 👈" 
                 value={search}
                 onChange={e => setSearch(e.target.value)}
                 style={{
