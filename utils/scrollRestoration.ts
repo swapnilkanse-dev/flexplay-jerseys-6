@@ -10,7 +10,7 @@ const NAVIGATION_STACK_KEY = 'flexplay_navigation_stack'
 
 /**
  * Save the current scroll position to sessionStorage
- * Called before navigating away from a page
+ * Called before navigating away from a pagep
  */
 export const saveScrollPosition = (): void => {
   if (typeof window === 'undefined') return
