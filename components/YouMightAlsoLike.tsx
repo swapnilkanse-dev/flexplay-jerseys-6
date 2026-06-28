@@ -89,19 +89,22 @@ function JerseyCard({ jersey, onClick }: { jersey: Jersey; onClick: () => void }
         {discount > 0 && (
           <div style={{
             position: 'absolute',
-            top: 8,
-            left: 8,
+            top: 10,
+            left: 10,
             background: '#111',
-            color: 'white',
-            padding: '4px 10px',
-            borderRadius: 4,
-            fontSize: 12,
+            color: '#fff',
+            padding: '4px 8px',
+            borderRadius: 999,
+            fontSize: 11,
             fontWeight: 700,
-            zIndex: 2
+            lineHeight: 1,
+            whiteSpace: 'nowrap',
+            zIndex: 3,
           }}>
-            Sale
+            {discount}% off
           </div>
         )}
+
       </div>
       
       {/* Details */}
@@ -167,27 +170,6 @@ function JerseyCard({ jersey, onClick }: { jersey: Jersey; onClick: () => void }
           </span>
         </div>
         
-        {/* Size badges - show first 3 available sizes */}
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: 4,
-        }}>
-          {(jersey.sizes ?? []).slice(0, 3).map((size) => (
-            <span
-              key={size}
-              style={{
-                fontSize: 10,
-                padding: '2px 6px',
-                background: '#f5f5f5',
-                borderRadius: 3,
-                color: '#555',
-              }}
-            >
-              {size}
-            </span>
-          ))}
-        </div>
       </div>
     </button>
   )

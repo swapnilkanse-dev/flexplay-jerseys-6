@@ -219,14 +219,6 @@ export default function JerseyCard({ jersey, onClick }: Props) {
             Rs. {jersey.originalPrice.toLocaleString('en-IN')}.00
           </span>
         </div>
-        <div className="flex flex-wrap gap-1 mt-2">
-          {jersey.sizes.map(s => (
-            <span key={s} className="text-[10px] px-1.5 py-0.5 rounded border"
-              style={{ borderColor: '#e5e5e5', color: '#888' }}>
-              {s}
-            </span>
-          ))}
-        </div>
       </div>
     </div>
   )

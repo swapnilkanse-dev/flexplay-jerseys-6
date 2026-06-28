@@ -14,7 +14,7 @@ export default function Footer() {
                 alt={siteConfig.logoAlt}
                 className="h-6 sm:h-7 w-auto"
               />
-              <span className="hidden sm:inline">{siteConfig.displayName}</span>
+              <span className="inline-block truncate">{siteConfig.displayName}</span>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed mb-4" style={{ color: '#aaa' }}>
               {siteConfig.tagline}

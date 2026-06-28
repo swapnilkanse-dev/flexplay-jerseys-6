@@ -192,50 +192,22 @@ export default function JerseyPageClient({ id }: { id: string }) {
     <main style={{ minHeight: '100vh', background: 'white' }}>
       <Navbar />
 
-      {/* Breadcrumb bar */}
+      {/* Back arrow bar */}
       <div style={{ paddingTop: 56, background: '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
-        <div className="px-4 sm:px-6 md:px-8" style={{ maxWidth: 1100, margin: '0 auto', padding: '12px 0', display: 'flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#aaa', flexWrap: 'wrap' }}>
-          <button onClick={() => router.push('/')}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa', fontSize: 12, padding: 0 }}>
-            🏠 Home
+        <div className="px-4 sm:px-6 md:px-8" style={{ maxWidth: 1100, margin: '0 auto', padding: '12px 0', display: 'flex', alignItems: 'center' }}>
+          <button onClick={() => router.back()}
+            style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#111', fontSize: 14, padding: 0, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontSize: 18 }}>←</span>
+            <span style={{ fontWeight: 700 }}>Back</span>
           </button>
-          <span>/</span>
-          <button onClick={() => router.push('/#collection')}
-            style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa', fontSize: 12, padding: 0 }}>
-            World Cup 2026
-          </button>
-          <span>/</span>
-          <span style={{ color: '#555' }}>{jersey.name}</span>
         </div>
       </div>
 
       {/* Product layout */}
-      <div className="px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10" style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '24px sm:gap-8 md:gap-10', alignItems: 'flex-start' }}>
+      <div className="px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 gap-6 sm:gap-8 md:gap-10" style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start' }}>
 
-        {/* ════ LEFT: thumbnails + main image ════ */}
-        <div style={{ display: 'flex', flexDirection: 'row', gap: 12, flex: '1 1 100%', maxWidth: '100%' }} className="sm:flex-1 sm:max-w-md">
-
-          {/* Thumbnail column — always visible when multiple images */}
-          {slots.length > 1 && (
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, flexShrink: 0 }}>
-              {slots.map((src, i) => (
-                <button key={i} onClick={() => setActiveIdx(i)}
-                  style={{
-                    width: 56, height: 56,
-                    borderRadius: 6,
-                    overflow: 'hidden',
-                    border: activeIdx === i ? '2px solid #111' : '2px solid #e5e5e5',
-                    cursor: 'pointer',
-                    background: '#f7f7f7',
-                    padding: 0,
-                    flexShrink: 0,
-                    transition: 'border-color 0.15s',
-                  }} className="sm:w-[76px] sm:h-[76px]">
-                  <ProductImage src={src} alt={`view ${i + 1}`} jersey={jersey} />
-                </button>
-              ))}
-            </div>
-          )}
+        {/* ════ LEFT: main image with bottom thumbnails ════ */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: '1 1 100%', maxWidth: '100%' }} className="sm:flex-1 sm:max-w-md">
 
           {/* Main image */}
           <div style={{ flex: 1, borderRadius: 10, overflow: 'hidden', background: '#f7f7f7', position: 'relative', minHeight: 320 }} className="sm:min-h-[460px]">
@@ -254,6 +226,28 @@ export default function JerseyPageClient({ id }: { id: string }) {
               />
             </div>
           </div>
+
+          {/* Thumbnail row — always visible when multiple images */}
+          {slots.length > 1 && (
+            <div style={{ display: 'flex', flexDirection: 'row', gap: 10, flexWrap: 'wrap', justifyContent: 'center', padding: '0 4px 8px' }}>
+              {slots.map((src, i) => (
+                <button key={i} onClick={() => setActiveIdx(i)}
+                  style={{
+                    width: 56, height: 56,
+                    borderRadius: 8,
+                    overflow: 'hidden',
+                    border: activeIdx === i ? '2px solid #111' : '2px solid #e5e5e5',
+                    cursor: 'pointer',
+                    background: '#fff',
+                    padding: 0,
+                    flexShrink: 0,
+                    transition: 'border-color 0.15s',
+                  }} className="sm:w-[76px] sm:h-[76px]">
+                  <ProductImage src={src} alt={`view ${i + 1}`} jersey={jersey} />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* ════ RIGHT: details ════ */}
@@ -343,7 +337,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
             {jersey.inStock ? 'ORDER ON WHATSAPP' : 'SOLD OUT'}
           </button>
 
-          <button onClick={() => router.push('/')}
+          <button onClick={() => router.back()}
             style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, color: '#aaa', textAlign: 'left', padding: 0, textDecoration: 'underline' }}>
             ← Back to Collection
           </button>
