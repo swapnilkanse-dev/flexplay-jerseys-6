@@ -17,6 +17,55 @@ export type MainFilter =
   | 'Crop Top'
   | 'Other';
 
+export type JerseyLike = {
+  name: string;
+  country?: string;
+  tags?: string[];
+  [key: string]: any;
+};
+
+function normalizeFilterText(text: string): string {
+  return text.toUpperCase().replace(/[^A-Z0-9]+/g, ' ').trim();
+}
+
+export function getMatchingMainCategories(jersey: JerseyLike): MainFilter[] {
+  const matched: MainFilter[] = [];
+
+  for (const [mainFilter, config] of Object.entries(FILTER_CONFIG) as [MainFilter, { detector: (jersey: JerseyLike) => boolean }][]) {
+    if (config.detector(jersey)) {
+      matched.push(mainFilter);
+    }
+  }
+
+  return matched.length > 0 ? matched : ['Other'];
+}
+
+export function getMatchingSubCategories(jersey: JerseyLike, mainCategory: MainFilter): string[] {
+  const matchers = SUBFILTER_MATCHERS[mainCategory];
+  if (!matchers) return [];
+
+  return Object.entries(matchers)
+    .filter(([subFilter]) => subFilter !== 'All')
+    .filter(([, matcher]) => matcher(jersey.name))
+    .map(([subFilter]) => subFilter);
+}
+
+export function getMatchingFilters(jersey: JerseyLike) {
+  const mainCategories = getMatchingMainCategories(jersey);
+  const subCategoriesByMain = Object.fromEntries(
+    mainCategories.map((mainCategory) => [
+      mainCategory,
+      getMatchingSubCategories(jersey, mainCategory),
+    ])
+  ) as Record<MainFilter, string[]>;
+
+  return {
+    mainCategories,
+    subCategoriesByMain,
+    mainCategory: mainCategories[0] ?? 'Other',
+  };
+}
+
 export const FILTER_CONFIG = {
   // ─── WORLD CUP FILTER ─────────────────────────────────────────────────────
   'World Cup': {

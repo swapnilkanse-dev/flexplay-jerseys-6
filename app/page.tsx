@@ -19,6 +19,7 @@ import Hero from '@/components/Hero'
 import JerseyCard from '@/components/JerseyCard'
 import Footer from '@/components/Footer'
 import Ticker from '@/components/Ticker'
+import { getMatchingFilters } from '@/utils/filterConfig'
 
 export default function Home() {
   const router = useRouter()
@@ -147,60 +148,56 @@ export default function Home() {
   const isCropTopJersey = (j: any) => /\bcrop\s*tops?\b|\bcropped\s*tops?\b|\bcrop\b(?!ped)/i.test(jerseyText(j))
 
   function getMainCategory(j: any) {
-    if (isWorldCupJersey(j)) return 'World Cup'
-    if (isFullSleeveJersey(j)) return 'FullSleeve'
-    if (isJacketJersey(j)) return 'Jackets'
-    if (isF1Jersey(j)) return 'F1'
-    if (isShortsJersey(j)) return 'Shorts'
-    if (isCropTopJersey(j)) return 'Crop Top'
-    if (isIPLJersey(j)) return 'IPL'
-    if (isClubJersey(j)) return 'Clubs'
-    return 'Other'
+    return getMatchingFilters(j).mainCategory
   }
 
   function getSubCategory(j: any, mainCat: string) {
-    if (mainCat === 'World Cup') return getWorldCupTeam(j)
-    if (mainCat === 'Clubs') return getClubLabel(j)
-    return ''
+    const matchData = getMatchingFilters(j)
+    return matchData.subCategoriesByMain[mainCat as keyof typeof matchData.subCategoriesByMain]?.[0] || ''
   }
 
   const getSubCategories = (mainCat: string) => {
     if (mainCat === 'All' || mainCat === 'IPL') return []
 
+    const subCatSet = new Set<string>()
+    JERSEYS.forEach(j => {
+      const matchData = getMatchingFilters(j)
+      if (!matchData.mainCategories.includes(mainCat as any)) return
+      ;(matchData.subCategoriesByMain[mainCat as keyof typeof matchData.subCategoriesByMain] || []).forEach(subCategory => {
+        subCatSet.add(subCategory)
+      })
+    })
+
     if (mainCat === 'World Cup') {
-      return worldCupTeamOrder.filter(team =>
-        JERSEYS.some(j => getMainCategory(j) === 'World Cup' && getSubCategory(j, 'World Cup') === team)
-      )
+      return worldCupTeamOrder.filter(team => subCatSet.has(team))
     }
 
     if (mainCat === 'Clubs') {
-      const clubSet = new Set(
-        JERSEYS.filter(j => getMainCategory(j) === 'Clubs')
-          .map(j => getSubCategory(j, 'Clubs'))
-          .filter(Boolean) as string[]
-      )
-      const ordered = clubsPriority.filter(club => clubSet.has(club))
-      const remaining = [...clubSet].filter(club => !clubsPriority.includes(club)).sort()
+      const ordered = clubsPriority.filter(club => subCatSet.has(club))
+      const remaining = [...subCatSet].filter(club => !clubsPriority.includes(club)).sort()
       return [...ordered, ...remaining]
     }
 
-    return []
+    return [...subCatSet].sort()
   }
 
   const mainCategories = useMemo(() => {
-    const catSet = new Set<string>(JERSEYS.map(j => getMainCategory(j)))
+    const catSet = new Set<string>()
+    JERSEYS.forEach(j => {
+      getMatchingFilters(j).mainCategories.forEach(category => catSet.add(category))
+    })
     const ordered = categoryPriority.filter(c => c === 'All' || catSet.has(c))
     return ordered
   }, [])
 
-  const [filterMainCategory, setFilterMainCategory] = useState('All')
+  const [filterMainCategory, setFilterMainCategory] = useState('World Cup')
   const [filterSubCategory, setFilterSubCategory] = useState('All')
   const [filterStock, setFilterStock] = useState('In Stock')
   const [search, setSearch] = useState('')
 
   // Reset all filters and clear search
   const resetFilters = () => {
-    setFilterMainCategory('All')
+    setFilterMainCategory('World Cup')
     setFilterSubCategory('All')
     setFilterStock('All')
     setSearch('')
@@ -229,10 +226,13 @@ export default function Home() {
 
   const filtered = useMemo(() => {
     const items = JERSEYS.filter(j => {
-      const mainCategory = getMainCategory(j)
-      const subCategory = getSubCategory(j, mainCategory)
-      if (filterMainCategory !== 'All' && mainCategory !== filterMainCategory) return false
-      if (filterMainCategory !== 'IPL' && filterSubCategory !== 'All' && subCategory !== filterSubCategory) return false
+      const matchData = getMatchingFilters(j)
+      const mainCategoriesForItem = matchData.mainCategories
+      if (filterMainCategory !== 'All' && !mainCategoriesForItem.includes(filterMainCategory as any)) return false
+      if (filterMainCategory !== 'IPL' && filterSubCategory !== 'All') {
+        const subCategoriesForSelectedMain = matchData.subCategoriesByMain[filterMainCategory as keyof typeof matchData.subCategoriesByMain] || []
+        if (!subCategoriesForSelectedMain.includes(filterSubCategory)) return false
+      }
       if (filterStock === 'In Stock' && !j.inStock) return false
       if (filterStock === 'Out of Stock' && j.inStock) return false
       if (search && !j.name.toLowerCase().includes(search.toLowerCase())) return false

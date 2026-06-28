@@ -17,6 +17,7 @@ import {
   FEATURED_PRIORITY_ORDER,
   NAME_CORRECTIONS,
   SUBFILTER_MATCHERS,
+  getMatchingFilters,
   type MainFilter,
 } from './filterConfig';
 
@@ -40,7 +41,9 @@ export type Jersey = {
   description: string;
   tags: string[];
   mainCategory?: MainFilter;
+  mainCategories?: MainFilter[];
   subCategory?: string;
+  subCategoriesByMain?: Record<MainFilter, string[]>;
   featured?: boolean;
 };
 
@@ -52,19 +55,14 @@ function correctProductName(name: string): string {
 }
 
 /**
- * Detect main category for a jersey
+ * Detect all main categories a jersey belongs to.
  */
-function detectMainCategory(jersey: Jersey): MainFilter | null {
-  for (const [mainFilter, config] of Object.entries(FILTER_CONFIG)) {
-    if (config.detector(jersey)) {
-      return mainFilter as MainFilter;
-    }
-  }
-  return null;
+function detectMainCategories(jersey: Jersey): MainFilter[] {
+  return getMatchingFilters(jersey).mainCategories;
 }
 
 /**
- * Detect sub-category within a main category
+ * Detect the primary sub-category for a jersey within a main category.
  */
 function detectSubCategory(jersey: Jersey, mainCategory: MainFilter): string {
   const matchers = SUBFILTER_MATCHERS[mainCategory];
@@ -144,15 +142,17 @@ export function processJerseyData(rawJerseys: any[]): Jersey[] {
       name: correctProductName(jersey.name),
     }))
     .map((jersey) => {
-      // Detect main category
-      const mainCategory = detectMainCategory(jersey) || 'Other';
+      const { mainCategories, subCategoriesByMain, mainCategory: primaryMainCategory } = getMatchingFilters(jersey);
+      const mainCategory = primaryMainCategory;
       const subCategory = detectSubCategory(jersey, mainCategory);
       const featured = isFeatured(jersey.id, mainCategory, subCategory);
 
       return {
         ...jersey,
         mainCategory,
+        mainCategories,
         subCategory,
+        subCategoriesByMain,
         featured,
       } as Jersey;
     })
