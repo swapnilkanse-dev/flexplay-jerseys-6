@@ -161,7 +161,7 @@
       "M": true,
       "L": false,
       "XL": false,
-      "XXL": true,
+      "XXL": false,
       "XXXL": true
     },
     "inStock": true,
@@ -553,7 +553,7 @@
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -1218,7 +1218,7 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
@@ -1868,12 +1868,12 @@
       "XL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-11T171348.364.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -2005,7 +2005,7 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false
@@ -2702,13 +2702,13 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
       "3XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-23T214335.011.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3055,13 +3055,13 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-15T170831.301.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3792,7 +3792,7 @@
       "M": true,
       "L": false,
       "XL": false,
-      "XXL": true,
+      "XXL": false,
       "XXXL": false
     },
     "inStock": true,
@@ -4286,7 +4286,7 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": true,
       "XL": false,
       "XXL": false,
@@ -4334,14 +4334,14 @@
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-23T194639.287.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4834,7 +4834,7 @@
       "M": true,
       "L": false,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -6632,6 +6632,34 @@
     ]
   },
   {
+    "id": "test-product",
+    "name": "Test Product",
+    "shortName": "Unknown 2026 Home",
+    "country": "Test",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 143,
+    "sizes": [],
+    "sizeStock": {},
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/IMG-9743.jpg",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/IMG-9743.jpg",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026"
+    ]
+  },
+  {
     "id": "tshirt-fullsleeve-emirates-r-w",
     "name": "Tshirt Fullsleeve Emirates R/W",
     "shortName": "Unknown 2026 Home",
@@ -7998,7 +8026,7 @@
     "sizeStock": {
       "S": false,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false
     },
