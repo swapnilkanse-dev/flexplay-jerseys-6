@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import type { Jersey } from '@/constants/jerseys'
+import { siteConfig } from '@/config/site'
 
 interface Props {
   jersey: Jersey
@@ -49,7 +50,7 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
 
   function sendOrder() {
     if (!validate()) return
-    const wa = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919156165683'
+    const wa = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || siteConfig.whatsappNumber.replace(/[^0-9]/g, '')
     const total = jersey.discountedPrice * qty
     const normalizedAddress = address.trim().replace(/[\s,]+$/g, '')
     const fullAddress = `${normalizedAddress}${city ? `, ${city.trim()}` : ''}`
@@ -57,7 +58,7 @@ export default function WhatsAppModal({ jersey, initialSize, onClose }: Props) {
       ? `Price : ₹${jersey.discountedPrice} × ${qty} = ₹${total}`
       : `Price : ₹${jersey.discountedPrice}`
     const msg = [
-      `New Order – FlexPlay Jerseys`,
+      siteConfig.whatsappMessageTitle,
       ``,
       `*• Product*`,
       `${jersey.name}`,

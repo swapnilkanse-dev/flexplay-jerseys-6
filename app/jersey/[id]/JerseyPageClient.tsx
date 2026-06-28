@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { JERSEYS } from '@/constants/jerseys'
 import type { Jersey } from '@/constants/jerseys'
+import { siteConfig } from '@/config/site'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import WhatsAppModal from '@/components/WhatsAppModal'
@@ -106,7 +107,7 @@ function SizeGuide() {
           }} />
 
           <p style={{ fontSize: 13, fontWeight: 700, color: '#111', margin: '0 0 12px', textAlign: 'center', letterSpacing: '0.05em' }}>
-            📏 SIZE GUIDE — FLEXPLAY JERSEYS
+            📏 SIZE GUIDE — {siteConfig.displayName.toUpperCase()}
           </p>
 
           <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
@@ -178,7 +179,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
   // Construct product URL - use the dynamic origin if available, fallback to absolute URL
   const productUrl = typeof window !== 'undefined' 
     ? `${window.location.origin}/jersey/${jersey.id}`
-    : `https://flexplay-jerseys.netlify.app/jersey/${jersey.id}`
+    : `${siteConfig.baseUrl}/jersey/${jersey.id}`
 
   function handleOrderClick() {
     if (!selectedSize || !jersey) { setSizeError(true); return }

@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { siteConfig } from '@/config/site'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -18,11 +19,11 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2 font-bold text-base sm:text-lg tracking-tight" style={{ color: 'var(--text)' }}>
           <img 
-            src="/images/flexplay-logo.png" 
-            alt="FlexPlay Jerseys"
-            className="h-7 w-auto"
+            src={siteConfig.logoPath} 
+            alt={siteConfig.logoAlt}
+            className="h-7 w-7 rounded-full object-cover"
           />
-          <span className="whitespace-nowrap">FlexPlay Jerseys</span>
+          <span className="whitespace-nowrap">{siteConfig.displayName}</span>
         </a>
 
         {/* Desktop Nav */}

@@ -1,5 +1,6 @@
 'use client'
 import { useState, useRef, useEffect, type MouseEvent } from 'react'
+import { siteConfig } from '@/config/site'
 
 interface ShareButtonProps {
   productName: string
@@ -40,7 +41,7 @@ export default function ShareButton({ productName, productUrl, isIcon = false }:
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Flexplay Jerseys',
+          title: siteConfig.shareTitle,
           text: `Check out this awesome jersey: ${productName}`,
           url: productUrl,
         })

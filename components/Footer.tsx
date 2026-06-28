@@ -1,3 +1,5 @@
+import { siteConfig } from '@/config/site'
+
 export default function Footer() {
   return (
     <footer id="about" className="mt-12 sm:mt-16 pt-8 pb-6 px-4 sm:px-6 md:px-8"
@@ -8,16 +10,16 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 font-bold text-base sm:text-lg mb-3">
               <img 
-                src="/images/flexplay-logo.png" 
-                alt="FlexPlay Jerseys"
+                src={siteConfig.logoPath} 
+                alt={siteConfig.logoAlt}
                 className="h-6 sm:h-7 w-auto"
               />
-              <span className="hidden sm:inline">FlexPlay Jerseys</span>
+              <span className="hidden sm:inline">{siteConfig.displayName}</span>
             </div>
             <p className="text-xs sm:text-sm leading-relaxed mb-4" style={{ color: '#aaa' }}>
-              Premium World Cup 2026 jerseys at the best prices. All orders confirmed personally on WhatsApp.
+              {siteConfig.tagline}
             </p>
-            <a href="https://wa.me/919156165683" target="_blank" rel="noopener noreferrer"
+            <a href={`https://wa.me/${siteConfig.whatsappNumber}`} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-semibold text-white transition-opacity hover:opacity-90"
               style={{ background: '#25D366' }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -30,34 +32,39 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-3 text-xs sm:text-sm tracking-widest uppercase" style={{ color: '#888' }}>Contact</h4>
             <ul className="space-y-2 text-xs sm:text-sm" style={{ color: '#aaa' }}>
-              <li>📱 <a href="tel:+919156165683" className="hover:text-white transition-colors">+91 91561 65683</a> / <a href="tel:+917058049668" className="hover:text-white transition-colors">+91 70580 49668</a></li>
+              <li>📱 {siteConfig.phoneNumbers.map((phone, index) => (
+                <span key={phone}>
+                  <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="hover:text-white transition-colors">{phone}</a>
+                  {index < siteConfig.phoneNumbers.length - 1 ? ' / ' : ''}
+                </span>
+              ))}</li>
 
-              <li>⏰ 10 AM – 8 PM</li>
-              <li>✉️ <a href="mailto:flexplayjersey@gmail.com" className="hover:text-white transition-colors">flexplayjersey@gmail.com</a></li>
-              <li><a href="https://www.instagram.com/flexplay.jerseys/?hl=en" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
+              <li>⏰ {siteConfig.hours}</li>
+              <li>✉️ <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">{siteConfig.email}</a></li>
+              <li><a href={siteConfig.instagramUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-2">
                 <img 
                   src="/images/instagram-logo.png" 
                   alt="Instagram"
                   className="h-4 w-4"
                 />
-                @flexplay.jerseys
+                {siteConfig.instagramHandle}
               </a></li>
-              <li>📦 Pan India Delivery</li>
+              <li>📦 {siteConfig.deliveryLabel}</li>
             </ul>
           </div>
           {/* Why us */}
           <div>
-            <h4 className="font-semibold mb-3 text-xs sm:text-sm tracking-widest uppercase" style={{ color: '#888' }}>Why FlexPlay</h4>
+            <h4 className="font-semibold mb-3 text-xs sm:text-sm tracking-widest uppercase" style={{ color: '#888' }}>Why {siteConfig.displayName.split(' ')[0]}</h4>
             <ul className="space-y-1.5 text-xs sm:text-sm" style={{ color: '#aaa' }}>
-              {['🏅 Premium embroidered crests','👕 Sizes S to XXXL','🚀 Fast and Free Delivery across India','💬 Personal WhatsApp support','✅ Quality guaranteed'].map(i => (
+              {siteConfig.whyUs.map(i => (
                 <li key={i}>{i}</li>
               ))}
             </ul>
           </div>
         </div>
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs" style={{ color: '#666' }}>
-          <p>© {new Date().getFullYear()} FlexPlay Jerseys. All rights reserved.</p>
-          <p>Made with ⚽ for football fans across India</p>
+          <p>© {new Date().getFullYear()} {siteConfig.displayName}. All rights reserved.</p>
+          <p>{siteConfig.footerNote}</p>
         </div>
       </div>
     </footer>

@@ -1,16 +1,17 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Script from 'next/script'
+import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  title: 'FlexPlay Jerseys – World Cup 2026 Collection',
-  description: 'Premium World Cup 2026 jerseys – Argentina, Portugal, Brazil, France & more. Order on WhatsApp for fast delivery across India.',
+  title: siteConfig.title,
+  description: siteConfig.description,
   icons: {
-    icon: '/images/flexplay-logo.png',
+    icon: siteConfig.logoPath,
   },
   openGraph: {
-    title: 'FlexPlay Jerseys – World Cup 2026 Collection',
-    description: 'Premium World Cup 2026 jerseys at unbeatable prices. Order via WhatsApp.',
+    title: siteConfig.openGraphTitle,
+    description: siteConfig.openGraphDescription,
     type: 'website',
   },
 }
