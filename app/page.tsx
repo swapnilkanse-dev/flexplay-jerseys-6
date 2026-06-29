@@ -20,6 +20,7 @@ import JerseyCard from '@/components/JerseyCard'
 import Footer from '@/components/Footer'
 import Ticker from '@/components/Ticker'
 import { getMatchingFilters } from '@/utils/filterConfig'
+import { matchesSearchQuery } from '@/utils/search'
 
 export default function Home() {
   const router = useRouter()
@@ -235,7 +236,7 @@ export default function Home() {
       }
       if (filterStock === 'In Stock' && !j.inStock) return false
       if (filterStock === 'Out of Stock' && j.inStock) return false
-      if (search && !j.name.toLowerCase().includes(search.toLowerCase())) return false
+      if (search && !matchesSearchQuery(search, j)) return false
       return true
     })
 
