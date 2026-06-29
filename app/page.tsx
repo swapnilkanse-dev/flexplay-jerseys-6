@@ -20,7 +20,7 @@ import JerseyCard from '@/components/JerseyCard'
 import Footer from '@/components/Footer'
 import Ticker from '@/components/Ticker'
 import { getMatchingFilters } from '@/utils/filterConfig'
-import { matchesSearchQuery } from '@/utils/search'
+import { getSearchSuggestions, matchesSearchQuery } from '@/utils/search'
 
 export default function Home() {
   const router = useRouter()
@@ -229,8 +229,10 @@ export default function Home() {
     const items = JERSEYS.filter(j => {
       const matchData = getMatchingFilters(j)
       const mainCategoriesForItem = matchData.mainCategories
-      if (filterMainCategory !== 'All' && !mainCategoriesForItem.includes(filterMainCategory as any)) return false
-      if (filterMainCategory !== 'IPL' && filterSubCategory !== 'All') {
+      const shouldApplyCategoryFilter = !search
+
+      if (shouldApplyCategoryFilter && filterMainCategory !== 'All' && !mainCategoriesForItem.includes(filterMainCategory as any)) return false
+      if (shouldApplyCategoryFilter && filterMainCategory !== 'IPL' && filterSubCategory !== 'All') {
         const subCategoriesForSelectedMain = matchData.subCategoriesByMain[filterMainCategory as keyof typeof matchData.subCategoriesByMain] || []
         if (!subCategoriesForSelectedMain.includes(filterSubCategory)) return false
       }
@@ -276,6 +278,10 @@ export default function Home() {
       })
       .map(item => item.jersey)
   }, [filterMainCategory, filterSubCategory, filterStock, search])
+
+  const suggestions = useMemo(() => {
+    return getSearchSuggestions(search, JERSEYS, 8)
+  }, [search])
 
   const pill = (active: boolean): React.CSSProperties => ({
     background: active ? '#111' : '#fff',
@@ -363,6 +369,45 @@ export default function Home() {
                   }
                 }
               `}</style>
+              {search && suggestions.length > 0 && (
+                <div style={{
+                  position: 'absolute',
+                  top: 'calc(100% + 6px)',
+                  left: 0,
+                  right: 0,
+                  zIndex: 20,
+                  background: '#fff',
+                  border: '1px solid #e5e7eb',
+                  borderRadius: 12,
+                  boxShadow: '0 12px 24px rgba(0,0,0,0.08)',
+                  padding: '10px 0',
+                  maxHeight: 320,
+                  overflowY: 'auto',
+                }}>
+                  <div style={{ padding: '8px 12px', color: '#6b7280', fontSize: 12, fontWeight: 600, letterSpacing: '0.02em' }}>Suggestions</div>
+                  {suggestions.map((suggestion, index) => (
+                    <button
+                      key={`${suggestion}-${index}`}
+                      type="button"
+                      onMouseDown={() => setSearch(suggestion)}
+                      style={{
+                        display: 'block',
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '10px 12px',
+                        background: 'transparent',
+                        border: 'none',
+                        cursor: 'pointer',
+                        fontSize: 14,
+                        color: '#111',
+                        fontWeight: 600,
+                      }}
+                    >
+                      {suggestion}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
             <button
               onClick={resetFilters}
