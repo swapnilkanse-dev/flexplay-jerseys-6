@@ -162,7 +162,7 @@
       "L": false,
       "XL": false,
       "XXL": false,
-      "XXXL": true
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -465,7 +465,7 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true,
       "XXL": true
     },
@@ -549,10 +549,10 @@
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -1172,7 +1172,7 @@
       "M": true,
       "L": false,
       "XL": false,
-      "XXXL": true
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -1554,7 +1554,7 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false
     },
@@ -1780,7 +1780,7 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": true,
       "XXXL": false
@@ -2005,10 +2005,10 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": false,
-      "L": false,
-      "XL": false,
-      "XXL": false
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
     },
     "inStock": true,
     "images": [
@@ -2023,6 +2023,49 @@
       "Portugal",
       "Ronaldo",
       "Home",
+      "2026"
+    ]
+  },
+  {
+    "id": "spain-2026-away-kit-lamine-yamal-1",
+    "name": "Spain 2026 Away Kit Lamine Yamal",
+    "shortName": "Spain 2026 Away – Lamine Yamal",
+    "country": "Spain",
+    "flag": "🇪🇸",
+    "year": 2026,
+    "kit": "Away",
+    "player": "Lamine Yamal",
+    "type": "Standard",
+    "badge": "ESP",
+    "originalPrice": 741,
+    "discountedPrice": 419,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "sizeStock": {
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true
+    },
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-04T220404.255.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/F-2026-06-04T220404.255.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/B-2026-06-04T220407.458.webp",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Spain Away Kit featuring Lamine Yamal's name & number. ",
+    "tags": [
+      "Spain",
+      "Lamine Yamal",
+      "Away",
       "2026"
     ]
   },
@@ -2177,10 +2220,10 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": false,
-      "L": false,
-      "XL": false,
-      "XXL": false,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true,
       "XXXL": false
     },
     "inStock": true,
@@ -3741,13 +3784,13 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": false,
-      "L": false,
-      "XL": false,
+      "M": true,
+      "L": true,
+      "XL": true,
       "XXL": false,
       "XXXL": false
     },
-    "inStock": false,
+    "inStock": true,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-01T210627.100.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4059,14 +4102,14 @@
       "XXXL"
     ],
     "sizeStock": {
-      "S": false,
-      "M": false,
-      "L": false,
-      "XL": false,
-      "XXL": false,
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true,
       "XXXL": false
     },
-    "inStock": false,
+    "inStock": true,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-03T215715.060_5c9ff4d0-f074-4049-98d9-e24c9cc1091c.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4244,7 +4287,7 @@
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -4648,7 +4691,7 @@
       "XL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": false
@@ -5261,7 +5304,7 @@
     ],
     "sizeStock": {
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -5935,7 +5978,7 @@
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false,
       "XXXL": false
     },
@@ -6629,6 +6672,34 @@
       "Home",
       "2007",
       "Embroidery"
+    ]
+  },
+  {
+    "id": "test-product",
+    "name": "Test Product",
+    "shortName": "Unknown 2026 Home",
+    "country": "Test",
+    "flag": "🏳",
+    "year": 2026,
+    "kit": "Home",
+    "player": "",
+    "type": "Standard",
+    "badge": "UNK",
+    "originalPrice": 741,
+    "discountedPrice": 143,
+    "sizes": [],
+    "sizeStock": {},
+    "inStock": true,
+    "images": [
+      "http://www.thayyilsports.in/cdn/shop/files/IMG-9743.jpg",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
+      "https://www.thayyilsports.in/cdn/shop/files/IMG-9743.jpg",
+      "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo.svg"
+    ],
+    "description": "2026 Unknown Home Kit. ",
+    "tags": [
+      "Home",
+      "2026"
     ]
   },
   {
