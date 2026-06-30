@@ -19,6 +19,7 @@ export type SiteConfig = {
   footerNote: string
   shareTitle: string
   whyUs: string[]
+  gaId: string
   baseUrl: string
 }
 
@@ -50,6 +51,7 @@ const siteConfigs: Record<string, SiteConfig> = {
       '💬 Personal WhatsApp support',
       '✅ Quality guaranteed',
     ],
+    gaId: 'G-TTEPGP2BET',
     baseUrl: 'https://flexplay-jerseys.netlify.app',
   },
   jerseyholic: {
@@ -79,6 +81,7 @@ const siteConfigs: Record<string, SiteConfig> = {
       '💬 Personal WhatsApp support',
       '✅ Quality guaranteed',
     ],
+    gaId: 'G-19LXX4WMFT',
     baseUrl: 'https://jerseyholic.netlify.app',
   },
 }

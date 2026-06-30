@@ -27,7 +27,7 @@ export default function RootLayout({
         {children}
         <Script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-TTEPGP2BET"
+          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.gaId}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -35,7 +35,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-TTEPGP2BET');
+            gtag('config', '${siteConfig.gaId}');
           `}
         </Script>
       </body>
