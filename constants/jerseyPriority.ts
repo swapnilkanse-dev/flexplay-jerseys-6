@@ -34,6 +34,7 @@ export const WORLD_CUP_PRIORITY: string[] = [
 'Argentina 2026 Away Kit Messi Embroidery Premium',
 'Argentina 2026 Away Kit Messi',
 'Argentina 2026 Away Kit Messi Embroidery',
+'ARGENTINA 2026 HOME KIT MESSI FULLSLEEVE EMBROIDERY PREMIUM',
 'Brazil 2026 Home Kit Neymer Embroidery Premium',
 'Brazil 2026 Home Kit Neymer',
 'Brazil 2026 Home Kit Neymer Embroidery',
@@ -148,7 +149,11 @@ export const CLUBS_PRIORITY: string[] = [
  * These jerseys appear first when viewing FullSleeve filter
  */
 export const FULLSLEEVE_PRIORITY: string[] = [
-  // Add full sleeve jersey names here to prioritize them
+  
+'ARGENTINA 2026 HOME KIT MESSI FULLSLEEVE EMBROIDERY PREMIUM',
+'Spain 2026 Home Kit Lamine Yamal Fullsleeve Embroidery',
+'Spain 2026 Home Kit Pedri Fullsleeve Embroidery',
+
 ]
 
 /**
@@ -193,6 +198,8 @@ export const GLOBAL_PRIORITY: string[] = [
   'Spain 2026 Away Kit Pedri Embroidery Premium',
   'Spain 2026 Away Kit Pedri',
   'Spain 2026 Away Kit Lamine Yamal',
+  'Spain 2026 Home Kit Lamine Yamal Fullsleeve Embroidery',
+  'Spain 2026 Home Kit Pedri Fullsleeve Embroidery',
   'Real Madrid 2023-24 Third Kit Kroos Polo Embroidery Premium',
   'Portugal 2026 Away Kit Ronaldo Embroidery Premium',
   'Portugal 2026 Home Kit Ronaldo Embroidery Premium',
@@ -207,6 +214,7 @@ export const GLOBAL_PRIORITY: string[] = [
   'FRANCE 2026 HOME KIT MBAPPE POLO EMBROIDERY Premium',
   'Argentina 2026 Home Kit Messi Embroidery Premium',
   'Argentina 2026 Away Kit Messi Embroidery Premium',
+  'ARGENTINA 2026 HOME KIT MESSI FULLSLEEVE EMBROIDERY PREMIUM',
   'URUGUAY 2026 AWAY KIT VALVERDE EMBROIDERY PREMIUM',
   'Portugal 2026 Black Kit With Shorts Imported',
   'Liverpool 2000-01 Home Kit Owen Polo Embroidery Premium',
