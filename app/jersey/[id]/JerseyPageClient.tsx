@@ -188,6 +188,18 @@ export default function JerseyPageClient({ id }: { id: string }) {
     setShowOrder(true)
   }
 
+  function handleBackToCollection() {
+    if (typeof window === 'undefined') return
+
+    const hasPreviousEntry = window.history.length > 1
+    if (hasPreviousEntry) {
+      router.back()
+      return
+    }
+
+    router.push('/')
+  }
+
   return (
     <main style={{ minHeight: '100vh', background: 'white' }}>
       <Navbar />
@@ -195,7 +207,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
       {/* Back arrow bar */}
       <div style={{ paddingTop: 56, background: '#fafafa', borderBottom: '1px solid #f0f0f0' }}>
         <div className="px-4 sm:px-6 md:px-8" style={{ maxWidth: 1100, margin: '0 auto', padding: '12px 0', display: 'flex', alignItems: 'center' }}>
-          <button onClick={() => router.back()}
+          <button onClick={handleBackToCollection}
             style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#111', fontSize: 14, padding: 0, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
             <span style={{ fontSize: 18 }}>←</span>
             <span style={{ fontWeight: 700 }}>Back</span>
@@ -337,7 +349,7 @@ export default function JerseyPageClient({ id }: { id: string }) {
             {jersey.inStock ? 'ORDER ON WHATSAPP' : 'SOLD OUT'}
           </button>
 
-          <button onClick={() => router.back()}
+          <button onClick={handleBackToCollection}
             style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 13, color: '#aaa', textAlign: 'left', padding: 0, textDecoration: 'underline' }}>
             ← Back to Collection
           </button>
