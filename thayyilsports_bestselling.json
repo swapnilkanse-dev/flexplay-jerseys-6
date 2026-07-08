@@ -556,7 +556,7 @@
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false,
       "XXXL": false
     },
@@ -601,12 +601,12 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-30T211837.049.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -1415,9 +1415,9 @@
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-24T150855.405.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -1454,13 +1454,13 @@
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-24T150117.127.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -2029,7 +2029,7 @@
       "S": true,
       "M": true,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": true
     },
     "inStock": true,
@@ -2075,7 +2075,7 @@
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -2773,12 +2773,12 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-11T172952.929.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3124,12 +3124,12 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-04T192257.130.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3217,7 +3217,7 @@
       "S": true,
       "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -3559,7 +3559,7 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false
     },
     "inStock": true,
@@ -4045,14 +4045,14 @@
       "XXXL"
     ],
     "sizeStock": {
-      "S": false,
-      "M": false,
-      "L": false,
-      "XL": false,
-      "XXL": false,
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true,
       "XXXL": false
     },
-    "inStock": false,
+    "inStock": true,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-15T170831.301.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -6602,12 +6602,12 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-04-01T201951.345.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
