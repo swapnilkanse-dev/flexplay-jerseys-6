@@ -321,7 +321,11 @@ export default function Home() {
                 type="text" 
                 placeholder="👉 You will find any Jersey here! 👈" 
                 value={search}
-                onChange={e => setSearch(e.target.value)}
+                onChange={e => {
+                  const nextValue = e.target.value
+                  setSearch(nextValue)
+                  setShowSuggestions(Boolean(nextValue.trim()))
+                }}
                 style={{
                   width: '100%', padding: '8px 12px 8px 32px',
                   fontSize: 13, borderRadius: 8, outline: 'none',
