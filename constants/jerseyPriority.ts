@@ -38,6 +38,7 @@ export const WORLD_CUP_PRIORITY: string[] = [
 'Argentina 2026 Away Kit Messi Embroidery',
 'ARGENTINA 2026 HOME KIT MESSI FULLSLEEVE EMBROIDERY PREMIUM',
 'ARGENTINA 2026 HOME KIT MESSI FIVESLEEVE EMBROIDERY',
+'ARGENTINA 2026 PREMATCH KIT EMBROIDERY PREMIUM',
 'Brazil 2026 Home Kit Neymer Embroidery Premium',
 'Brazil 2026 Home Kit Neymer',
 'Brazil 2026 Home Kit Neymer Embroidery',

@@ -50,13 +50,13 @@ export default function Home() {
 
   // Sub-category priority for Clubs (priority order per user instructions)
   const clubsPriority = [
-    'All', 'Barcelona', 'Manchester', 'Alnassr', 'Chelsea', 'AC Milan', 'Arsenal', 'Liverpool', 'Real Madrid', 'PSG', 'Juventus', 'Inter Milan', 'Inter Miami', 'Monaco'
+    'All', 'Real Madrid', 'Barcelona', 'Manchester', 'Liverpool', 'Chelsea', 'Juventus', 'Inter Milan', 'AC Milan', 'PSG', 'Monaco', 'Inter Miami', 'Alnassr', 'Santos', 'Sao Paulo'
   ]
 
   const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
 
   const worldCupTeamOrder = [
-    'Brazil', 'Argentina', 'France', 'Germany', 'Spain', 'England', 'Italy', 'Portugal', 'Mexico', 'Croatia', 'Japan', 'Jamaica', 'Sao Paulo', 'Morocco', 'Norway'
+    'Portugal', 'Argentina', 'Brazil', 'Spain', 'France', 'Norway', 'Germany', 'Italy', 'Japan', 'England', 'Croatia', 'Mexico', 'Jamaica', 'Morocco'
   ]
 
   const jerseyText = (j: any) => [j.country, j.name, ...(j.tags ?? [])].filter(Boolean).join(' ').toLowerCase()
@@ -112,6 +112,7 @@ export default function Home() {
     if (/\bjuventus\b/i.test(text)) return 'Juventus'
     if (/\binter\s*milan\b|\bintermilan\b/i.test(text)) return 'Inter Milan'
     if (/\bmonaco\b/i.test(text)) return 'Monaco'
+    if (/\bsantos\b/i.test(text)) return 'Santos'
     
     // Additional clubs (not in priority)
     if (/\batletico\b|\batlético\b/i.test(text)) return 'Atletico'
@@ -195,6 +196,7 @@ export default function Home() {
   const [filterSubCategory, setFilterSubCategory] = useState('All')
   const [filterStock, setFilterStock] = useState('In Stock')
   const [search, setSearch] = useState('')
+  const [showSuggestions, setShowSuggestions] = useState(false)
 
   // Reset all filters and clear search
   const resetFilters = () => {
@@ -202,6 +204,7 @@ export default function Home() {
     setFilterSubCategory('All')
     setFilterStock('All')
     setSearch('')
+    setShowSuggestions(false)
   }
 
   const subCategories = useMemo(() => getSubCategories(filterMainCategory), [filterMainCategory])
@@ -329,10 +332,12 @@ export default function Home() {
                 onFocus={(e) => {
                   e.target.style.borderColor = '#ff6b35';
                   e.target.style.boxShadow = '0 0 0 3px rgba(255, 107, 53, 0.1)';
+                  setShowSuggestions(true);
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = '#d0d0d0';
                   e.target.style.boxShadow = 'none';
+                  setShowSuggestions(false);
                 }}
               />
               <svg style={{ position: 'absolute', left: 10, top: '50%', transform: 'translateY(-50%)', opacity: 0.35 }}
@@ -369,7 +374,7 @@ export default function Home() {
                   }
                 }
               `}</style>
-              {search && suggestions.length > 0 && (
+              {search && showSuggestions && suggestions.length > 0 && (
                 <div style={{
                   position: 'absolute',
                   top: 'calc(100% + 6px)',
@@ -389,7 +394,23 @@ export default function Home() {
                     <button
                       key={`${suggestion}-${index}`}
                       type="button"
-                      onMouseDown={() => setSearch(suggestion)}
+                      onMouseDown={(e) => {
+                        e.preventDefault();
+                        setSearch(suggestion);
+                        setShowSuggestions(false);
+                        setFilterStock('All');
+                        
+                        // Scroll to the matching jersey
+                        setTimeout(() => {
+                          const matchedJersey = filtered.find(j => j.name === suggestion);
+                          if (matchedJersey) {
+                            const element = document.getElementById(`jersey-${matchedJersey.id}`);
+                            if (element) {
+                              element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                          }
+                        }, 0);
+                      }}
                       style={{
                         display: 'block',
                         width: '100%',
@@ -401,6 +422,12 @@ export default function Home() {
                         fontSize: 14,
                         color: '#111',
                         fontWeight: 600,
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.target as HTMLElement).style.background = '#f3f4f6';
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.target as HTMLElement).style.background = 'transparent';
                       }}
                     >
                       {suggestion}
@@ -465,15 +492,20 @@ export default function Home() {
             className="sm:gap-4 md:gap-5 lg:gap-6"
           >
             {filtered.map(jersey => (
-              <JerseyCard
+              <div
                 key={jersey.id}
-                jersey={jersey}
-                onClick={() => {
-                  // Save current scroll position before navigating
-                  saveScrollPosition()
-                  router.push(`/jersey/${jersey.id}`)
-                }}
-              />
+                id={`jersey-${jersey.id}`}
+                data-jersey-name={jersey.name}
+              >
+                <JerseyCard
+                  jersey={jersey}
+                  onClick={() => {
+                    // Save current scroll position before navigating
+                    saveScrollPosition()
+                    router.push(`/jersey/${jersey.id}`)
+                  }}
+                />
+              </div>
             ))}
           </div>
         )}

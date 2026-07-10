@@ -284,12 +284,18 @@ export default function JerseyPageClient({ id }: { id: string }) {
             Rs. {(jersey.discountedPrice ?? 0).toLocaleString('en-IN')}.00
           </p>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <span style={{ width: 9, height: 9, borderRadius: '50%', background: jersey.inStock ? '#22c55e' : '#f87171', display: 'inline-block' }} />
-            <span style={{ fontSize: 14, color: jersey.inStock ? '#16a34a' : '#ef4444', fontWeight: 600 }}>
-              {jersey.inStock ? 'In stock!' : 'Sold out'}
-            </span>
-          </div>
+          {jersey.inventoryMessage && jersey.inventoryMessage.trim() && !jersey.inventoryMessage.toLowerCase().includes('in stock') ? (
+            <p style={{ fontSize: 13, fontWeight: 600, color: '#ff6b35', margin: 0 }}>
+              {jersey.inventoryMessage}
+            </p>
+          ) : (
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+              <span style={{ width: 9, height: 9, borderRadius: '50%', background: jersey.inStock ? '#22c55e' : '#f87171', display: 'inline-block' }} />
+              <span style={{ fontSize: 14, color: jersey.inStock ? '#16a34a' : '#ef4444', fontWeight: 600 }}>
+                {jersey.inStock ? 'In stock!' : 'Sold out'}
+              </span>
+            </div>
+          )}
 
           {/* Size */}
           <div>

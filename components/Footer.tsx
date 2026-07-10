@@ -62,6 +62,25 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+        <div className="pt-8 sm:pt-10 pb-8 sm:pb-10" style={{ borderTop: '1px solid #333', borderBottom: '1px solid #333' }}>
+          <ul className="flex flex-wrap gap-6 sm:gap-8 text-xs sm:text-sm" style={{ color: '#aaa' }}>
+            <li>
+              <a href="/faq" className="hover:text-white transition-colors">FAQ</a>
+            </li>
+            <li>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/terms" className="hover:text-white transition-colors">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="/shipping" className="hover:text-white transition-colors">Shipping Policy</a>
+            </li>
+            <li>
+              <a href="/refund" className="hover:text-white transition-colors">Refund Policy</a>
+            </li>
+          </ul>
+        </div>
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs" style={{ color: '#666' }}>
           <p>© {new Date().getFullYear()} {siteConfig.displayName}. All rights reserved.</p>
           <p>{siteConfig.footerNote}</p>
