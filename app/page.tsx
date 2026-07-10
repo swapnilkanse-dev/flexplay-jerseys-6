@@ -46,7 +46,7 @@ export default function Home() {
   }
 }, [])
 
-  const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top', 'Other']
+  const categoryPriority = ['All', 'World Cup', 'Clubs', 'FullSleeve', 'Jackets', 'F1', 'Shorts', 'IPL', 'Crop Top']
 
   // Sub-category priority for Clubs (priority order per user instructions)
   const clubsPriority = [
@@ -56,7 +56,7 @@ export default function Home() {
   const displayCategoryLabel = (category: string) => category === 'Other' ? 'Others' : category
 
   const worldCupTeamOrder = [
-    'Portugal', 'Argentina', 'Brazil', 'Spain', 'France', 'Norway', 'Germany', 'Italy', 'Japan', 'England', 'Croatia', 'Mexico', 'Jamaica', 'Morocco'
+    'Portugal', 'Argentina', 'Brazil', 'Spain', 'France', 'Norway', 'Japan'
   ]
 
   const jerseyText = (j: any) => [j.country, j.name, ...(j.tags ?? [])].filter(Boolean).join(' ').toLowerCase()
