@@ -22,7 +22,7 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false,
@@ -45,7 +45,7 @@
       "Premium",
       "Embroidery"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 2 left. Order soon!"
   },
   {
     "id": "acmilan-2007-away-special-edition-kit-maldini-fivesleeve-polo",
@@ -72,7 +72,7 @@
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -90,7 +90,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 2 left. Order soon!"
   },
   {
     "id": "argentina-2026-home-kit-messi-fivesleeve-embroidery",
@@ -117,7 +117,7 @@
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -249,11 +249,11 @@
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -320,7 +320,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 2 left. Order soon!"
   },
   {
     "id": "brazil-2026-home-kit-neymer-fivesleeve-embroidery",
@@ -345,9 +345,9 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -613,7 +613,7 @@
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": false,
       "XL": false,
@@ -638,7 +638,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": "In stock!"
   },
   {
     "id": "france-2026-home-kit-mbappe-polo-embroidery",
@@ -1447,8 +1447,8 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": false,
       "XXL": false
     },
@@ -1761,8 +1761,8 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": false,
       "XXL": true
     },
@@ -1941,7 +1941,7 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false
     },
@@ -1987,7 +1987,7 @@
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -2031,8 +2031,8 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
-      "XL": true,
+      "L": false,
+      "XL": false,
       "XXL": false
     },
     "inStock": true,
@@ -2166,12 +2166,12 @@
     ],
     "sizeStock": {
       "S": false,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-22T195510.122.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -2188,7 +2188,7 @@
       "Embroidery",
       "Full Sleeve"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": ""
   },
   {
     "id": "argentina-2026-training-kit-messi-polo-embroidery-premium",
@@ -2208,16 +2208,18 @@
       "M",
       "L",
       "XL",
+      "XXL",
       "XXXL"
     ],
     "sizeStock": {
-      "S": false,
-      "M": false,
-      "L": false,
-      "XL": false,
-      "XXXL": false
+      "S": true,
+      "M": true,
+      "L": true,
+      "XL": true,
+      "XXL": true,
+      "XXXL": true
     },
-    "inStock": false,
+    "inStock": true,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-06-16T163221.924.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -2237,7 +2239,7 @@
       "Polo",
       "Training"
     ],
-    "inventoryMessage": ""
+    "inventoryMessage": "In stock!"
   },
   {
     "id": "japan-2026-away-kit-embroidery-premium-1",
@@ -2563,7 +2565,7 @@
       "XL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": true
@@ -2583,7 +2585,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": "In stock!"
   },
   {
     "id": "tshirt-bayern-white-fivesleeve-polo-with-zip-copy",
@@ -2859,7 +2861,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 2 left. Order soon!"
   },
   {
     "id": "brazil-2010-11-away-kit-kaka-embroidery-premium",
@@ -3024,7 +3026,7 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": true
     },
@@ -3290,7 +3292,7 @@
       "M": true,
       "L": true,
       "XL": true,
-      "XXL": true,
+      "XXL": false,
       "XXXL": false
     },
     "inStock": true,
@@ -3357,7 +3359,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "croatia-2026-home-kit-modric-embroidery-premium",
@@ -3536,7 +3538,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "celtic-green-fivesleeve-polo",
@@ -3558,12 +3560,12 @@
       "XL"
     ],
     "sizeStock": {
-      "S": true,
-      "M": true,
+      "S": false,
+      "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-30T183344.707.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -3578,7 +3580,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "bayern-bavarian-giants-fivesleeve-polo",
@@ -3643,7 +3645,7 @@
     ],
     "sizeStock": {
       "S": true,
-      "M": true,
+      "M": false,
       "L": false,
       "XL": false
     },
@@ -3872,7 +3874,7 @@
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": true,
@@ -3896,7 +3898,7 @@
       "Premium",
       "Embroidery"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": "In stock!"
   },
   {
     "id": "real-madrid-2006-away-kit-with-shorts-imported",
@@ -4047,12 +4049,12 @@
       "XL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-05-20T175850.243.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -4067,7 +4069,7 @@
       "Home",
       "2008"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "portugal-2026-away-kit-ronaldo-fullsleeve-embroidery",
@@ -4958,7 +4960,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "manchester-united-1998-white-kit-beckham-embroidery",
@@ -5672,7 +5674,7 @@
       "M": true,
       "L": false,
       "XL": true,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -5715,7 +5717,7 @@
       "XXXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": true,
       "L": true,
       "XL": true,
@@ -5740,7 +5742,7 @@
       "Premium",
       "Embroidery"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": "In stock!"
   },
   {
     "id": "manchester-united-2000-01-third-kit-beckham-polo-embroidery-premium",
@@ -5954,9 +5956,9 @@
       "S": true,
       "M": true,
       "L": true,
-      "XL": true,
+      "XL": false,
       "XXL": false,
-      "XXXL": true
+      "XXXL": false
     },
     "inStock": true,
     "images": [
@@ -6201,7 +6203,7 @@
       "2017",
       "Embroidery"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "real-madrid-2006-home-ronaldo-embroidery",
@@ -6534,7 +6536,7 @@
     "sizeStock": {
       "L": true,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -6751,7 +6753,7 @@
     "sizeStock": {
       "S": true,
       "M": true,
-      "L": true,
+      "L": false,
       "XL": false,
       "XXL": false,
       "XXXL": false
@@ -6981,9 +6983,9 @@
       "S": false,
       "M": false,
       "L": false,
-      "XL": true
+      "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-03-30T200825.035.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -7000,7 +7002,7 @@
       "Embroidery",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "rcb-2026-home-kit-virat-polo-embroidery-premium",
@@ -7028,7 +7030,7 @@
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": false,
+      "XXL": true,
       "XXXL": false
     },
     "inStock": true,
@@ -7050,7 +7052,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "germany-2026-away-kit-wirtz",
@@ -7139,7 +7141,7 @@
       "2026",
       "Embroidery"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "italy-2026-tiro-polo-embroidery-premium",
@@ -7282,7 +7284,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "liverpool-1993-94-home-kit-torres-polo-embroidery-premium",
@@ -7540,10 +7542,10 @@
     "sizeStock": {
       "S": false,
       "M": false,
-      "L": true,
+      "L": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-03-10T181557.109.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -7561,7 +7563,7 @@
       "Polo",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "newcastle-1999-2000-away-kit-shearer-fivesleeve-polo-embroidery-premium",
@@ -7750,7 +7752,7 @@
       "Premium",
       "Embroidery"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "olympique-lyonnais-2007-08-third-kit-juninho-embroidery-premium",
@@ -8787,7 +8789,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "barcelona-2014-15-third-kit-messi-polo-embroidery-premium",
@@ -8976,8 +8978,8 @@
       "XXL"
     ],
     "sizeStock": {
-      "M": true,
-      "L": true,
+      "M": false,
+      "L": false,
       "XL": true,
       "XXL": false
     },
@@ -8995,7 +8997,7 @@
       "Home",
       "2026"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": "In stock!"
   },
   {
     "id": "sao-paulo-2001-home-kit-kaka-fivesleeve",
@@ -9056,10 +9058,10 @@
       "XL"
     ],
     "sizeStock": {
-      "XXL": true,
+      "XXL": false,
       "XL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-10-17T172626.307_f18aeaee-67e4-456f-afa7-7ef261a456c5.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -9075,7 +9077,7 @@
       "2012",
       "Embroidery"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "roma-25-26-third-kit-dybala-polo",
@@ -9258,7 +9260,7 @@
       "Third",
       "2026"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "real-madrid-25-26-away-kit-trent-embroidery-premium",
@@ -9705,7 +9707,7 @@
       "M": false,
       "L": false,
       "XL": false,
-      "XXL": true
+      "XXL": false
     },
     "inStock": true,
     "images": [
@@ -10050,7 +10052,7 @@
       "2002",
       "Embroidery"
     ],
-    "inventoryMessage": "In stock!"
+    "inventoryMessage": "Just 2 left. Order soon!"
   },
   {
     "id": "liverpool-1997-98-away-kit-owen-fivesleeve",
@@ -10258,11 +10260,11 @@
     ],
     "sizeStock": {
       "XXL": false,
-      "XL": true,
+      "XL": false,
       "L": false,
       "M": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2025-11-10T191946.656_a34889be-5fae-483f-a7b5-189582f0643c.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -10277,7 +10279,7 @@
       "1997",
       "Five Sleeve"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "intermiami-flame-edition-kit-messi-embroidery-2",
@@ -10548,13 +10550,13 @@
       "XXL"
     ],
     "sizeStock": {
-      "S": true,
+      "S": false,
       "M": false,
       "L": false,
       "XL": false,
       "XXL": false
     },
-    "inStock": true,
+    "inStock": false,
     "images": [
       "http://www.thayyilsports.in/cdn/shop/files/F-2026-01-21T195011.422.webp",
       "https://www.thayyilsports.in/cdn/shop/files/thayyilsports_logo_blk.svg",
@@ -10572,7 +10574,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "Just 1 left. Order soon!"
+    "inventoryMessage": ""
   },
   {
     "id": "france-1998-away-kit-zidane-polo-embroidery-4",
@@ -10940,7 +10942,7 @@
       "Embroidery",
       "Polo"
     ],
-    "inventoryMessage": "Just 2 left. Order soon!"
+    "inventoryMessage": "Just 1 left. Order soon!"
   },
   {
     "id": "barcelona-x-santos-neymer-special-edition-kit-embroidery-2",
