@@ -220,6 +220,25 @@ function correctProductName(name) {
   return NAME_CORRECTIONS[name] || name;
 }
 
+function normalizeJersey(jersey) {
+  const normalized = { ...jersey };
+  const inventoryMessage =
+    jersey.inventoryMessage ??
+    jersey.inventorymsg ??
+    jersey.inventoryMsg ??
+    jersey.inventory_message;
+
+  if (inventoryMessage !== undefined) {
+    normalized.inventoryMessage = inventoryMessage;
+  }
+
+  delete normalized.inventorymsg;
+  delete normalized.inventoryMsg;
+  delete normalized.inventory_message;
+
+  return normalized;
+}
+
 function detectMainCategory(jersey) {
   for (const [mainFilter, config] of Object.entries(FILTER_CONFIG)) {
     if (config.detector(jersey)) {
@@ -257,10 +276,13 @@ function getPriorityIndex(jerseyId, mainCategory, subCategory) {
 
 function processJerseyData(rawJerseys) {
   return rawJerseys
-    .map((jersey) => ({
-      ...jersey,
-      name: correctProductName(jersey.name),
-    }))
+    .map((jersey) => {
+      const normalizedJersey = normalizeJersey(jersey);
+      return {
+        ...normalizedJersey,
+        name: correctProductName(normalizedJersey.name),
+      };
+    })
     .map((jersey) => {
       const mainCategory = detectMainCategory(jersey);
       const subCategory = detectSubCategory(jersey, mainCategory);

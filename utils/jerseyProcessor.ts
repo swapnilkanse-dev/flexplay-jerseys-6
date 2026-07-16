@@ -45,6 +45,7 @@ export type Jersey = {
   subCategory?: string;
   subCategoriesByMain?: Record<MainFilter, string[]>;
   featured?: boolean;
+  inventoryMessage?: string;
 };
 
 /**
