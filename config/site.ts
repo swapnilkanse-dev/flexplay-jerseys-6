@@ -38,7 +38,7 @@ const siteConfigs: Record<string, SiteConfig> = {
     email: 'flexplayjersey@gmail.com',
     instagramUrl: 'https://www.instagram.com/flexplay.jerseys/?hl=en',
     instagramHandle: '@flexplay.jerseys',
-    phoneNumbers: ['+91 91561 65683', '+91 70580 49668'],
+    phoneNumbers: ['+91 91561 65683'],
     hours: '10 AM – 8 PM',
     deliveryLabel: 'Free Pan India Delivery',
     tagline: 'Premium World Cup 2026 jerseys at the best prices. All orders confirmed personally on WhatsApp.',
